@@ -12,6 +12,10 @@
     ]
   },
   "scripts": {
+    "build:worker": "opennextjs-cloudflare",
+    "dev:worker": "wrangler dev --port 8771",
+    "preview:worker": "npm run build:worker && npm run dev:worker",
+    "deploy:worker": "npm run build:worker && wrangler deploy",
     "build": "turbo run build --filter=apps/front",
     "dev": "turbo run dev --filter=apps/front",
     "lint": "turbo run lint",
@@ -20,6 +24,8 @@
     "commit": "git-cz"
   },
   "devDependencies": {
+    "@opennextjs/cloudflare": "^0.5.8",
+    "wrangler": "^3.114.0",
     "turbo": "1.10.6"
   },
   "engines": {
