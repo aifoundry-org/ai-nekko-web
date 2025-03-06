@@ -102,58 +102,29 @@ ol {
   }
 }
 
-.testimonials-pagination-bullet {
-  width: 0.95vw;
-  height: 0.95vw;
-  background-color: transparent;
-  border: 2px solid white;
-  opacity: 1;
-  border-radius: 1.6vw;
-}
-.testimonials-pagination-bullet-active {
-  width: 0.95vw;
-  height: 0.95vw;
-  background-color: white;
-  opacity: 1;
-  border-radius: 1.6vw;
-}
-
-.testimonials-pagination-mobile-bullet {
-  width: 3.5vw;
-  height: 3.5vw;
-  background-color: transparent;
-  border: 2px solid white;
-  opacity: 1;
-  border-radius: 6.15vw;
-}
-.testimonials-pagination-bullet-mobile-active {
-  width: 3.5vw;
-  height: 3.5vw;
-  background-color: white;
-  opacity: 1;
-  border-radius: 6.15vw;
-}
-
-.inTheNews-pagination-bullet {
-  width: 0.95vw;
-  height: 0.95vw;
-  background-color: transparent;
-  border: 2px solid black;
-  opacity: 1;
-  border-radius: 1.6vw;
-}
-.inTheNews-pagination-bullet-active {
-  width: 0.95vw;
-  height: 0.95vw;
-  background-color: black;
-  opacity: 1;
-  border-radius: 1.6vw;
-}
-
 .faqsModal input:hover, input:focus{
   border-color: #F9A03F !important;
 }
 
 .scrollbar-width-none{
   scrollbar-width: none;
+}
+
+.card {
+  transform-style: preserve-3d;
+  transition: 450ms;
+  transform: rotateY(var(--rotate-y, 0));
+}
+
+.card.flip {
+  --rotate-y: 180deg;
+}
+
+.card .front,
+.card .back {
+  backface-visibility: hidden;
+}
+
+.card .back {
+  transform: rotateY(180deg);
 }
