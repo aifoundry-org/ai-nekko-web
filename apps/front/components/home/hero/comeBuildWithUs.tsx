@@ -18,7 +18,7 @@ export default function ComeBuildWithUs({firstAnimComplete}: {firstAnimComplete?
     useGSAP(() => {
         if(firstAnimComplete){
             const tl = gsap.timeline({paused: true})
-                .to('.scroller-container', {overflowY: 'hidden'})
+                .to({}, {duration: 0.5})
                 .fromTo(['.come-build-with-us-container .cat'], {
                     opacity: 0,
                     y: '-35px'
@@ -57,7 +57,6 @@ export default function ComeBuildWithUs({firstAnimComplete}: {firstAnimComplete?
                     y: 0,
                     duration: 0.2
                 })
-                .to('.scroller-container', {overflowY: 'scroll'})
 
             gsap.to('.come-build-with-us-container .sticker', {
                 rotation: 360,
@@ -73,6 +72,7 @@ export default function ComeBuildWithUs({firstAnimComplete}: {firstAnimComplete?
                 id: 'trigger-4',
                 scroller: '.scroller-container',
                 onEnter: () => {
+                    gsap.to('.scroller-container', {overflowY: 'hidden'})
                     gsap.fromTo('.come-build-with-us-container', {
                         opacity: 0,
                         y: '-50px'
@@ -82,6 +82,7 @@ export default function ComeBuildWithUs({firstAnimComplete}: {firstAnimComplete?
                         duration: 0.3
                     })
                     tl.restart(true)
+                    .set('.scroller-container', {overflowY: 'scroll'})
                     .set('body', {overflowY: 'scroll'})
                 },
                 onEnterBack: () => {
@@ -94,7 +95,6 @@ export default function ComeBuildWithUs({firstAnimComplete}: {firstAnimComplete?
                         y: '50px',
                         duration: 0.3
                     })
-                    gsap.set('body', {overflowY: 'scroll'})
                 }
             })
         }

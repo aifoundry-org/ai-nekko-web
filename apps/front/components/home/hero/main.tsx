@@ -44,7 +44,7 @@ export default function CatAnim() {
     }, [firstAnimComplete, skipAnim])
 
     useGSAP(() => {
-        if(skipAnim || window.scrollY > 0){
+        if(skipAnim){
             gsap.set(['.trigger-1', '.trigger-2', '.trigger-3'],{
                 display: 'none'
             })
