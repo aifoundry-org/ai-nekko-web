@@ -72,7 +72,7 @@ const Button: FC<ButtonProps> = ({as: Component = 'button', href = '', variant =
     SVGIcon = svgVariants[svg];
   }
 
-  const labelStyle = `flex text-[1.8rem] xs:text-[1.8rem] sm:text-[2rem] md:text-[2rem] lg:text-[2rem] xl:text-[2rem] 2xl:text-[2rem] items-center justify-center`
+  const labelStyle = `flex text-[1.8rem] xs:text-[1.8rem] sm:text-[2rem] md:text-[2rem] lg:text-[2rem] xl:text-[2rem] 2xl:text-[4rem] items-center justify-center`
 
   return (
     <Component {...componentProps}>

@@ -2,11 +2,12 @@
 
 import React, { useState } from 'react';
 import { cn } from '../../utils/cn';
-import IMGChevron from '@/public/pngs/home/faqs/chevron.png'
+import IMGChevron from '@/public/imgs/faqs/chevron.webp'
+import ImageWrapper from '@/components/common/ImageWrapper';
 
 interface AccordionProps {
   title: React.ReactNode;
-  content: React.ReactNode;
+  content: string;
   isOpen?: boolean;
   isDesktop?: boolean;
   className?: string;
@@ -20,25 +21,34 @@ interface AccordionProps {
  * @param title - The title element that will be always displayed at the top of the accordion.
  * @param content - The content that will be displayed when the accordion is open.
  * @param isOpen - Determine whether the accordion is opened or not
- * @param isDesktop - Determine whether the accordion is for mobile or not
  * @param className - Additional CSS classes that can be passed to customize the styling of the component.
  */
-const Accordion = ({ title, isOpen = false, isDesktop = false, content, className }: AccordionProps) => {
+const Accordion = ({ title, isOpen = false, content, className }: AccordionProps) => {
   const [open, setOpen] = useState(isOpen)
 
   return (
     <div className={cn('flex flex-col border-t-[2px] border-black', className)}>
-      <div className={`flex flex-row items-center ${isDesktop && 'justify-between'} `} onClick={() => setOpen(!open)}>
-        <label className={`font-host-grotesk justify-between pl-0 pr-[2vw] ${isDesktop ? 'py-[2.4rem]' : 'py-[1.67vw]'} cursor-pointer ${isDesktop ? 'text-[2.4rem]' : 'text-[4.82vw]'} font-bold`} >
+      <div className='flex flex-row items-center justify-between' onClick={() => setOpen(!open)}>
+        <label className='font-host-grotesk pl-0 pr-[2vw] cursor-pointer font-bold
+          py-[1.6rem] sm:py-[2.4rem] md:py-[2.4rem] lg:py-[2.4rem] xl:py-[2.4rem] 2xl:py-[2.4rem]
+          text-[1.8rem] sm:text-[2.4rem] md:text-[2.4rem] lg:text-[2.4rem] xl:text-[2.4rem] 2xl:text-[4.4rem]
+        '>
           {title}
         </label>
-        <img src={IMGChevron.src} className={`${isDesktop ? 'w-[2.3rem]' : 'w-[6.4vw]'} transform transition-transform duration-200 ${open && 'rotate-180'} pointer-events-none`} />
+        <div className='
+        min-w-[2.4rem] sm:min-w-[2.4rem] md:min-w-[2.4rem] lg:min-w-[2.4rem] xl:min-w-[2.4rem] 2xl:min-w-[4rem]
+        '>
+          <ImageWrapper style={{height: '100%'}} src={IMGChevron.src} className={`transform transition-transform duration-200 ${open && 'rotate-180'} pointer-events-none`} alt='Chevron' />
+        </div>
       </div>
      <div
         className={cn(
-          `max-h-0 overflow-hidden transition-all duration-500 ${open && 'max-h-screen'}`
+          `max-h-0 overflow-y-scroll transition-all duration-500 ${open && 'max-h-screen'}`
         )}>
-        <div className={`font-normal ${isDesktop ? 'text-[1.6rem] pb-[2.4rem]' : 'text-[3.75vw] pb-[5vw]'} font-host-grotesk`} >{content}</div>
+        <div className='font-normal font-host-grotesk
+          text-[1.4rem] sm:text-[1.6rem] md:text-[1.6rem] lg:text-[1.6rem] xl:text-[1.6rem] 2xl:text-[4rem] 
+          pb-[1.6rem] sm:pb-[2.4rem] md:pb-[2.4rem] lg:pb-[2.4rem] xl:pb-[2.4rem] 2xl:pb-[2.4rem]
+        ' dangerouslySetInnerHTML={{__html: content}}></div>
       </div>
     </div>
   );

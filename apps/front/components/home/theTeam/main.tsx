@@ -98,7 +98,8 @@ export default function Main() {
     
     return (
         <div className='relative w-full h-full overflow-x-hidden flex flex-col
-            py-[14rem] sm:py-[18rem] md:py-[18rem] lg:py-[18rem] xl:py-[18rem] 2xl:py-[28rem]
+            pt-[14rem] sm:pt-[18rem] md:pt-[18rem] lg:pt-[18rem] xl:pt-[18rem] 2xl:pt-[28rem]
+            pb-[4rem] sm:pb-[8rem] md:pb-[8rem] lg:pb-[8rem] xl:pb-[8rem] 2xl:pb-[18rem]
         '>
             <div className='relative w-fit h-full flex flex-col
                 mx-auto sm:mx-[8.2rem] md:mx-[11.2rem] lg:mx-[11.2rem] xl:mx-[11.2rem] 2xl:mx-[11.2rem] 
