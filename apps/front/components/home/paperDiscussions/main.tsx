@@ -62,8 +62,8 @@ export default function Main() {
                 p-[2.4rem] sm:p-[5.6rem] md:p-[5.6rem] lg:p-[5.6rem] xl:p-[5.6rem] 2xl:p-[5.6rem]
             '>
                 <p className='font-host-grotesk font-bold
-                    text-[1.6rem] xs:text-[2rem] sm:text-[2.5rem] md:text-[2.5rem] lg:text-[2.5rem] xl:text-[2rem] 2xl:text-[2rem]
-                    leading-[2.4rem] sm:leading-[2.5rem] md:leading-[3rem] lg:leading-[3rem] xl:leading-[3rem] 2xl:leading-[3rem]
+                    text-[1.6rem] xs:text-[2rem] sm:text-[2.5rem] md:text-[2.5rem] lg:text-[2.5rem] xl:text-[2rem] 2xl:text-[4.5rem]
+                    leading-[2.4rem] sm:leading-[2.5rem] md:leading-[3rem] lg:leading-[3rem] xl:leading-[3rem] 2xl:leading-[5rem]
                     mb-[2.4rem] sm:mb-[4.8rem] md:mb-[2.5rem] lg:mb-[2.5rem] xl:mb-[2.5rem] 2xl:mb-[2.5rem]
                 '>
                     Freedom of choice in AI requires an interoperable ecosystem.<br className='hidden md:block lg:block xl:block 2xl:block' />Be part of the open, composable community for AI.
