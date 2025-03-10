@@ -1,0 +1,22 @@
+---
+name: Site Deploy
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  site-deploy:
+    runs-on: ubuntu-latest
+    container:
+      image: node:22-alpine
+      env:
+        CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Install Yarn Dependencies
+        run: cd apps/front && yarn install
+      - name: Deploy Site
+        run: cd apps/front && npm run deploy:worker
