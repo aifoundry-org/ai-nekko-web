@@ -193,7 +193,6 @@ export default function Main() {
                 <Swiper
                     modules={[Navigation]}
                     slidesPerView={1}
-                    loop
                     onSwiper={setSwiperInstance}
                     navigation={{
                         prevEl: buttonPrevRef.current,

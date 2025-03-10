@@ -83,13 +83,13 @@ export default function CatAnim() {
             return;
         }
 
-        const tl = gsap.timeline({onComplete: () => {setFirstAnimComplete(true)}});
+        const tl = gsap.timeline({paused:true, onComplete: () => {setFirstAnimComplete(true)}});
         const mm = gsap.matchMedia();
 
-        gsap.set('.navbar-team-link', {pointerEvents: 'none'})
+        tl.set('.navbar-team-link', {pointerEvents: 'none'})
 
         // Remove scroll from body
-        gsap.set('body', {overflowY: 'hidden'})
+        tl.set('body', {overflowY: 'hidden'})
 
         // Remove scroll from main container
         tl.set(scrollerContainerRef.current, {overflowY: 'hidden'})
@@ -165,6 +165,8 @@ export default function CatAnim() {
                 gsap.set('.main-container', { pointerEvents: 'auto'})
             }
         })
+
+        tl.play();
     });
     
     return (

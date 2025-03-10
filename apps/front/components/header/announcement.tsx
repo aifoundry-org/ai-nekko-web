@@ -1,5 +1,5 @@
 'use client'
-/* eslint-disable */
+
 import Link from "next/link";
 import SVGArrowUpRight from '@/public/svgs/common/ArrowUpRight.svg';
 import { usePathname } from 'next/navigation';
@@ -7,7 +7,7 @@ import ImageWrapper from '../common/ImageWrapper';
 
 export default function Announcement() {
     const path = usePathname();
-    const hideSelf = path.includes('blog') || path.includes('terms-and-conditions');
+    const hideSelf = ['blog', 'terms-of-service', 'privacy-policy', 'cookie-policy'].some(el => path.includes(el) ? true : false)
 
     return (
         <div className={`${hideSelf && 'hidden'} flex flex-row text-sand justify-center p-4`}>
@@ -18,7 +18,7 @@ export default function Announcement() {
                     block sm:flex md:flex lg:flex xl:flex 2xl:flex
                     text-center sm:text-justify md:text-justify lg:text-justify xl:text-justify 2xl:text-justify
                 '>
-                    AIFoundry.org is sponsoring the "Low-Level AI Engineering & Hacking" Dev Room at FOSDEM. Find out more!
+                    AIFoundry.org is sponsoring the &quot;Low-Level AI Engineering & Hacking&quot; Dev Room at FOSDEM. Find out more!
                     <div className='ml-[0.56vw] w-[1.4rem]
                         inline-block sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden 
                     '>

@@ -11,6 +11,8 @@ import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const slides = [{
     id: 1,
     content: "ai paper discussions"
@@ -21,8 +23,6 @@ const slides = [{
     id: 3,
     content: "open source models & projects"
 }]
-
-gsap.registerPlugin(ScrollTrigger);
 
 export default function Main() {
     useGSAP(() => {

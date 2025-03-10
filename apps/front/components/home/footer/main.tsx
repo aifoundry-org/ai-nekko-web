@@ -41,10 +41,10 @@ export default function Footer(){
                             text-[1.8rem] lg:text-[2rem] xl:text-[2rem] 2xl:text-[2rem] 
                             leading-[1.8rem] lg:leading-[2rem] xl:leading-[2rem] 2xl:leading-[2rem] 
                         '>
-                            <Link href='https://aifoundry.org'>ai foundry</Link>
+                            <Link target='_blank' href='https://aifoundry.org'>ai foundry</Link>
                             <Link href='/#team'>team</Link>
                             <Link href='/blog'>blog</Link>
-                            <Link className='block sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden' href='/terms-and-conditions'>privacy policy</Link>
+                            <Link onClick={() => window.scrollTo(0, 0)} href='/privacy-policy' className='block sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden'>privacy policy</Link>
                         </div>
                         <div className='relative w-full h-fit uppercase font-bold tracking-wider items-end justify-end
                             mt-[1.4rem] sm:mt-0 md:mt-0 lg:mt-0 xl:mt-0 2xl:mt-0 
@@ -53,11 +53,11 @@ export default function Footer(){
                             text-[1.8rem] lg:text-[2rem] xl:text-[2rem] 2xl:text-[2rem] 
                             leading-[1.8rem] lg:leading-[2rem] xl:leading-[2rem] 2xl:leading-[2rem] 
                         '>
-                            <Link className='hidden sm:block md:block lg:block xl:block 2xl:block
+                            <Link onClick={() => window.scrollTo(0, 0)} className='hidden sm:block md:block lg:block xl:block 2xl:block
                                 basis-1/3 sm:basis-auto md:basis-auto lg:basis-auto xl:basis-auto 2xl:basis-auto
-                            ' href='/terms-and-conditions'>privacy policy</Link>
-                            <Link className='basis-1/2 sm:basis-auto md:basis-auto lg:basis-auto xl:basis-auto 2xl:basis-auto' href='/terms-and-conditions'>terms of service</Link>
-                            <Link className='basis-1/2 sm:basis-auto md:basis-auto lg:basis-auto xl:basis-auto 2xl:basis-auto' href='/terms-and-conditions'>cookie policy</Link>
+                            ' href='/privacy-policy'>privacy policy</Link>
+                            <Link onClick={() => window.scrollTo(0, 0)} className='basis-1/2 sm:basis-auto md:basis-auto lg:basis-auto xl:basis-auto 2xl:basis-auto' href='/terms-of-service'>terms of service</Link>
+                            <Link onClick={() => window.scrollTo(0, 0)} className='basis-1/2 sm:basis-auto md:basis-auto lg:basis-auto xl:basis-auto 2xl:basis-auto' href='/cookie-policy'>cookie policy</Link>
                             <div className='basis-1/4 justify-end mt-0
                                 flex sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden 
                             '>
@@ -74,12 +74,12 @@ export default function Footer(){
                             xs:text-[2rem] sm:text-[2rem] md:text-[2rem] 2xl:text-[4rem]
                             xs:leading-[2rem] sm:leading-[2rem] md:leading-[2rem] 2xl:leading-[4rem]
                         '>
-                            <Link href='https://aifoundry.org'>ai foundry</Link>
+                            <Link target='_blank' href='https://aifoundry.org'>ai foundry</Link>
                             <Link href='/#team'>team</Link>
                             <Link href='/blog'>blog</Link>
-                            <Link href='/terms-and-conditions'>privacy policy</Link>
-                            <Link href='/terms-and-conditions'>terms of service</Link>
-                            <Link href='/terms-and-conditions'>cookie policy</Link>
+                            <Link onClick={() => window.scrollTo(0, 0)} href='/privacy-policy'>privacy policy</Link>
+                            <Link onClick={() => window.scrollTo(0, 0)} href='/terms-of-service'>terms of service</Link>
+                            <Link onClick={() => window.scrollTo(0, 0)} href='/cookie-policy'>cookie policy</Link>
                         </div>
                     </div>
                     <div className='relative w-full h-fit justify-end 

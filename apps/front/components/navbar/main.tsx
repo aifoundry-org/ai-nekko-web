@@ -1,17 +1,21 @@
 'use client';
 
+import Link from 'next/link';
+import { redirect } from 'next/navigation'
+
 import IMGAiNekkoLogo from '@/public/imgs/navbar/logo.webp'
 import IMGAiNekkoLogoMobile from '@/public/imgs/navbar/logoMobile.webp'
 import SVGIconHamburger from '@/public/svgs/common/Hamburger.svg'
 import SVGIconLinkedin from '@/public/svgs/common/IconLinkedin.svg'
 import SVGIconCloseButton from '@/public/svgs/common/CloseButton.svg'
 import Button from '@/libs/litebox-lib/ui/Button/Button';
-import Link from 'next/link';
 import ImageWrapper from '@/components/common/ImageWrapper';
 
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function NavBar() {
     useGSAP(() => {
@@ -309,10 +313,10 @@ export default function NavBar() {
                         ">
                             <div className='hidden sm:block lg:block xl:block 2xl:block'>
                                 <div className='logoMobile hidden w-[3.265vw]'>
-                                    <ImageWrapper style={{height: '100%'}} src={IMGAiNekkoLogoMobile.src} alt='AINekko logo mobile' />
+                                    <ImageWrapper onClick={() => redirect('/')} style={{height: '100%'}} src={IMGAiNekkoLogoMobile.src} alt='AINekko logo mobile' />
                                 </div>
                                 <div className='logo w-[15.14vw]'>
-                                    <ImageWrapper style={{height: '100%'}} src={IMGAiNekkoLogo.src} alt='AINekko logo' />
+                                    <ImageWrapper onClick={() => redirect('/')} style={{height: '100%'}} src={IMGAiNekkoLogo.src} alt='AINekko logo' />
                                 </div>
                             </div>
                         </div>
@@ -330,10 +334,10 @@ export default function NavBar() {
                 <nav className='flex flex-row justify-between items-center w-full'>
                     <div className='w-[15.4rem]'>
                         <div className='logo w-[15.4rem] justify-start'>
-                            <ImageWrapper src={IMGAiNekkoLogo.src} alt='AINekko logo' />
+                            <ImageWrapper onClick={() => redirect('/')} src={IMGAiNekkoLogo.src} alt='AINekko logo' />
                         </div>
                         <div className='logoMobile hidden w-[4.5rem]'>
-                            <ImageWrapper src={IMGAiNekkoLogoMobile.src} alt='AINekko logo mobile' />
+                            <ImageWrapper onClick={() => redirect('/')} src={IMGAiNekkoLogoMobile.src} alt='AINekko logo mobile' />
                         </div>
                     </div>
                     <div className='w-[2.4rem] justify-end'>
@@ -370,19 +374,19 @@ export default function NavBar() {
                         <Link className="uppercase" onClick={() => {
                             window.scrollTo(0, 0);
                             closeMenu()}
-                        } href="/terms-and-conditions">
+                        } href="/privacy-policy">
                             privacy policy
                         </Link>
                         <Link className="uppercase" onClick={() => {
                             window.scrollTo(0, 0);
                             closeMenu()}
-                        } href="/terms-and-conditions">
+                        } href="/terms-of-service">
                             terms of service
                         </Link>
                         <Link className="uppercase" onClick={() => {
                             window.scrollTo(0, 0);
                             closeMenu()}
-                        } href="/terms-and-conditions">
+                        } href="/cookie-policy">
                             cookie policy
                         </Link>
                     </div>
