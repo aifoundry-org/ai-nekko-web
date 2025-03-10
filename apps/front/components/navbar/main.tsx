@@ -295,7 +295,7 @@ export default function NavBar() {
                         <div className='navbar-links
                             flex flex-row font-medium gap-x-[2.8vw]
                             basis-1/2 md:basis-1/3 lg:basis-1/3 xl:basis-1/3 2xl:basis-1/3
-                            text-[2rem] lg:text-[2rem] xl:text-[2rem] 2xl:text-[2rem]
+                            text-[2rem] lg:text-[2rem] xl:text-[2rem] 2xl:text-[4rem]
                             md:w-full sm:w-full lg:w-full xl:w-full 2xl:w-full justify-start
                         '>
                             <Link href="https://aifoundry.org" target="_blank" className="uppercase relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300">
