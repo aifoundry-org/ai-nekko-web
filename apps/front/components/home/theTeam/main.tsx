@@ -97,7 +97,7 @@ export default function Main() {
     }, [swiperInstance, buttonPrevRef, buttonNextRef]);
     
     return (
-        <div className='relative w-full h-full overflow-x-hidden flex flex-col
+        <div id="team" className='relative w-full h-full overflow-x-hidden flex flex-col
             pt-[14rem] sm:pt-[18rem] md:pt-[18rem] lg:pt-[18rem] xl:pt-[18rem] 2xl:pt-[28rem]
             pb-[4rem] sm:pb-[8rem] md:pb-[8rem] lg:pb-[8rem] xl:pb-[8rem] 2xl:pb-[18rem]
         '>
@@ -111,14 +111,14 @@ export default function Main() {
                 '>
                     <ImageWrapper src={IMGPaper.src} alt="Punch card" />
                 </div>
-                <p className='font-dharma-gothic-e font-black uppercase z-[1]
+                <p className='font-dharma-gothic-e font-black uppercase
                     leading-[5.3rem] sm:leading-[5.3rem] md:leading-[5.3rem] lg:leading-[5.3rem] xl:leading-[5.3rem] 2xl:leading-[10rem]
                     text-[4.8rem] sm:text-[6.4rem] md:text-[6.4rem] lg:text-[6.4rem] xl:text-[6.4rem] 2xl:text-[8.4rem] 
                     mb-[4rem] sm:mb-[4.8rem] md:mb-[4.8rem] lg:mb-[4.8rem] xl:mb-[4.8rem] 2xl:mb-[6.8rem] 
                 '>
                     the team
                 </p>
-                <div className='flex z-[1]
+                <div className='flex z-0
                     flex-col sm:flex-row md:flex-row lg:flex-row xl:flex-row 2xl:flex-row
                     gap-y-[2.4rem] sm:gap-x-[2.4rem] md:gap-x-[2.4rem] lg:gap-x-[2.4rem] xl:gap-x-[2.4rem] 2xl:gap-x-[2.4rem] 
                 '>
@@ -126,7 +126,7 @@ export default function Main() {
                         <Card key={member.id} name={member.name} role={member.role} profileImgUrl={member.profileImgUrl} linkedinUrl={member.linkedin} />
                     ))}
                 </div>
-                <div className='absolute z-[1]
+                <div className='absolute z-0
                     -bottom-[6.7rem] sm:-bottom-[2.9rem] md:-bottom-[3.5rem] lg:-bottom-[4.4rem] xl:-bottom-[6rem] 2xl:-bottom-[6rem] 
                     w-[23rem] sm:w-[10.3rem] md:w-[12.3rem] lg:w-[15rem] xl:w-[21rem] 2xl:w-[20rem] 
                     -right-[30.5vw] sm:-right-[7.1vw] md:-right-[6.2vw] lg:-right-[6vw] xl:-right-[7vw] 2xl:-right-[3.5vw]
@@ -170,7 +170,7 @@ export default function Main() {
                             slidesPerView: 5
                         }
                     }}
-                    className='
+                    className='!z-0
                         !hidden sm:!block md:!block lg:!block xl:!block 2xl!:block
                     '
                     wrapperClass='

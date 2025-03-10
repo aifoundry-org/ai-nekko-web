@@ -39,7 +39,7 @@ export default function Faqs() {
     // const [isModalOpen, setIsModalOpen] = useState(false);
 
     return (
-        <div className='relative flex flex-col h-auto
+        <div className='relative flex flex-col h-auto z-0
             justify-start sm:justify-center md:justify-center lg:justify-center xl:justify-center 2xl:justify-center  
             w-[32.3rem] xs:w-[40rem] sm:w-fit md:w-fit lg:w-fit xl:w-fit 2xl:w-fit
             py-[10rem] sm:py-[5rem] md:py-[5rem] lg:py-[5rem] xl:py-[12rem] 2xl:py-[10rem] 
