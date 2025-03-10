@@ -54,7 +54,7 @@ export default function Main() {
     }, []);
 
     return (
-        <div className='relative w-full h-auto flex justify-center'>
+        <div className='relative w-full h-auto flex justify-center bg-sand'>
             <div className='relative flex flex-col h-full border-2 border-black
                 w-full xs:w-[40rem] sm:w-full md:w-full lg:w-full xl:w-full 2xl:w-full
                 my-[11.2rem] sm:my-[16.6rem] md:my-[16.6rem] lg:my-[16.6rem] xl:my-[16.6rem] 2xl:my-[16.6rem]

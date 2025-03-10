@@ -24,6 +24,10 @@
   font-display:auto;font-style:normal;font-weight:900;font-stretch:normal;
 }
 
+html {
+  scroll-behavior: smooth !important;
+}
+
 :root {
   --sand: #F6EFE4;
   --orange: #F9A03F;

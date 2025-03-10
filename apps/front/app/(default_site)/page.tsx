@@ -4,12 +4,11 @@ import AiAsASystem from '@/components/home/aiAsASystem/main'
 import Marquee from '@/components/home/marquee/main'
 import TheTeam from '@/components/home/theTeam/main'
 import Faqs from '@/components/home/faqs/main'
-import Footer from '@/components/home/footer/main'
 
 export default function Page() {
   return (
     <main>
-      <div className='pin-section'>
+      <div className='pin-section bg-black'>
         <Hero />
         <PaperDiscussions />
       </div>
@@ -17,7 +16,6 @@ export default function Page() {
       <Marquee />
       <TheTeam />
       <Faqs />
-      <Footer />
     </main>
   );
 }

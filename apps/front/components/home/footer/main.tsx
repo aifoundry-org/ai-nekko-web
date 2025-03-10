@@ -14,7 +14,7 @@ export default function Footer(){
     const pathname = usePathname();
 
     useGSAP(() => {
-        gsap.to('.sticker', {
+        gsap.to('.footer-sticker', {
             rotation: 360,
             repeat: -1,
             duration: 2.5,
@@ -42,9 +42,9 @@ export default function Footer(){
                             leading-[1.8rem] lg:leading-[2rem] xl:leading-[2rem] 2xl:leading-[2rem] 
                         '>
                             <Link href='https://aifoundry.org'>ai foundry</Link>
-                            <Link href='/'>team</Link>
-                            <Link href='/'>blog</Link>
-                            <Link className='block sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden' href='/'>privacy policy</Link>
+                            <Link href='/#team'>team</Link>
+                            <Link href='/blog'>blog</Link>
+                            <Link className='block sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden' href='/terms-and-conditions'>privacy policy</Link>
                         </div>
                         <div className='relative w-full h-fit uppercase font-bold tracking-wider items-end justify-end
                             mt-[1.4rem] sm:mt-0 md:mt-0 lg:mt-0 xl:mt-0 2xl:mt-0 
@@ -55,9 +55,9 @@ export default function Footer(){
                         '>
                             <Link className='hidden sm:block md:block lg:block xl:block 2xl:block
                                 basis-1/3 sm:basis-auto md:basis-auto lg:basis-auto xl:basis-auto 2xl:basis-auto
-                            ' href='/'>privacy policy</Link>
-                            <Link className='basis-1/2 sm:basis-auto md:basis-auto lg:basis-auto xl:basis-auto 2xl:basis-auto' href='/'>terms of service</Link>
-                            <Link className='basis-1/2 sm:basis-auto md:basis-auto lg:basis-auto xl:basis-auto 2xl:basis-auto' href='/'>cookie policy</Link>
+                            ' href='/terms-and-conditions'>privacy policy</Link>
+                            <Link className='basis-1/2 sm:basis-auto md:basis-auto lg:basis-auto xl:basis-auto 2xl:basis-auto' href='/terms-and-conditions'>terms of service</Link>
+                            <Link className='basis-1/2 sm:basis-auto md:basis-auto lg:basis-auto xl:basis-auto 2xl:basis-auto' href='/terms-and-conditions'>cookie policy</Link>
                             <div className='basis-1/4 justify-end mt-0
                                 flex sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden 
                             '>
@@ -75,11 +75,11 @@ export default function Footer(){
                             xs:leading-[2rem] sm:leading-[2rem] md:leading-[2rem] 2xl:leading-[4rem]
                         '>
                             <Link href='https://aifoundry.org'>ai foundry</Link>
-                            <Link href='/'>team</Link>
-                            <Link href='/'>blog</Link>
-                            <Link href='/'>privacy policy</Link>
-                            <Link href='/'>terms of service</Link>
-                            <Link href='/'>cookie policy</Link>
+                            <Link href='/#team'>team</Link>
+                            <Link href='/blog'>blog</Link>
+                            <Link href='/terms-and-conditions'>privacy policy</Link>
+                            <Link href='/terms-and-conditions'>terms of service</Link>
+                            <Link href='/terms-and-conditions'>cookie policy</Link>
                         </div>
                     </div>
                     <div className='relative w-full h-fit justify-end 
@@ -117,7 +117,7 @@ export default function Footer(){
                         '>
                             © 2024 AI Foundry. All rights reserved.
                         </p>
-                        <div className='sticker absolute 
+                        <div className='footer-sticker absolute 
                             right-[calc(50%-2.1rem)] xs:right-[calc(50%-4.7rem)] sm:right-[calc(50%+2.1rem)] md:right-[calc(50%+5.8rem)] lg:right-[calc(50%-2.5rem)] xl:right-[calc(50%-5rem)] 2xl:right-[calc(50%-4.8rem)] 
                             top-[calc(50%-10rem)] sm:top-[calc(50%-7.5rem)] md:top-[calc(50%-9rem)] lg:top-[calc(50%-8.8rem)] xl:top-[calc(50%-12.2rem)] 2xl:top-[calc(50%-11.8rem)] 
                             w-[4.3rem] sm:w-[5rem] md:w-[5.5rem] lg:w-[7rem] xl:w-[10rem] 2xl:w-[10rem] 
