@@ -1,20 +1,32 @@
- 
+'use client'
+
 import IMGComputer from '@/public/imgs/blog/computer.webp'
 import IMGVerticalText from '@/public/imgs/blog/verticalText.webp'
 import IMGArrows from '@/public/imgs/blog/arrows.webp'
 import IMGError from '@/public/imgs/blog/error.webp'
 import IMGPaper from '@/public/imgs/blog/paper.webp'
 import IMGGraffiti from '@/public/imgs/blog/graffiti.webp'
-import ImageWrapper from '../common/ImageWrapper';
+import ImageWrapper from '@/components/common/ImageWrapper';
+
+import { gsap } from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 export default function Main() {
+    useGSAP(() => {
+        gsap.set('body', {overflowY: 'scroll'})
+        gsap.set('.navbar', {top: '2.4rem'});
+    })
+    
     return (
         <div className='flex flex-col w-full h-full'>
-            <div className='w-full h-[22rem]' />
-            <div className='flex flex-col h-fit mx-auto my-[8rem]
-                w-[121.6rem] sm:w-[54rem] md:w-[72rem] lg:w-[95.6rem] xl:w-[121.6rem] 2xl:w-[130rem] 
+            <div className='flex flex-col h-fit mx-auto 
+                mt-[12rem] sm:mt-[10rem] md:mt-[12rem] lg:mt-[12rem] xl:mt-[15rem] 2xl:mt-[15rem] 
+                mb-[12rem] sm:mb-[8rem] md:mb-[8rem] lg:mb-[8rem] xl:mb-[8rem] 2xl:mb-[8rem] 
+                w-[32.7rem] sm:w-[54rem] md:w-[72rem] lg:w-[95.6rem] xl:w-[121.6rem] 2xl:w-[130rem] 
             '>
-                <div className='flex flex-row w-full text-center relative'>
+                <div className='flex-row w-full text-center relative
+                    hidden sm:flex md:flex lg:flex xl:flex 2xl:flex 
+                '>
                     <div className='relative justify-center flex flex-col basis-3/4 w-fit gap-y-[0.2rem] text-start uppercase font-dharma-gothic-e font-black
                         text-[7.2rem] sm:text-[5.8rem] md:text-[8.8rem] lg:text-[9.8rem] xl:text-[12.8rem] 2xl:text-[12.8rem] 
                         leading-[5.3rem] sm:leading-[4.4rem] md:leading-[6.4rem] lg:leading-[7.4rem] xl:leading-[9.4rem] 2xl:leading-[9.4rem] 
@@ -68,6 +80,35 @@ export default function Main() {
                             <ImageWrapper src={IMGVerticalText.src} alt="Vertical text" />
                         </div>
                     </div>
+                </div>
+                <div className='flex-col w-full text-center relative
+                    flex sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden 
+                '>
+                    <div className='relative justify-center flex flex-col basis-3/4 w-fit gap-y-[0.2rem] text-start uppercase font-dharma-gothic-e font-black text-[7.2rem] leading-[5.3rem]'>
+                        <p className='text-orange'>latest</p>
+                        <p className='text-orange'>news from</p>
+                        <p>the ainekko world</p>
+                        <div className='relative top-0 left-0'>
+                            <div className='absolute w-[9.2rem] top-[calc(50%-19rem)] left-[calc(50%-10.3rem)]'>
+                                <ImageWrapper src={IMGArrows.src} alt="Arrows" />
+                            </div>
+                            <div className='absolute w-[13.6rem] top-[calc(50%-14.5rem)] left-[calc(50%-17.5rem)]'>
+                                <ImageWrapper src={IMGError.src} alt="Error" />
+                            </div>
+                            <div className='absolute w-[5.9rem] top-[calc(50%-17.5rem)] right-[calc(50%-10.8rem)]'>
+                                <ImageWrapper src={IMGGraffiti.src} alt="Graffiti" />
+                            </div>
+                            <div className='absolute w-[12.2rem] bottom-[calc(50%-0.5rem)] left-[calc(50%-12.5rem)]'>
+                                <ImageWrapper src={IMGPaper.src} alt="Paper" />
+                            </div>
+                            <div className='absolute w-[1.6rem] right-0 top-[calc(50%-22.7rem)]'>
+                                <ImageWrapper src={IMGVerticalText.src} alt="Vertical text" />
+                            </div>
+                            <div className='absolute w-[17.9rem] right-[calc(50%-18rem)] top-[calc(50%-5rem)]'>
+                                <ImageWrapper src={IMGComputer.src} alt="Computer" />
+                            </div>
+                        </div>
+                    </div> 
                 </div>
             </div>
         </div>

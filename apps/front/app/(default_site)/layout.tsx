@@ -4,7 +4,7 @@ import Header from '@/components/header/main';
 import Footer from '@/components/home/footer/main';
 
 export const metadata: Metadata = {
-  title: "AI Nekko",
+  title: "Ainekko",
   description: "",
 };
 

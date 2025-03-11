@@ -13,6 +13,11 @@ export interface FiltersOption {
   name: string;
 }
 
+export interface ArticleThumbnailProps {
+    article: StrapiArticle,
+    isFeaturedArticle?: boolean;
+}
+
 export interface ArticlesListProps {
     articles: StrapiData<StrapiArticle[]>;
     searchTerm: string;

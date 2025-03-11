@@ -17,7 +17,7 @@ import IMGNumbersMobile from '@/public/imgs/notFound/numbersMobile.webp'
 import IMGPaperMobile from '@/public/imgs/notFound/paperMobile.webp'
 import IMGPlusesMobile from '@/public/imgs/notFound/plusesMobile.webp'
 
-export default function Content() { 
+export default function NotFoundPage() { 
     return (
         <>
 			<div className='hidden xs:flex xs:relative xs:w-full xs:h-full xs:flex-col'>

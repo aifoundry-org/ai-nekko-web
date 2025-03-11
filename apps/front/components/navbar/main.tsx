@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { redirect } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 
 import IMGAiNekkoLogo from '@/public/imgs/navbar/logo.webp'
 import IMGAiNekkoLogoMobile from '@/public/imgs/navbar/logoMobile.webp'
@@ -18,6 +18,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function NavBar() {
+    const path = usePathname();
+    const hiddenAnnouncement = ['blog', 'terms-of-service', 'privacy-policy', 'cookie-policy'].some(el => path.includes(el) ? true : false)
+
     useGSAP(() => {
         ScrollTrigger.create({
             start: 'top+=1px top',
@@ -29,7 +32,7 @@ export default function NavBar() {
                     position: 'absolute',
                     backgroundColor: 'transparent',
                     width: '90vw',
-                    top: '9.4rem',
+                    top: hiddenAnnouncement ? '2.4rem': '9.4rem',
                     marginLeft: '5vw',
                     marginRight: '5vw',
                 },{
@@ -103,7 +106,7 @@ export default function NavBar() {
                     position: 'absolute',
                     backgroundColor: 'transparent',
                     width: '90vw',
-                    top: '9.4rem',
+                    top: hiddenAnnouncement ? '2.4rem': '9.4rem',
                     marginLeft: '5vw',
                     marginRight: '5vw',
                 })
@@ -164,7 +167,7 @@ export default function NavBar() {
                     backgroundColor: 'transparent',
                     width: '32.7rem',
                     height: '4rem',
-                    top: '9.4rem',
+                    top: hiddenAnnouncement ? '2.4rem': '9.4rem',
                     marginLeft: '2.4rem',
                     marginRight: '2.4rem',
                     paddingLeft: '0',
@@ -231,7 +234,7 @@ export default function NavBar() {
                     backgroundColor: 'transparent',
                     width: '32.7rem',
                     height: '4rem',
-                    top: '9.4rem',
+                    top: hiddenAnnouncement ? '2.4rem': '9.4rem',
                     marginLeft: '2.4rem',
                     marginRight: '2.4rem',  
                     paddingLeft: '0',
@@ -287,9 +290,9 @@ export default function NavBar() {
 
     return (
         <>
-            <div className='navbar z-[1] absolute bg-transparent w-[90vw] top-[9.4rem] mx-[5vw] items-center bg-sand
+            <div className={`navbar z-[1] absolute bg-transparent w-[90vw] ${hiddenAnnouncement ? 'top-[2.4rem]': 'top-[9.4rem]'} mx-[5vw] items-center bg-sand
                 hidden xs:flex sm:flex md:flex lg:flex xl:flex 2xl:flex 
-            '>
+            `}>
                 <nav className='relative w-full flex flex-col'>
                     <div className='flex flex-row items-center'>
                         <div className='navbar-links
@@ -298,25 +301,25 @@ export default function NavBar() {
                             text-[2rem] lg:text-[2rem] xl:text-[2rem] 2xl:text-[4rem]
                             md:w-full sm:w-full lg:w-full xl:w-full 2xl:w-full justify-start
                         '>
-                            <Link href="https://aifoundry.org" target="_blank" className="uppercase relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300">
+                            <div onClick={() => window.open("https://aifoundry.org")} className="uppercase relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300">
                                 AI Foundry
-                            </Link>
-                            <Link href="/#team" className="navbar-team-link uppercase relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300">
+                            </div>
+                            <div onClick={() => window.location.href="/#team"} className="navbar-team-link uppercase relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300">
                                 Team
-                            </Link>
-                            <Link href="/blog" className="uppercase relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300">
+                            </div>
+                            <div onClick={() => window.location.href="/blog"} className="uppercase relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300">
                                 Blog
-                            </Link>
+                            </div>
                         </div>
                         <div className="flex justify-center items-center relative
                             basis-0 md:basis-1/3 lg:basis-1/3 xl:basis-1/3 2xl:basis-1/3 
                         ">
                             <div className='hidden sm:block lg:block xl:block 2xl:block'>
                                 <div className='logoMobile hidden w-[3.265vw]'>
-                                    <ImageWrapper onClick={() => redirect('/')} style={{height: '100%'}} src={IMGAiNekkoLogoMobile.src} alt='AINekko logo mobile' />
+                                    <ImageWrapper onClick={() => window.location.href= '/'} style={{height: '100%'}} src={IMGAiNekkoLogoMobile.src} alt='AINekko logo mobile' />
                                 </div>
                                 <div className='logo w-[15.14vw]'>
-                                    <ImageWrapper onClick={() => redirect('/')} style={{height: '100%'}} src={IMGAiNekkoLogo.src} alt='AINekko logo' />
+                                    <ImageWrapper onClick={() => window.location.href= '/'} style={{height: '100%'}} src={IMGAiNekkoLogo.src} alt='AINekko logo' />
                                 </div>
                             </div>
                         </div>
@@ -328,16 +331,16 @@ export default function NavBar() {
                     </div>
                 </nav>
             </div>
-            <div className='navbar-mobile z-[1] absolute bg-transparent w-[32.7rem] top-[9.4rem] mx-[2.4rem] items-center bg-sand
+            <div className={`navbar-mobile z-[1] absolute bg-transparent w-[32.7rem] ${hiddenAnnouncement ? 'top-[2.4rem]': 'top-[9.4rem]'} mx-[2.4rem] items-center bg-sand
                 flex xs:hidden sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden
-            '>
+            `}>
                 <nav className='flex flex-row justify-between items-center w-full'>
                     <div className='w-[15.4rem]'>
                         <div className='logo w-[15.4rem] justify-start'>
-                            <ImageWrapper onClick={() => redirect('/')} src={IMGAiNekkoLogo.src} alt='AINekko logo' />
+                            <ImageWrapper onClick={() => window.location.href= '/'} src={IMGAiNekkoLogo.src} alt='AINekko logo' />
                         </div>
                         <div className='logoMobile hidden w-[4.5rem]'>
-                            <ImageWrapper onClick={() => redirect('/')} src={IMGAiNekkoLogoMobile.src} alt='AINekko logo mobile' />
+                            <ImageWrapper onClick={() => window.location.href= '/'} src={IMGAiNekkoLogoMobile.src} alt='AINekko logo mobile' />
                         </div>
                     </div>
                     <div className='w-[2.4rem] justify-end'>
@@ -360,44 +363,35 @@ export default function NavBar() {
                         </div>
                     </div>
                     <div className="flex flex-col w-full my-[10.667vw] xs:my-[4vw] font-dharma-gothic-e font-black text-[10.667vw] xs:text-[6.5vw] leading-[8.8vw] gap-[8.8vw] xs:gap-0">
-                        <Link className="uppercase" onClick={closeMenu} href="https://aifoundry.org" target="_blank">
+                        <div onClick={() => {closeMenu(); window.open("https://aifoundry.org")}} className="uppercase">
                             ai foundry
-                        </Link>
-                        <Link className="uppercase navbar-team-link" onClick={closeMenu} href="/#team">
+                        </div>
+                        <div onClick={() => {closeMenu(); window.location.href="/#team"}} className="uppercase navbar-team-link">
                             team
-                        </Link>
-                        <Link className="uppercase" onClick={closeMenu} href="/blog">
+                        </div>
+                        <div onClick={() => {closeMenu(); window.location.href="/blog"}} className="uppercase">
                             blog
-                        </Link>
+                        </div>
                     </div>
                     <div className="flex flex-col w-full mb-[10.667vw] xs:mb-[5vw] font-dharma-gothic-e font-bold text-[4.8vw] xs:text-[4vw] leading-[4.8vw] gap-[4.8vw] xs:gap-[2vw]">
-                        <Link className="uppercase" onClick={() => {
-                            window.scrollTo(0, 0);
-                            closeMenu()}
-                        } href="/privacy-policy">
+                        <div onClick={() => {closeMenu(); window.location.href="/privacy-policy"}} className="uppercase">
                             privacy policy
-                        </Link>
-                        <Link className="uppercase" onClick={() => {
-                            window.scrollTo(0, 0);
-                            closeMenu()}
-                        } href="/terms-of-service">
+                        </div>
+                        <div onClick={() => {closeMenu(); window.location.href="/terms-of-service"}} className="uppercase">
                             terms of service
-                        </Link>
-                        <Link className="uppercase" onClick={() => {
-                            window.scrollTo(0, 0);
-                            closeMenu()}
-                        } href="/cookie-policy">
+                        </div>
+                        <div onClick={() => {closeMenu(); window.location.href="/cookie-policy"}} className="uppercase">
                             cookie policy
-                        </Link>
+                        </div>
                     </div>
                     <div className='flex w-full justify-start'>
                         <Button target='_blank' as={Link} href='/' variant='primary' content='Contact us' />
                     </div>
                     <div className='flex flex-row gap-[8.55vw] xs:gap-[2vw] mt-[8.27vw]'>
                         <div className='w-[2.4rem] h-[2.4rem]'>
-                            <Link target="_blank" href='https://www.linkedin.com/company/nekko-ai/'>
+                            <div onClick={() => window.open('https://www.linkedin.com/company/nekko-ai/')}>
                                 <ImageWrapper className='dark:invert' src={SVGIconLinkedin.src} alt="Linkedin" />
-                            </Link>
+                            </div>
                         </div>
                     </div>
                     <div className='font-host-grotesk font-normal text-[3.2vw] leading-[4.8vw] mt-[4.8vw]'>
