@@ -54,7 +54,7 @@ export interface SeoMetadata extends Struct.ComponentSchema {
   attributes: {
     description: Schema.Attribute.Text & Schema.Attribute.Required;
     og_image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
-    title: Schema.Attribute.String & Schema.Attribute.Required & Schema.Attribute.DefaultTo<'ai-nekko.litebox.dev'>;
+    title: Schema.Attribute.String & Schema.Attribute.Required & Schema.Attribute.DefaultTo<'ai-foundry.litebox.dev'>;
   };
 }
 

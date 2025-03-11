@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import '../globals.css';
+import Header from '@/components/header/main';
 
 export const metadata: Metadata = {
-  title: 'AI Nekko',
+  title: 'Ainekko',
   description: '',
 };
 
@@ -13,7 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body>{children}</body>
+      <body>
+        <Header hideAnnouncement />
+        {children}
+      </body>
     </html>
   );
 }

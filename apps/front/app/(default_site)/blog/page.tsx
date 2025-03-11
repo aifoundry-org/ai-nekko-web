@@ -17,7 +17,13 @@ export default async function Page({ searchParams }: {
     <main>
       <Main />
       <Suspense>
-        <ArticlesMainContainer articles={articles} featuredArticleId={featuredArticleId} search={search} tags={allTags.data} selectedTags={selectedTags} />
+        <ArticlesMainContainer 
+          articles={articles} 
+          featuredArticleId={featuredArticleId} 
+          search={search} 
+          tags={allTags.data} 
+          selectedTags={selectedTags} 
+        />
       </Suspense>
     </main>
   );

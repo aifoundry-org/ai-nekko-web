@@ -1,11 +1,9 @@
 'use client'
 
-/* eslint-disable */
 import { useState } from 'react';
 import { ArticlesMainContainerProps } from './types';
 import { FiltersOption } from './types';
-// import ArticlesListDesktop from '@/components/blog/desktop/ArticlesList'
-// import ArticlesListMobile from '@/components/blog/mobile/ArticlesList'
+import ArticlesList from '@/components/blog/articlesList'
 
 const getInitTags = (tags: FiltersOption[], selectedTags: string[]) => {
     const formattedTags = tags.map(tag => ({
@@ -24,23 +22,13 @@ export default function ArticlesMainContainer({articles, search, tags, selectedT
     const handleFilterChange = (updatedFilters: FiltersOption[]) => setFiltersOptions(updatedFilters);
 
     return (
-        <>
-            {/* <ArticlesListDesktop
-                articles={articles}
-                searchTerm={searchTerm}
-                onSearchChange={handleSearchChange}
-                filtersOptions={filtersOptions}
-                onFilterChange={handleFilterChange}
-                featuredArticleId={featuredArticleId}
-            />
-            <ArticlesListMobile
-                articles={articles}
-                searchTerm={searchTerm}
-                onSearchChange={handleSearchChange}
-                filtersOptions={filtersOptions}
-                onFilterChange={handleFilterChange}
-                featuredArticleId={0}
-            /> */}
-        </>
+        <ArticlesList
+            articles={articles}
+            searchTerm={searchTerm}
+            onSearchChange={handleSearchChange}
+            filtersOptions={filtersOptions}
+            onFilterChange={handleFilterChange}
+            featuredArticleId={featuredArticleId}
+        />
     )
 }
