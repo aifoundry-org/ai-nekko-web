@@ -25,7 +25,7 @@ export default function Author({author, contentNavigation}: AuthorProps) {
             '>
                 <div className='flex flex-wrap flex-row font-host-grotesk items-center gap-[2rem] text-[#222222]'>
                     {profileImage && <div className='flex'>
-                        <div className='w-[6.4rem] h-[6.4rem]'>
+                        <div className='w-[6.4rem] h-[6.4rem] overflow-hidden'>
                             <ImageWrapper src={getStrapiMediaUrl(profileImage.url)} alt="Profile image" />
                         </div>
                     </div>}
@@ -34,7 +34,7 @@ export default function Author({author, contentNavigation}: AuthorProps) {
                         <p className='font-normal text-[1.6rem] leading-[2.1rem['>{role}</p>
                     </div>
                 </div>
-                <p className='font-host-grotesk font-normal text-[1.4rem] leading-[2.1rem] mt-10 text-[#222222]'>{description}</p>
+                <p className='flex font-host-grotesk font-normal text-[1.4rem] leading-[2.1rem] mt-10 text-[#222222]'>{description}</p>
                 <div className='flex flex-row gap-[2.4rem] mt-8 pb-[4rem] border-black 
                     border-b-0 lg:border-b-2 xl:border-b-2 2xl:border-b-2
                 '>
