@@ -1,16 +1,16 @@
-import ArticleTag from './articleTag';
+import ArticleTag from '@/components/blog/article/articleTag';
 import { StrapiTag } from '@/libs/litebox-lib/types/strapi/strapiBlog';
 import Button from '@/libs/litebox-lib/ui/Button/Button';
 import Link from 'next/link';
 import getStrapiMediaUrl from '@/utils/getStrapiMediaUrl';
-import ImageWrapper from '../common/ImageWrapper';
-import { ArticleThumbnailProps } from './types';
+import ImageWrapper from '@/components/common/ImageWrapper';
+import { ArticleBoxProps } from '@/components/blog/common/types';
 
-export default function ArticleThumbnail({article, isFeaturedArticle = false}: ArticleThumbnailProps) {
+export default function ArticleBox({article, isFeaturedArticle = false}: ArticleBoxProps) {
     const { id, title, date, authors, coverImage, slug, tags } = article;
 
     return (
-        <div key={id} className={`flex flex-col w-full h-full border-2 border-black rounded-[0.4rem] ${isFeaturedArticle ? 'sm:col-start-1 sm:col-end-3' : ''}`}>
+        <div onClick={() => window.location.href = `/blog/${slug}`} key={id} className={`flex flex-col w-full h-full cursor-pointer border-2 border-black rounded-[0.4rem] ${isFeaturedArticle ? 'sm:col-start-1 sm:col-end-3' : ''}`}>
             <div className='flex flex-col flex-1 w-full h-full border-b-2 border-black '>
                 {coverImage ? 
                     <div className='flex w-full h-[21.4rem]'>
@@ -21,7 +21,7 @@ export default function ArticleThumbnail({article, isFeaturedArticle = false}: A
                     '>No cover image</div>
                 }
             </div>
-            <div className='flex flex-col flex-grow-0 w-full h-full 
+            <div className='flex flex-col flex-grow-0 w-full h-full bg-sand
                 p-[2.4rem] sm:p-[3.2rem] md:p-[3.2rem] lg:p-[3.2rem] xl:p-[3.2rem] 2xl:p-[3.2rem] 
             '>
                 <div className='max-w-[100%] flex flex-row justify-start items-center flex-wrap overflow-x-auto gap-[0.8rem]'>

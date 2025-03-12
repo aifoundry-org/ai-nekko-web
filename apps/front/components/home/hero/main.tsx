@@ -180,7 +180,7 @@ export default function CatAnim() {
                     <Image ref={imgLightCatRef} className='absolute top-0 left-0' width={662} height={597} src={IMGCatAnimLight.src} alt='Cat Animation Light Color' />
                     <Image ref={imgDarkCatRef} className='absolute top-0 left-0 w-full h-full' style={{clipPath: 'inset(100% 0% 0% 0%)'}} width={662} height={597} src={IMGCatAnim.src} alt='Cat Animation Dark Color' />
                     <div className='relative left-1/2 transform -translate-x-1/2 font-dharma-gothic-e flex font-black justify-center items-center
-                    -bottom-[7rem] md:-bottom-[11.5rem] lg:-bottom-[11.5rem] xl:-bottom-[11.5rem] 2xl:-bottom-[11.5rem] 
+                        -bottom-[7rem] md:-bottom-[11.5rem] lg:-bottom-[11.5rem] xl:-bottom-[11.5rem] 2xl:-bottom-[11.5rem] 
                     '>
                         <p ref={percentParagraphRef} className='
                             text-[6.4rem] md:text-[12.8rem] lg:text-[12.8rem] xl:text-[12.8rem] 2xl:text-[12.8rem]

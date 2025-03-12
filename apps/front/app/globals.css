@@ -132,3 +132,7 @@ ol {
 .card .back {
   transform: rotateY(180deg);
 }
+
+.blogSocialIcon:hover{
+  filter: saturate(100%) invert(65%) sepia(87%) saturate(6747%) hue-rotate(-8deg) brightness(250%) contrast(101%);
+}

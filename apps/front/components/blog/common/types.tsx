@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { StrapiData } from '@/libs/litebox-lib/types/strapi/strapi';
 import { StrapiArticle } from '@/libs/litebox-lib/types/strapi/strapiBlog';
 
@@ -8,12 +7,12 @@ export type CheckOption = {
 };
 
 export interface FiltersOption {
-  id: string;
-  isChecked?: boolean;
-  name: string;
+    id: string;
+    isChecked?: boolean;
+    name: string;
 }
 
-export interface ArticleThumbnailProps {
+export interface ArticleBoxProps {
     article: StrapiArticle,
     isFeaturedArticle?: boolean;
 }
@@ -23,7 +22,7 @@ export interface ArticlesListProps {
     searchTerm: string;
     onSearchChange: (newSearch: string) => void;
     filtersOptions: FiltersOption[];
-    onFilterChange: (updatedFilters: any[]) => void;
+    onFilterChange: (updatedFilters: FiltersOption[]) => void;
     featuredArticleId: number;
 }
 
@@ -32,7 +31,6 @@ export interface ArticlesContainerProps {
     tags: string[];
     initArticles: StrapiData<StrapiArticle[]>;
     featuredArticleId?: number;
-    ArticleComponent: any;
 }
 
 export interface ArticlesMainContainerProps {

@@ -1,14 +1,15 @@
 import { useState, useEffect, useMemo } from 'react';
 import { getArticles } from '@/backend/blog/actions';
-import { ArticlesContainerProps } from './types';
+import { ArticlesContainerProps } from '@/components/blog/common/types';
 import Spinner from '@/libs/litebox-lib/ui/Spinner/Spinner';
+import Button from '@/libs/litebox-lib/ui/Button/Button';
+import ArticleBox from './articleBox';
 
 const ArticlesContainer = ({
   search,
   tags,
   initArticles,
-  featuredArticleId,
-  ArticleComponent
+  featuredArticleId
 }: ArticlesContainerProps) => {
     const [loading, setLoading] = useState(false);
     const [articles, setArticles] = useState(initArticles);
@@ -51,12 +52,20 @@ const ArticlesContainer = ({
     return (
         loading ? 
             <Spinner /> : 
-            <ArticleComponent 
-                sortedArticles={sortedArticles}
-                hasMoreArticles={hasMoreArticles}
-                showMoreArticles={showMoreArticles}
-                featuredArticleId={featuredArticleId} 
-            />
+            <div>
+                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-[2.4rem] gap-y-20'>
+                    {sortedArticles.data.map(article => {
+                        const isFeaturedArticle = article.id === featuredArticleId;
+    
+                        return ArticleBox({article, isFeaturedArticle})
+                    })}
+                </div>
+                {hasMoreArticles && (
+                    <div className='flex flex-row justify-center my-32'>
+                        <Button onClick={showMoreArticles} variant='secondary' content='Load more articles' />
+                    </div>
+                )}
+            </div>
     );
 };
 

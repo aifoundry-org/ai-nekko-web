@@ -1,4 +1,4 @@
-import ArticleTag from './articleTag';
+import ArticleTag from '@/components/blog/article/articleTag';
 import { FiltersOption, CheckOption } from './types';
 import { StrapiTag } from '@/libs/litebox-lib/types/strapi/strapiBlog';
 

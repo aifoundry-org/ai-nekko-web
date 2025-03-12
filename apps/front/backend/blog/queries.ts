@@ -1,5 +1,5 @@
 import qs from 'qs';
-import { PAGINATION_LIMIT } from '@/components/blog/types';
+import { PAGINATION_LIMIT } from '@/components/blog/common/types';
 
 export const getArticlesQueryParams = (search?: string, tags?: string[], offset?: number, limit?: number) => {
     const config = {
