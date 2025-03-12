@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import "../globals.css";
+import Header from '@/components/header/main';
+import Footer from '@/components/home/footer/main';
 
 export const metadata: Metadata = {
-  title: "AI Nekko",
+  title: "Ainekko",
   description: "",
 };
 
@@ -13,8 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className='overflow-hidden'>
+      <body>
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

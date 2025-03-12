@@ -9,7 +9,7 @@
     "title": {
       "type": "string",
       "required": true,
-      "default": "ai-nekko.litebox.dev"
+      "default": "ai-foundry.litebox.dev"
     },
     "description": {
       "type": "text",

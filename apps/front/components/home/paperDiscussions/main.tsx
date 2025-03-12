@@ -11,6 +11,8 @@ import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const slides = [{
     id: 1,
     content: "ai paper discussions"
@@ -21,8 +23,6 @@ const slides = [{
     id: 3,
     content: "open source models & projects"
 }]
-
-gsap.registerPlugin(ScrollTrigger);
 
 export default function Main() {
     useGSAP(() => {
@@ -54,7 +54,7 @@ export default function Main() {
     }, []);
 
     return (
-        <div className='relative w-full h-auto flex justify-center'>
+        <div className='relative w-full h-auto flex justify-center bg-sand'>
             <div className='relative flex flex-col h-full border-2 border-black
                 w-full xs:w-[40rem] sm:w-full md:w-full lg:w-full xl:w-full 2xl:w-full
                 my-[11.2rem] sm:my-[16.6rem] md:my-[16.6rem] lg:my-[16.6rem] xl:my-[16.6rem] 2xl:my-[16.6rem]
@@ -62,8 +62,8 @@ export default function Main() {
                 p-[2.4rem] sm:p-[5.6rem] md:p-[5.6rem] lg:p-[5.6rem] xl:p-[5.6rem] 2xl:p-[5.6rem]
             '>
                 <p className='font-host-grotesk font-bold
-                    text-[1.6rem] xs:text-[2rem] sm:text-[2.5rem] md:text-[2.5rem] lg:text-[2.5rem] xl:text-[2rem] 2xl:text-[2rem]
-                    leading-[2.4rem] sm:leading-[2.5rem] md:leading-[3rem] lg:leading-[3rem] xl:leading-[3rem] 2xl:leading-[3rem]
+                    text-[1.6rem] xs:text-[2rem] sm:text-[2.5rem] md:text-[2.5rem] lg:text-[2.5rem] xl:text-[2rem] 2xl:text-[4.5rem]
+                    leading-[2.4rem] sm:leading-[2.5rem] md:leading-[3rem] lg:leading-[3rem] xl:leading-[3rem] 2xl:leading-[5rem]
                     mb-[2.4rem] sm:mb-[4.8rem] md:mb-[2.5rem] lg:mb-[2.5rem] xl:mb-[2.5rem] 2xl:mb-[2.5rem]
                 '>
                     Freedom of choice in AI requires an interoperable ecosystem.<br className='hidden md:block lg:block xl:block 2xl:block' />Be part of the open, composable community for AI.

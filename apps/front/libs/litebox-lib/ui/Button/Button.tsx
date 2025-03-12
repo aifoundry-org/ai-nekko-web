@@ -16,7 +16,6 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   svg?: string;
   content?: string;
   noShadow?: boolean;
-  svgProps?: string;
   target?: string;
 }
 
@@ -46,7 +45,7 @@ const svgVariants : {[key: string]: FC<SVGProps<SVGSVGElement>>} = {
  * @param svg - Optionally adding a predetermined svg, available svg: 'plus', 'discord', 'github', 'arrow-up-right'
  * @param content - Content of the button
  */
-const Button: FC<ButtonProps> = ({as: Component = 'button', href = '', variant = 'primary', className = '', svg = '', content = '', noShadow = false, svgProps = '', target = '', ...props }) => {
+const Button: FC<ButtonProps> = ({as: Component = 'button', href = '', variant = 'primary', className = '', svg = '', content = '', noShadow = false, target = '', ...props }) => {
   // #F6EFE4 = sand color
   const essentialStyles = `flex flex-row items-center align-middle justify-between ${noShadow ? 'shadow-[4px_4px_0_0_#F6EFE4]' : 'shadow-[4px_4px_0_0_black]'} w-fit h-fit text-[black] font-bold uppercase border border-2 whitespace-nowrap rounded-md transition-all ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#22D3EE] disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer select-none`;
   let styles = `${essentialStyles} ${btnVariants[variant]} ${className}`;
@@ -73,7 +72,7 @@ const Button: FC<ButtonProps> = ({as: Component = 'button', href = '', variant =
     SVGIcon = svgVariants[svg];
   }
 
-  const labelStyle = `flex text-[1.8rem] xs:text-[1.8rem] sm:text-[2rem] md:text-[2rem] lg:text-[2rem] xl:text-[2rem] 2xl:text-[2rem] items-center justify-center`
+  const labelStyle = `flex text-[1.8rem] xs:text-[1.8rem] sm:text-[2rem] md:text-[2rem] lg:text-[2rem] xl:text-[2rem] 2xl:text-[4rem] items-center justify-center`
 
   return (
     <Component {...componentProps}>

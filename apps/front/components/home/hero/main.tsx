@@ -44,7 +44,7 @@ export default function CatAnim() {
     }, [firstAnimComplete, skipAnim])
 
     useGSAP(() => {
-        if(skipAnim || window.scrollY > 0){
+        if(skipAnim || window.scrollY > 10){
             gsap.set(['.trigger-1', '.trigger-2', '.trigger-3'],{
                 display: 'none'
             })
@@ -78,12 +78,19 @@ export default function CatAnim() {
             })
             gsap.set('body', {overflowY: 'scroll'})
             gsap.set('.scroller-container', {overflowY: 'hidden'})
+            gsap.set('.navbar-team-link', {pointerEvents: 'auto'})
 
             return;
         }
 
-        const tl = gsap.timeline({onComplete: () => {setFirstAnimComplete(true)}});
+        const tl = gsap.timeline({paused:true, onComplete: () => {setFirstAnimComplete(true)}});
         const mm = gsap.matchMedia();
+
+        tl.set('.navbar', {top: '9.4rem'});
+        tl.set('.navbar-team-link', {pointerEvents: 'none'})
+
+        // Remove scroll from body
+        tl.set('body', {overflowY: 'hidden'})
 
         // Remove scroll from main container
         tl.set(scrollerContainerRef.current, {overflowY: 'hidden'})
@@ -159,19 +166,21 @@ export default function CatAnim() {
                 gsap.set('.main-container', { pointerEvents: 'auto'})
             }
         })
+
+        tl.play();
     });
     
     return (
-        <div className='main-container relative w-full h-screen overflow-hidden translate-x-0 translate-y-0'>
-            <div className='absolute w-full h-full flex justify-center items-center'>
-                <div className='anim-container absolute flex opacity-0 
+        <div className='main-container relative w-full h-screen overflow-hidden translate-x-0 translate-y-0 rounded-t-[2rem] bg-sand'>
+            <div className='absolute w-full h-full flex justify-center items-center rounded-t-[2rem]'>
+                <div className='anim-container absolute flex opacity-0
                     w-[5.6rem] md:w-[7.5rem] lg:w-[7.5rem] xl:w-[7.5rem] 2xl:w-[7.5rem] 
                     h-[5.1rem] md:h-[6.9rem] lg:h-[6.9rem] xl:h-[6.9rem] 2xl:h-[6.9rem] 
                 '>
                     <Image ref={imgLightCatRef} className='absolute top-0 left-0' width={662} height={597} src={IMGCatAnimLight.src} alt='Cat Animation Light Color' />
                     <Image ref={imgDarkCatRef} className='absolute top-0 left-0 w-full h-full' style={{clipPath: 'inset(100% 0% 0% 0%)'}} width={662} height={597} src={IMGCatAnim.src} alt='Cat Animation Dark Color' />
                     <div className='relative left-1/2 transform -translate-x-1/2 font-dharma-gothic-e flex font-black justify-center items-center
-                    -bottom-[7rem] md:-bottom-[11.5rem] lg:-bottom-[11.5rem] xl:-bottom-[11.5rem] 2xl:-bottom-[11.5rem] 
+                        -bottom-[7rem] md:-bottom-[11.5rem] lg:-bottom-[11.5rem] xl:-bottom-[11.5rem] 2xl:-bottom-[11.5rem] 
                     '>
                         <p ref={percentParagraphRef} className='
                             text-[6.4rem] md:text-[12.8rem] lg:text-[12.8rem] xl:text-[12.8rem] 2xl:text-[12.8rem]
