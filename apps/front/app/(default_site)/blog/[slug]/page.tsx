@@ -1,6 +1,5 @@
 import { Suspense } from 'react';
-// import MainMobile from '@/components/blogSlug/mobile/Main';
-// import MainDesktop from '@/components/blogSlug/desktop/Main';
+import Main from '@/components/blog/article/article'
 import { getArticle } from '@/backend/blog/actions';
 
 interface PageProps {
@@ -17,8 +16,7 @@ export default async function Page({ params }: PageProps) {
     return (
         <main>
             <Suspense>
-                {/* <MainDesktop article={article} />
-                <MainMobile article={article} /> */}
+                <Main article={article} />
             </Suspense>
         </main>
     );

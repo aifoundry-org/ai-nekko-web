@@ -1,4 +1,4 @@
-'use client'
+// 'use client'
 
 import Accordion from '@/libs/litebox-lib/ui/Accordion/Accordion'
 

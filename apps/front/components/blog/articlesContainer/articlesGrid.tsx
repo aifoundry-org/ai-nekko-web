@@ -1,30 +1,41 @@
 'use client'
 
-import { useMemo, useEffect } from 'react'
-import { useRouter, usePathname, useSearchParams } from 'next/navigation';
-import { useQueryString } from '@/hooks/useQueryString';
-import useDebounce from '@/hooks/useDebounce';
-import ArticlesContainer from './articlesContainer';
-import Article from './article';
-import Filters from './filters';
-import SearchInput from './searchInput';
-import { CheckOption, ArticlesListProps } from './types';
-import IMGComputer from '@/public/imgs/blog/computer.webp'
-import ImageWrapper from '../common/ImageWrapper';
+import { useEffect, useMemo, useState } from 'react';
+import { usePathname, useSearchParams, useRouter } from 'next/navigation';
 
-export default function ArticlesList({
-    articles,
-    searchTerm,
-    onSearchChange,
-    filtersOptions,
-    onFilterChange,
-    featuredArticleId
-  }: ArticlesListProps) {
-    const debouncedSearchTerm = useDebounce(searchTerm, 300);
-    const pathname = usePathname();
+import useDebounce from '@/hooks/useDebounce';
+import { useQueryString } from '@/hooks/useQueryString';
+
+import { ArticlesMainContainerProps, CheckOption } from '@/components/blog/common/types';
+import { FiltersOption } from '@/components/blog/common/types';
+
+import ImageWrapper from '@/components/common/ImageWrapper';
+import IMGComputer from '@/public/imgs/blog/computer.webp'
+
+import ArticlesContainer from '@/components/blog/articlesContainer/articlesContainer';
+import Filters from '@/components/blog/common/filters';
+import SearchInput from '@/components/blog/common/searchInput';
+
+const getInitTags = (tags: FiltersOption[], selectedTags: string[]) => {
+    const formattedTags = tags.map(tag => ({
+        ...tag,
+        isChecked: selectedTags.includes(tag.id.toString()),
+    }));
+  
+    return formattedTags;
+};
+
+export default function ArticlesGrid({articles, search, tags, selectedTags, featuredArticleId}: ArticlesMainContainerProps) {
     const { replace } = useRouter();
     const { createQueryString } = useQueryString();
     const searchParams = useSearchParams();
+    const pathname = usePathname();
+
+    const [searchTerm, setSearchTerm] = useState<string>(search);
+    const [filtersOptions, setFiltersOptions] = useState<FiltersOption[]>(getInitTags(tags, selectedTags));
+    const handleSearchChange = (newSearch: string) => setSearchTerm(newSearch);
+    const handleFilterChange = (updatedFilters: FiltersOption[]) => setFiltersOptions(updatedFilters);
+    const debouncedSearchTerm = useDebounce(searchTerm, 300);
     const tagsParams = searchParams.get('tags');
     const hasMoreArticles = useMemo(() => articles.data.length > 0, [articles]);
 
@@ -42,7 +53,7 @@ export default function ArticlesList({
             isChecked: option.id === updatedOption.id ? updatedOption.isChecked : option.isChecked,
         }));
 
-        onFilterChange(updatedFilters);
+        handleFilterChange(updatedFilters);
 
         const checkedFilters = updatedFilters.filter(option => option.isChecked).map(option => option.id);
         replace(`${pathname}?${createQueryString('tags', checkedFilters)}`, { scroll: false });
@@ -59,7 +70,7 @@ export default function ArticlesList({
                 <SearchInput className='
                     mt-[2.4rem] lg:mt-0 xl:mt-0 2xl:mt-0
                     w-full lg:w-[32.7rem] xl:w-[32.7rem] 2xl:w-[32.7rem] 
-                ' inputClassName='h-[4.1rem] lg:h-auto xl:h-auto 2xl:h-auto text-[1.6rem]' value={searchTerm} onChange={(e) => onSearchChange(e.target.value)} />
+                ' inputClassName='h-[4.1rem] lg:h-auto xl:h-auto 2xl:h-auto text-[1.6rem]' value={searchTerm} onChange={(e) => handleSearchChange(e.target.value)} />
             </div>
             <div>
                 {!hasMoreArticles && 
@@ -81,9 +92,8 @@ export default function ArticlesList({
                     tags={filtersOptions.filter(option => option.isChecked).map(option => option.id)}
                     initArticles={articles}
                     featuredArticleId={featuredArticleId}
-                    ArticleComponent={Article}
                 />
             </div>
         </div>
-    );
+    )
 }

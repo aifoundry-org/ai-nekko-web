@@ -1,8 +1,6 @@
-import { Suspense } from 'react';
-
-import Main from '@/components/blog/main';
+import Main from '@/components/blog/common/main';
 import { getArticles, getTags, getBlogFeaturedArticle } from '@/backend/blog/actions';
-import ArticlesMainContainer from '@/components/blog/articlesMainContainer';
+import ArticlesGrid from '@/components/blog/articlesContainer/articlesGrid';
 
 export default async function Page({ searchParams }: { 
   searchParams: Promise<{ [key: string]: string | undefined }>
@@ -16,15 +14,13 @@ export default async function Page({ searchParams }: {
   return (
     <main>
       <Main />
-      <Suspense>
-        <ArticlesMainContainer 
-          articles={articles} 
-          featuredArticleId={featuredArticleId} 
-          search={search} 
-          tags={allTags.data} 
-          selectedTags={selectedTags} 
-        />
-      </Suspense>
+      <ArticlesGrid
+        articles={articles} 
+        featuredArticleId={featuredArticleId} 
+        search={search} 
+        tags={allTags.data} 
+        selectedTags={selectedTags} 
+      />
     </main>
   );
 }

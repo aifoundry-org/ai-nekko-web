@@ -11,6 +11,8 @@ import { useGSAP } from '@gsap/react';
 
 export default function Footer(){
     const pathname = usePathname();
+    const urlItems = pathname.split('/');
+    const alternativeBackground = urlItems.length > 2
 
     useGSAP(() => {
         gsap.to('.footer-sticker', {
@@ -20,11 +22,13 @@ export default function Footer(){
             ease: 'none'
         })
     })
+
+    const classMainContainer = `relative w-full flex ${pathname.includes('/blog/') ? (alternativeBackground ? 'bg-orange' : 'bg-sand') : 'bg-none'} overflow-hidden
+        h-[43.3rem] sm:h-[35rem] md:h-[45rem] lg:h-[55rem] xl:h-[60.1rem] 2xl:h-[60.1rem] 
+    `
     
     return (
-        <footer className={`relative w-full flex ${pathname.includes('/blog/') ? 'bg-peach' : 'bg-none'} overflow-hidden
-            h-[43.3rem] sm:h-[35rem] md:h-[45rem] lg:h-[55rem] xl:h-[60.1rem] 2xl:h-[60.1rem] 
-        `}>
+        <footer className={classMainContainer}>
             <div className='relative w-full flex bg-black rounded-t-[2rem] text-sand'>
                 <div className='relative w-full flex flex-col
                     mx-[2.4rem] sm:mx-[4.2rem] md:mx-[6.2rem] lg:mx-[11.2rem] xl:mx-[11.2rem] 2xl:mx-[11.2rem] 
