@@ -366,7 +366,7 @@ export default function NavBar() {
                         <div onClick={() => {closeMenu(); window.open("https://aifoundry.org")}} className="uppercase cursor-pointer">
                             ai foundry
                         </div>
-                        <div onClick={() => {closeMenu(); window.location.href="/#team"}} className="uppercase cursor-pointer navbar-team-link">
+                        <div onClick={() => {closeMenu(); window.location.href="/#team"}} className="uppercase text-[#808080] navbar-team-link pointer-events-none cursor-pointer">
                             team
                         </div>
                         <div onClick={() => {closeMenu(); window.location.href="/blog"}} className="uppercase cursor-pointer">
