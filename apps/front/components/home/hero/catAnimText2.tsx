@@ -123,8 +123,8 @@ export default function CatAnimText2({firstAnimComplete}: {firstAnimComplete?: b
                 <ImageWrapper src={IMGErrorMobile.src} alt='Error Mobile' />
             </div>
             <div className='spray absolute opacity-0 transform -translate-x-1/2
-                w-[6.4rem] sm:w-[7.8rem] md:w-[7.8rem] lg:w-[7.8rem] xl:w-[7.8rem] 2xl:w-[7.8rem]
-                bottom-[calc(50%-29rem)] sm:bottom-[calc(50%-34rem)] md:bottom-[calc(50%-33rem)] lg:bottom-[calc(50%-34rem)] xl:bottom-[calc(50%-34rem)] 2xl:bottom-[calc(50%-34rem)]
+                w-[5.4rem] sm:w-[7.8rem] md:w-[7.8rem] lg:w-[7.8rem] xl:w-[7.8rem] 2xl:w-[7.8rem]
+                bottom-[calc(50%-27rem)] sm:bottom-[calc(50%-34rem)] md:bottom-[calc(50%-33rem)] lg:bottom-[calc(50%-34rem)] xl:bottom-[calc(50%-34rem)] 2xl:bottom-[calc(50%-34rem)]
                 left-1/2
             '>
                 <ImageWrapper src={IMGSpray.src} alt='Spray' />
