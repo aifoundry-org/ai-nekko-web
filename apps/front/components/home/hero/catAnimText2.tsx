@@ -9,7 +9,7 @@ import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function CatAnimText2({firstAnimComplete}: {firstAnimComplete?: boolean}) {
     useGSAP(() => {
@@ -42,8 +42,8 @@ export default function CatAnimText2({firstAnimComplete}: {firstAnimComplete?: b
                 
             ScrollTrigger.create({
                 trigger: '.trigger-2',
-                start: 'top+=30vw center',
-                end: 'bottom-=30vw center',
+                start: () => 'top+=30vw center',
+                end: () => 'bottom-=30vw center',
                 id: 'trigger-2',
                 scroller: '.scroller-container',
                 onEnter: () => {

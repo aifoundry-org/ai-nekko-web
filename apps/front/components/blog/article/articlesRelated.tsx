@@ -17,7 +17,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function RelatedArticles({ articles }: {articles?: StrapiArticle[]}) {
     const refMotoCat = useRef<HTMLDivElement | null>(null)
