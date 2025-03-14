@@ -54,8 +54,8 @@ export default function NavBar() {
                 },{
                     borderWidth: '2px',
                     borderColor: 'black',
-                    paddingTop: '1.6rem',
-                    paddingBottom: '1.6rem',
+                    paddingTop: '1.05rem',
+                    paddingBottom: '1.05rem',
                     paddingLeft: '2.8vw',
                     paddingRight: '2.8vw',
                 })
@@ -114,8 +114,8 @@ export default function NavBar() {
                 gsap.fromTo('.navbar nav', {
                     borderWidth: '2px',
                     borderColor: 'black',
-                    paddingTop: '1.6rem',
-                    paddingBottom: '1.6rem',
+                    paddingTop: '1.05rem',
+                    paddingBottom: '1.05rem',
                     paddingLeft: '2.8vw',
                     paddingRight: '2.8vw',
                 },{
