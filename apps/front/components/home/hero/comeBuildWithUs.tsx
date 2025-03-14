@@ -12,7 +12,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Button from '@/libs/litebox-lib/ui/Button/Button'
 import Link from 'next/link'
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function ComeBuildWithUs({firstAnimComplete}: {firstAnimComplete?: boolean}) {
     useGSAP(() => {
@@ -67,8 +67,8 @@ export default function ComeBuildWithUs({firstAnimComplete}: {firstAnimComplete?
                 
             ScrollTrigger.create({
                 trigger: '.trigger-4',
-                start: 'top+=30vw center',
-                end: 'top+=30vw center',
+                start: () => 'top+=30vw center',
+                end: () => 'top+=30vw center',
                 id: 'trigger-4',
                 scroller: '.scroller-container',
                 onEnter: () => {
@@ -103,7 +103,7 @@ export default function ComeBuildWithUs({firstAnimComplete}: {firstAnimComplete?
     }, [firstAnimComplete])
 
     return (
-        <div className='come-build-with-us-container fixed top-0 pointer-events-none flex flex-col w-full h-full font-dharma-gothic-e font-black uppercase justify-center items-center text-center'>
+        <div className='come-build-with-us-container fixed top-0 pointer-events-none flex flex-col w-full h-full font-dharma-gothic-e font-black uppercase justify-center items-center text-center rounded-t-[2rem]'>
             <div className='punchCard absolute z-[0] opacity-0
                 w-[16.1rem] sm:w-[17.4rem] sm:md:w-[35.4rem] md:w-[40.4rem] lg:w-[66.5rem] lg:xl:w-[66.5rem] xl:2xl:w-[66.5rem]    
                 top-[calc(50%-5.5rem)] sm:top-[calc(50%-5rem)] md:top-[calc(50%-7.6rem)] lg:top-[calc(50%-12.5rem)] xl:top-[calc(50%-12.5rem)] 2xl:top-[calc(50%-12.5rem)]

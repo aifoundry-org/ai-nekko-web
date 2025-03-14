@@ -12,8 +12,8 @@ export default function Card({name, role, profileImgUrl, linkedinUrl, className}
             h-[28.9rem] sm:h-[20.3rem] md:h-[23.3rem] lg:h-[25.4rem] xl:h-[33.3rem] 2xl:h-[40.3rem] 
             ${className}
         `}>
-            <div className={`card relative cursor-pointer hover:opacity-100 ${flip ? 'flip' : ''}`}>
-                <div className='front w-full left-0 absolute
+            <div className={`card relative z-[2] cursor-pointer hover:opacity-100 ${flip ? 'flip' : ''}`}>
+                <div className='front w-full left-0 absolute z-[1]
                     h-[28.6rem] sm:h-[20rem] md:h-[23rem] lg:h-[25rem] xl:h-[32.9rem] 2xl:h-[40rem]
                 '>
                     <ImageWrapper style={{height: '100%', objectFit: 'cover'}} src={profileImgUrl} alt={`${name} profile image`} />

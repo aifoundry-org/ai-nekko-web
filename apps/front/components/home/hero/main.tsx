@@ -14,34 +14,15 @@ import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef, useState } from 'react';
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-export default function CatAnim() {
-    const scrollerContainerRef = useRef<HTMLDivElement | null>(null);
+export default function Hero() {
     const percentParagraphRef = useRef(null);
     const [percent, setpercent] = useState(0);
-    const imgDarkCatRef = useRef(null);
-    const imgLightCatRef = useRef(null);
     const [firstAnimComplete, setFirstAnimComplete] = useState(false);
 
     // eslint-disable-next-line prefer-const
     let skipAnim = false;
-
-    useGSAP(() => {
-        if(!skipAnim && firstAnimComplete){
-            if (!scrollerContainerRef.current) return;
-        
-            // Recalculate the markers for the scroll triggers based on scrollerContainerRef
-            ScrollTrigger.scrollerProxy(scrollerContainerRef.current, {
-                scrollTop(value) {
-                    return arguments.length ? scrollerContainerRef.current?.scrollTo({ top: value }) : scrollerContainerRef.current?.scrollTop;
-                },
-                getBoundingClientRect() {
-                    return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
-                }
-            });
-        }
-    }, [firstAnimComplete, skipAnim])
 
     useGSAP(() => {
         if(skipAnim || window.scrollY > 10){
@@ -93,7 +74,7 @@ export default function CatAnim() {
         tl.set('body', {overflowY: 'hidden'})
 
         // Remove scroll from main container
-        tl.set(scrollerContainerRef.current, {overflowY: 'hidden'})
+        tl.set('.scroller-container', {overflowY: 'hidden'})
 
         // Short pause
         tl.to({}, { duration: 0.5 });
@@ -112,7 +93,7 @@ export default function CatAnim() {
                 setpercent(progress);
 
                 // Fill the cat with a darker color
-                gsap.to(imgDarkCatRef.current, {
+                gsap.to('.dark-cat', {
                     clipPath: `inset(${100 - progress}% 0% 0% 0%)`,
                     duration: 0,
                 });
@@ -120,7 +101,7 @@ export default function CatAnim() {
         }, '<');
 
         // Hide light cat image
-        tl.set(imgLightCatRef.current, { display: 'none' })
+        tl.set('.light-cat', { display: 'none' })
     
         // Fading out of the percent number and enlarging the cat image
         // (with responsive)
@@ -151,13 +132,13 @@ export default function CatAnim() {
         })
 
         // Enable scroll for main container
-        tl.set(scrollerContainerRef.current, {overflowY: 'scroll'})
+        tl.set('.scroller-container', {overflowY: 'scroll'})
 
         // Enable going back to previous section
         ScrollTrigger.create({
             scroller: 'body',
-            start: 'top top',
-            end: 'top+=1px top',
+            start: () => 'top top',
+            end: () => 'top+=1px top',
             trigger: 'body',
             onEnter: () => {
                 gsap.set('.main-container', { pointerEvents: 'none'})
@@ -171,14 +152,14 @@ export default function CatAnim() {
     });
     
     return (
-        <div className='main-container relative w-full h-screen overflow-hidden translate-x-0 translate-y-0 rounded-t-[2rem] bg-sand'>
-            <div className='absolute w-full h-full flex justify-center items-center rounded-t-[2rem]'>
+        <div className='main-container relative w-full h-screen overflow-hidden translate-x-0 translate-y-0 bg-black'>
+            <div className='absolute w-full h-full flex justify-center items-center rounded-t-[2rem] bg-sand'>
                 <div className='anim-container absolute flex opacity-0
                     w-[5.6rem] md:w-[7.5rem] lg:w-[7.5rem] xl:w-[7.5rem] 2xl:w-[7.5rem] 
                     h-[5.1rem] md:h-[6.9rem] lg:h-[6.9rem] xl:h-[6.9rem] 2xl:h-[6.9rem] 
                 '>
-                    <Image ref={imgLightCatRef} className='absolute top-0 left-0' width={662} height={597} src={IMGCatAnimLight.src} alt='Cat Animation Light Color' />
-                    <Image ref={imgDarkCatRef} className='absolute top-0 left-0 w-full h-full' style={{clipPath: 'inset(100% 0% 0% 0%)'}} width={662} height={597} src={IMGCatAnim.src} alt='Cat Animation Dark Color' />
+                    <Image className='light-cat absolute top-0 left-0' width={662} height={597} src={IMGCatAnimLight.src} alt='Cat Animation Light Color' />
+                    <Image className='dark-cat absolute top-0 left-0 w-full h-full' style={{clipPath: 'inset(100% 0% 0% 0%)'}} width={662} height={597} src={IMGCatAnim.src} alt='Cat Animation Dark Color' />
                     <div className='relative left-1/2 transform -translate-x-1/2 font-dharma-gothic-e flex font-black justify-center items-center
                         -bottom-[7rem] md:-bottom-[11.5rem] lg:-bottom-[11.5rem] xl:-bottom-[11.5rem] 2xl:-bottom-[11.5rem] 
                     '>
@@ -191,7 +172,7 @@ export default function CatAnim() {
                     </div>
                 </div>
             </div>
-            <div ref={scrollerContainerRef} className='scroller-container relative w-full h-full snap-y snap-mandatory overflow-x-hidden'>
+            <div className='scroller-container relative w-full h-full snap-y snap-mandatory overflow-x-hidden'>
                 <div className='trigger-1 w-full h-full flex flex-col justify-center items-center snap-center'>
                     <CatAnimText1 firstAnimComplete={firstAnimComplete} />
                 </div>
