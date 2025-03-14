@@ -301,13 +301,13 @@ export default function NavBar() {
                             text-[2rem] lg:text-[2rem] xl:text-[2rem] 2xl:text-[4rem]
                             md:w-full sm:w-full lg:w-full xl:w-full 2xl:w-full justify-start
                         '>
-                            <div onClick={() => window.open("https://aifoundry.org")} className="uppercase relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300">
+                            <div onClick={() => window.open("https://aifoundry.org")} className="uppercase cursor-pointer relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300">
                                 AI Foundry
                             </div>
-                            <div onClick={() => window.location.href="/#team"} className="navbar-team-link uppercase relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300">
+                            <div onClick={() => window.location.href="/#team"} className="text-[#808080] navbar-team-link pointer-events-none cursor-pointer uppercase relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300">
                                 Team
                             </div>
-                            <div onClick={() => window.location.href="/blog"} className="uppercase relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300">
+                            <div onClick={() => window.location.href="/blog"} className="uppercase cursor-pointer relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300">
                                 Blog
                             </div>
                         </div>
@@ -315,10 +315,10 @@ export default function NavBar() {
                             basis-0 md:basis-1/3 lg:basis-1/3 xl:basis-1/3 2xl:basis-1/3 
                         ">
                             <div className='hidden sm:block lg:block xl:block 2xl:block'>
-                                <div className='logoMobile hidden w-[3.265vw]'>
+                                <div className='logoMobile hidden w-[3.265vw] cursor-pointer'>
                                     <ImageWrapper onClick={() => window.location.href= '/'} style={{height: '100%'}} src={IMGAiNekkoLogoMobile.src} alt='AINekko logo mobile' />
                                 </div>
-                                <div className='logo w-[15.14vw]'>
+                                <div className='logo w-[15.14vw] cursor-pointer'>
                                     <ImageWrapper onClick={() => window.location.href= '/'} style={{height: '100%'}} src={IMGAiNekkoLogo.src} alt='AINekko logo' />
                                 </div>
                             </div>
@@ -336,14 +336,14 @@ export default function NavBar() {
             `}>
                 <nav className='flex flex-row justify-between items-center w-full'>
                     <div className='w-[15.4rem]'>
-                        <div className='logo w-[15.4rem] justify-start'>
+                        <div className='logo w-[15.4rem] justify-start cursor-pointer'>
                             <ImageWrapper onClick={() => window.location.href= '/'} src={IMGAiNekkoLogo.src} alt='AINekko logo' />
                         </div>
-                        <div className='logoMobile hidden w-[4.5rem]'>
+                        <div className='logoMobile hidden w-[4.5rem] cursor-pointer'>
                             <ImageWrapper onClick={() => window.location.href= '/'} src={IMGAiNekkoLogoMobile.src} alt='AINekko logo mobile' />
                         </div>
                     </div>
-                    <div className='w-[2.4rem] justify-end'>
+                    <div className='w-[2.4rem] justify-end cursor-pointer'>
                         <ImageWrapper src={SVGIconHamburger.src} onClick={showMenu} alt="Side menu button" />
                     </div>
                 </nav>
@@ -352,35 +352,35 @@ export default function NavBar() {
                 <div className='flex flex-col p-[6vw]'>
                     <div className='flex flex-row w-full items-center justify-between'>
                         <div className='flex justify-start'>
-                            <div className='w-[15.4rem]'>
+                            <div className='w-[15.4rem] cursor-pointer'>
                                 <ImageWrapper src={IMGAiNekkoLogo.src} alt='AINekko logo mobile' />
                             </div>
                         </div>
                         <div className='flex justify-end'>
-                            <div className='w-[2.4rem]'>
+                            <div className='w-[2.4rem] cursor-pointer'>
                                 <ImageWrapper onClick={closeMenu} src={SVGIconCloseButton.src} alt='Close button' />
                             </div>
                         </div>
                     </div>
                     <div className="flex flex-col w-full my-[10.667vw] xs:my-[4vw] font-dharma-gothic-e font-black text-[10.667vw] xs:text-[6.5vw] leading-[8.8vw] gap-[8.8vw] xs:gap-0">
-                        <div onClick={() => {closeMenu(); window.open("https://aifoundry.org")}} className="uppercase">
+                        <div onClick={() => {closeMenu(); window.open("https://aifoundry.org")}} className="uppercase cursor-pointer">
                             ai foundry
                         </div>
-                        <div onClick={() => {closeMenu(); window.location.href="/#team"}} className="uppercase navbar-team-link">
+                        <div onClick={() => {closeMenu(); window.location.href="/#team"}} className="uppercase cursor-pointer navbar-team-link">
                             team
                         </div>
-                        <div onClick={() => {closeMenu(); window.location.href="/blog"}} className="uppercase">
+                        <div onClick={() => {closeMenu(); window.location.href="/blog"}} className="uppercase cursor-pointer">
                             blog
                         </div>
                     </div>
                     <div className="flex flex-col w-full mb-[10.667vw] xs:mb-[5vw] font-dharma-gothic-e font-bold text-[4.8vw] xs:text-[4vw] leading-[4.8vw] gap-[4.8vw] xs:gap-[2vw]">
-                        <div onClick={() => {closeMenu(); window.location.href="/privacy-policy"}} className="uppercase">
+                        <div onClick={() => {closeMenu(); window.location.href="/privacy-policy"}} className="uppercase cursor-pointer">
                             privacy policy
                         </div>
-                        <div onClick={() => {closeMenu(); window.location.href="/terms-of-service"}} className="uppercase">
+                        <div onClick={() => {closeMenu(); window.location.href="/terms-of-service"}} className="uppercase cursor-pointer">
                             terms of service
                         </div>
-                        <div onClick={() => {closeMenu(); window.location.href="/cookie-policy"}} className="uppercase">
+                        <div onClick={() => {closeMenu(); window.location.href="/cookie-policy"}} className="uppercase cursor-pointer">
                             cookie policy
                         </div>
                     </div>
@@ -389,7 +389,7 @@ export default function NavBar() {
                     </div>
                     <div className='flex flex-row gap-[8.55vw] xs:gap-[2vw] mt-[8.27vw]'>
                         <div className='w-[2.4rem] h-[2.4rem]'>
-                            <div onClick={() => window.open('https://www.linkedin.com/company/nekko-ai/')}>
+                            <div className='cursor-pointer' onClick={() => window.open('https://www.linkedin.com/company/nekko-ai/')}>
                                 <ImageWrapper className='dark:invert' src={SVGIconLinkedin.src} alt="Linkedin" />
                             </div>
                         </div>

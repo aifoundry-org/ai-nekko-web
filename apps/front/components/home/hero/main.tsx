@@ -59,7 +59,7 @@ export default function Hero() {
             })
             gsap.set('body', {overflowY: 'scroll'})
             gsap.set('.scroller-container', {overflowY: 'hidden'})
-            gsap.set('.navbar-team-link', {pointerEvents: 'auto'})
+            gsap.set('.navbar-team-link', {color: 'black', pointerEvents: 'auto'})
 
             return;
         }
@@ -68,7 +68,7 @@ export default function Hero() {
         const mm = gsap.matchMedia();
 
         tl.set('.navbar', {top: '9.4rem'});
-        tl.set('.navbar-team-link', {pointerEvents: 'none'})
+        tl.set('.navbar-team-link', {color: 'gray', pointerEvents: 'none'})
 
         // Remove scroll from body
         tl.set('body', {overflowY: 'hidden'})

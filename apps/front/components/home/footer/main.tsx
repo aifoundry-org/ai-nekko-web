@@ -44,10 +44,10 @@ export default function Footer(){
                             text-[1.8rem] lg:text-[2rem] xl:text-[2rem] 2xl:text-[2rem] 
                             leading-[1.8rem] lg:leading-[2rem] xl:leading-[2rem] 2xl:leading-[2rem] 
                         '>
-                            <div onClick={() => window.open('https://aifoundry.org')} >ai foundry</div>
-                            <div onClick={() => window.location.href='/#team'} >team</div>
-                            <div onClick={() => window.location.href='/blog'} >blog</div>
-                            <div onClick={() => window.location.href='/privacy-policy'} className='block sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden'>privacy policy</div>
+                            <div onClick={() => window.open('https://aifoundry.org')} className='cursor-pointer relative after:bg-white after:absolute after:top-[2rem] after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300' >ai foundry</div>
+                            <div onClick={() => window.location.href='/#team'} className='cursor-pointer relative after:bg-white after:absolute after:top-[2rem] after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300' >team</div>
+                            <div onClick={() => window.location.href='/blog'} className='cursor-pointer relative after:bg-white after:absolute after:top-[2rem] after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300' >blog</div>
+                            <div onClick={() => window.location.href='/privacy-policy'} className='block sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden cursor-pointer relative after:bg-white after:absolute after:top-[2rem] after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300'>privacy policy</div>
                         </div>
                         <div className='relative w-full h-fit uppercase font-bold tracking-wider items-end justify-end
                             mt-[1.4rem] sm:mt-0 md:mt-0 lg:mt-0 xl:mt-0 2xl:mt-0 
@@ -56,16 +56,17 @@ export default function Footer(){
                             text-[1.8rem] lg:text-[2rem] xl:text-[2rem] 2xl:text-[2rem] 
                             leading-[1.8rem] lg:leading-[2rem] xl:leading-[2rem] 2xl:leading-[2rem] 
                         '>
-                            <div className='hidden sm:block md:block lg:block xl:block 2xl:block
+                            <div className='cursor-pointer relative after:bg-white after:absolute after:top-[2rem] after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300
+                                hidden sm:block md:block lg:block xl:block 2xl:block
                                 basis-1/3 sm:basis-auto md:basis-auto lg:basis-auto xl:basis-auto 2xl:basis-auto
                             ' onClick={() => window.location.href='/privacy-policy'} >privacy policy</div>
-                            <div className='basis-1/2 sm:basis-auto md:basis-auto lg:basis-auto xl:basis-auto 2xl:basis-auto' onClick={() => window.location.href='/terms-of-service'} >terms of service</div>
-                            <div className='basis-1/2 sm:basis-auto md:basis-auto lg:basis-auto xl:basis-auto 2xl:basis-auto' onClick={() => window.location.href='/cookie-policy'} >cookie policy</div>
+                            <div className='cursor-pointer relative basis-1/2 sm:basis-auto md:basis-auto lg:basis-auto xl:basis-auto 2xl:basis-auto after:bg-white after:absolute after:top-[2rem] after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300' onClick={() => window.location.href='/terms-of-service'} >terms of service</div>
+                            <div className='cursor-pointer relative basis-1/2 sm:basis-auto md:basis-auto lg:basis-auto xl:basis-auto 2xl:basis-auto after:bg-white after:absolute after:top-[2rem] after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300' onClick={() => window.location.href='/cookie-policy'} >cookie policy</div>
                             <div className='basis-1/4 justify-end mt-0
                                 flex sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden 
                             '>
                                 <div className=' w-[2.4rem] h-[2.4rem]'>
-                                    <div onClick={() => window.open('https://www.linkedin.com/company/nekko-ai/')}>
+                                    <div className='cursor-pointer' onClick={() => window.open('https://www.linkedin.com/company/nekko-ai/')}>
                                         <ImageWrapper src={SVGIconLinkedin.src} alt="Linkedin" />
                                     </div>
                                 </div>
@@ -77,12 +78,12 @@ export default function Footer(){
                             xs:text-[2rem] sm:text-[2rem] md:text-[2rem] 2xl:text-[4rem]
                             xs:leading-[2rem] sm:leading-[2rem] md:leading-[2rem] 2xl:leading-[4rem]
                         '>
-                            <div onClick={() => window.open('https://aifoundry.org')}>ai foundry</div>
-                            <div onClick={() => window.location.href='/#team'}>team</div>
-                            <div onClick={() => window.location.href='/blog'}>blog</div>
-                            <div onClick={() => window.location.href='/privacy-policy'} >privacy policy</div>
-                            <div onClick={() => window.location.href='/terms-of-service'} >terms of service</div>
-                            <div onClick={() => window.location.href='/cookie-policy'} >cookie policy</div>
+                            <div className='cursor-pointer relative after:bg-white after:absolute after:top-[2rem] after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300' onClick={() => window.open('https://aifoundry.org')}>ai foundry</div>
+                            <div className='cursor-pointer relative after:bg-white after:absolute after:top-[2rem] after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300' onClick={() => window.location.href='/#team'}>team</div>
+                            <div className='cursor-pointer relative after:bg-white after:absolute after:top-[2rem] after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300' onClick={() => window.location.href='/blog'}>blog</div>
+                            <div className='cursor-pointer relative after:bg-white after:absolute after:top-[2rem] after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300' onClick={() => window.location.href='/privacy-policy'} >privacy policy</div>
+                            <div className='cursor-pointer relative after:bg-white after:absolute after:top-[2rem] after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300' onClick={() => window.location.href='/terms-of-service'} >terms of service</div>
+                            <div className='cursor-pointer relative after:bg-white after:absolute after:top-[2rem] after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300' onClick={() => window.location.href='/cookie-policy'} >cookie policy</div>
                         </div>
                     </div>
                     <div className='relative w-full h-fit justify-end 
@@ -93,7 +94,7 @@ export default function Footer(){
                             w-[2.8rem] sm:w-[2.8rem] md:w-[2.8rem] lg:w-[2.8rem] xl:w-[2.8rem] 2xl:w-[2.8rem] 
                             h-[2.8rem] sm:h-[2.8rem] md:h-[2.8rem] lg:h-[2.8rem] xl:h-[2.8rem] 2xl:h-[2.8rem] 
                         '>
-                            <div onClick={() => window.open('https://www.linkedin.com/company/nekko-ai/')}>
+                            <div className='cursor-pointer' onClick={() => window.open('https://www.linkedin.com/company/nekko-ai/')}>
                                 <ImageWrapper src={SVGIconLinkedin.src} alt="Linkedin" />
                             </div>
                         </div>
