@@ -126,7 +126,7 @@ export default function Main() {
                         <Card key={member.id} name={member.name} role={member.role} profileImgUrl={member.profileImgUrl} linkedinUrl={member.linkedin} />
                     ))}
                 </div>
-                <div className='absolute z-0
+                <div className='absolute
                     -bottom-[6.7rem] sm:-bottom-[2.9rem] md:-bottom-[3.5rem] lg:-bottom-[4.4rem] xl:-bottom-[6rem] 2xl:-bottom-[6rem] 
                     w-[23rem] sm:w-[10.3rem] md:w-[12.3rem] lg:w-[15rem] xl:w-[21rem] 2xl:w-[20rem] 
                     -right-[30.5vw] sm:-right-[7.1vw] md:-right-[6.2vw] lg:-right-[6vw] xl:-right-[7vw] 2xl:-right-[3.5vw]

@@ -290,7 +290,7 @@ export default function NavBar() {
 
     return (
         <>
-            <div className={`navbar z-[1] absolute bg-transparent w-[90vw] ${hiddenAnnouncement ? 'top-[2.4rem]': 'top-[9.4rem]'} mx-[5vw] items-center bg-sand
+            <div className={`navbar z-10 absolute bg-transparent w-[90vw] ${hiddenAnnouncement ? 'top-[2.4rem]': 'top-[9.4rem]'} mx-[5vw] items-center bg-sand
                 hidden xs:flex sm:flex md:flex lg:flex xl:flex 2xl:flex 
             `}>
                 <nav className='relative w-full flex flex-col'>
@@ -331,7 +331,7 @@ export default function NavBar() {
                     </div>
                 </nav>
             </div>
-            <div className={`navbar-mobile z-[1] absolute bg-transparent w-[32.7rem] ${hiddenAnnouncement ? 'top-[2.4rem]': 'top-[9.4rem]'} mx-[2.4rem] items-center bg-sand
+            <div className={`navbar-mobile z-10 absolute bg-transparent w-[32.7rem] ${hiddenAnnouncement ? 'top-[2.4rem]': 'top-[9.4rem]'} mx-[2.4rem] items-center bg-sand
                 flex xs:hidden sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden
             `}>
                 <nav className='flex flex-row justify-between items-center w-full'>
