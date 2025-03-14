@@ -106,13 +106,13 @@ export default function ComeBuildWithUs({firstAnimComplete}: {firstAnimComplete?
         <div className='come-build-with-us-container fixed top-0 pointer-events-none flex flex-col w-full h-full font-dharma-gothic-e font-black uppercase justify-center items-center text-center rounded-t-[2rem]'>
             <div className='punchCard absolute z-[0] opacity-0
                 w-[16.1rem] sm:w-[17.4rem] sm:md:w-[35.4rem] md:w-[40.4rem] lg:w-[66.5rem] lg:xl:w-[66.5rem] xl:2xl:w-[66.5rem]    
-                top-[calc(50%-5.5rem)] sm:top-[calc(50%-5rem)] md:top-[calc(50%-7.6rem)] lg:top-[calc(50%-12.5rem)] xl:top-[calc(50%-12.5rem)] 2xl:top-[calc(50%-12.5rem)]
+                top-[calc(50%-10.5rem)] sm:top-[calc(50%-5rem)] md:top-[calc(50%-7.6rem)] lg:top-[calc(50%-12.5rem)] xl:top-[calc(50%-14.5rem)] 2xl:top-[calc(50%-14.5rem)]
                 left-[calc(50%-9.3rem)] sm:left-[calc(50%-25rem)] md:left-[calc(50%-34rem)] lg:left-[calc(50%-56rem)] xl:left-[calc(50%-56rem)] 2xl:left-[calc(50%-56rem)]
             '>
                 <ImageWrapper src={IMGPunchCard.src} alt='Punch card'/>
             </div>
             <div className='flex flex-col absolute transform -translate-y-1/2 text-sand
-                top-[calc(50%-5rem)] sm:top-1/2 md:top-1/2 lg:top-1/2 xl:top-1/2 2xl:top-1/2 
+                top-[calc(50%-10rem)] sm:top-1/2 md:top-1/2 lg:top-1/2 xl:top-[calc(50%-2rem)] 2xl:top-[calc(50%-2rem)]
             '>
                 <p className='text1 opacity-0
                 ml-0 sm:ml-0 md:ml-[1rem] lg:ml-0 xl:ml-0 2xl:ml-0
@@ -129,40 +129,42 @@ export default function ComeBuildWithUs({firstAnimComplete}: {firstAnimComplete?
             </div>
             <div className='cat absolute opacity-0
                 w-[11rem] sm:w-[15rem] md:w-[20.7rem] lg:w-[30.3rem] xl:w-[30.3rem] 2xl:w-[30.3rem]
-                bottom-[27rem] sm:top-[calc(50%-10.5rem)] md:top-[calc(50%-15rem)] lg:top-[calc(50%-20rem)] xl:top-[calc(50%-20rem)] 2xl:top-[calc(50%-20rem)]
+                bottom-[calc(50%-10rem)] sm:top-[calc(50%-10.5rem)] md:top-[calc(50%-15rem)] lg:top-[calc(50%-20rem)] xl:top-[calc(50%-22rem)] 2xl:top-[calc(50%-22rem)]
                 left-[calc(50%-4.5rem)] sm:left-[calc(50%-6rem)] md:left-[calc(50%-8rem)] lg:left-[calc(50%-10rem)] xl:left-[calc(50%-10rem)] 2xl:left-[calc(50%-10rem)]
             '>
                 <ImageWrapper src={IMGCat.src} alt='Cat' />
             </div>
             <div className='error absolute z-[1] opacity-0
                 w-[13.2rem] sm:w-[17.4rem] md:w-[20.4rem] lg:w-[30.1rem] xl:w-[30.1rem] 2xl:w-[30.1rem]    
-                top-[calc(50%+0.3rem)] sm:top-[calc(50%+2rem)] md:top-[calc(50%+3rem)] lg:top-[calc(50%+5rem)] xl:top-[calc(50%+5rem)] 2xl:top-[calc(50%+5rem)]
+                top-[calc(50%-5rem)] sm:top-[calc(50%+2rem)] md:top-[calc(50%+3rem)] lg:top-[calc(50%+5rem)] xl:top-[calc(50%+3rem)] 2xl:top-[calc(50%+3rem)]
                 left-[calc(50%-12.3rem)] sm:left-[calc(50%-20rem)] md:left-[calc(50%-27.5rem)] lg:left-[calc(50%-45rem)] xl:left-[calc(50%-45rem)] 2xl:left-[calc(50%-45rem)]
             '>
                 <ImageWrapper src={IMGError.src} alt='Error'/>
             </div>
             <div className='findOut absolute z-[1] opacity-0
                 w-[9.3rem] sm:w-[14.4rem] md:w-[14.4rem] lg:w-[24.3rem] xl:w-[24.3rem] 2xl:w-[24.3rem]
-                top-[calc(50%-10.7rem)] sm:top-[calc(50%-5.5rem)] md:top-[calc(50%-8.2rem)] lg:top-[calc(50%-13.8rem)] xl:top-[calc(50%-13.8rem)] 2xl:top-[calc(50%-13.8rem)]
+                top-[calc(50%-15.7rem)] sm:top-[calc(50%-5.5rem)] md:top-[calc(50%-8.2rem)] lg:top-[calc(50%-13.8rem)] xl:top-[calc(50%-15.8rem)] 2xl:top-[calc(50%-15.8rem)]
                 right-[calc(50%-11rem)] sm:right-[calc(50%-28.5rem)] md:right-[calc(50%-35rem)] lg:right-[calc(50%-55.5rem)] xl:right-[calc(50%-55.5rem)] 2xl:right-[calc(50%-55.5rem)]
             '>
                 <ImageWrapper src={IMGFindOut.src} alt='Find Out'/>
             </div>
             <div className='data absolute z-[1] opacity-0
                 w-[6.5rem] sm:w-[7.4rem] md:w-[9.4rem] lg:w-[13.9rem] xl:w-[13.9rem] 2xl:w-[13.9rem]
-                top-[calc(50%-1rem)] sm:top-[calc(50%+2rem)] md:top-[calc(50%+3rem)] lg:top-[calc(50%+5.5rem)] xl:top-[calc(50%+5.5rem)] 2xl:top-[calc(50%+5.5rem)]
+                top-[calc(50%-6rem)] sm:top-[calc(50%+2rem)] md:top-[calc(50%+3rem)] lg:top-[calc(50%+5.5rem)] xl:top-[calc(50%+3.5rem)] 2xl:top-[calc(50%+3.5rem)]
                 right-[calc(50%-17.5rem)] sm:right-[calc(50%-23.5rem)] md:right-[calc(50%-30.5rem)] lg:right-[calc(50%-50.5rem)] xl:right-[calc(50%-50.5rem)] 2xl:right-[calc(50%-50.5rem)]
             '>
                 <ImageWrapper src={IMGData.src} alt='Data'/>
             </div>
             <div className='sticker absolute z-[1] opacity-0
                 w-[5.5rem] sm:w-[5.5rem] md:w-[8rem] lg:w-[12rem] xl:w-[12rem] 2xl:w-[12rem]
-                top-[calc(50%-5.5rem)] sm:top-[calc(50%-4rem)] md:top-[calc(50%-5rem)] lg:top-[calc(50%-7rem)] xl:top-[calc(50%-7rem)] 2xl:top-[calc(50%-7rem)]
+                top-[calc(50%-10.5rem)] sm:top-[calc(50%-4rem)] md:top-[calc(50%-5rem)] lg:top-[calc(50%-7rem)] xl:top-[calc(50%-9rem)] 2xl:top-[calc(50%-9rem)]
                 right-[calc(50%-10rem)] sm:right-[calc(50%-18.5rem)] md:right-[calc(50%-26rem)] lg:right-[calc(50%-44rem)] xl:right-[calc(50%-44rem)] 2xl:right-[calc(50%-44rem)]
             '>
                 <ImageWrapper src={IMGSticker.src} alt='Data'/>
             </div>
-            <Button className='ainekko-repo-button pointer-events-auto absolute transform -translate-x-1/2 bottom-[calc(50%-30rem)] left-1/2 opacity-0' target='_blank' as={Link} href='https://github.com/aifoundry-org/ainekko' variant='primary' content='ainekko repo' svg='arrow-up-right' />
+            <Button className='ainekko-repo-button pointer-events-auto absolute transform -translate-x-1/2 left-1/2 opacity-0
+            bottom-[calc(50%-22rem)] sm:bottom-[calc(50%-22rem)] md:bottom-[calc(50%-22rem)] lg:bottom-[calc(50%-28rem)] xl:bottom-[calc(50%-28rem)] 2xl:bottom-[calc(50%-28rem)] 
+            ' target='_blank' as={Link} href='https://github.com/aifoundry-org/ainekko' variant='primary' content='ainekko repo' svg='arrow-up-right' />
         </div>
     )
 }
