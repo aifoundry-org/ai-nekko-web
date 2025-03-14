@@ -116,7 +116,7 @@ export default function Hero() {
             tl.to('.anim-container', { width: '55.8rem', height: '50.2rem', duration: 0.75, ease: 'power2.out' });
         })
         mm.add('(min-width: 640px) and (max-width: 767px)', () => { // sm
-            tl.to('.anim-container', { width: '66.2rem', height: '59.6rem', duration: 0.75, ease: 'power2.out' });
+            tl.to('.anim-container', { width: '69.2rem', height: '59.6rem', duration: 0.75, ease: 'power2.out' });
         })
         mm.add('(min-width: 768px) and (max-width: 1023px)', () => { // md
             tl.to('.anim-container', { width: '66.2rem', height: '59.6rem', duration: 0.75, ease: 'power2.out' });
@@ -154,14 +154,19 @@ export default function Hero() {
     return (
         <div className='main-container relative w-full h-screen overflow-hidden translate-x-0 translate-y-0 bg-black'>
             <div className='absolute w-full h-full flex justify-center items-center rounded-t-[2rem] bg-sand'>
-                <div className='anim-container absolute flex opacity-0
+                <div className='anim-container absolute flex opacity-0 -translate-y-1/2 transform 
                     w-[5.6rem] md:w-[7.5rem] lg:w-[7.5rem] xl:w-[7.5rem] 2xl:w-[7.5rem] 
                     h-[5.1rem] md:h-[6.9rem] lg:h-[6.9rem] xl:h-[6.9rem] 2xl:h-[6.9rem] 
+                    top-[calc(50%+4.5rem)] sm:top-[calc(50%+4.5rem)] md:top-[calc(50%+4.5rem)] lg:top-[calc(50%+4.5rem)] xl:top-[calc(50%+4.5rem)] 2xl:top-[calc(50%+4.5rem)] 
                 '>
-                    <Image className='light-cat absolute top-0 left-0' width={662} height={597} src={IMGCatAnimLight.src} alt='Cat Animation Light Color' />
-                    <Image className='dark-cat absolute top-0 left-0 w-full h-full' style={{clipPath: 'inset(100% 0% 0% 0%)'}} width={662} height={597} src={IMGCatAnim.src} alt='Cat Animation Dark Color' />
-                    <div className='relative left-1/2 transform -translate-x-1/2 font-dharma-gothic-e flex font-black justify-center items-center
-                        -bottom-[7rem] md:-bottom-[11.5rem] lg:-bottom-[11.5rem] xl:-bottom-[11.5rem] 2xl:-bottom-[11.5rem] 
+                    <Image className='light-cat absolute transform left-1/2 -translate-x-1/2
+                    -top-[4.5rem] sm:-top-[5rem] md:-top-[5rem] lg:-top-[5rem] xl:-top-[5rem] 2xl:-top-[5rem]
+                    ' width={662} height={597} src={IMGCatAnimLight.src} alt='Cat Animation Light Color' />
+                    <Image className='dark-cat absolute transform left-1/2 -translate-x-1/2 w-full h-full
+                    -top-[4.5rem] sm:-top-[5rem] md:-top-[5rem] lg:-top-[5rem] xl:-top-[5rem] 2xl:-top-[5rem]
+                    ' style={{clipPath: 'inset(100% 0% 0% 0%)'}} width={662} height={597} src={IMGCatAnim.src} alt='Cat Animation Dark Color' />
+                    <div className='absolute transform left-1/2 -translate-x-1/2 font-dharma-gothic-e flex font-black justify-center items-center
+                        -bottom-[2rem] sm:-bottom-[3rem] md:-bottom-[8rem] lg:-bottom-[9rem] xl:-bottom-[9rem] 2xl:-bottom-[9rem] 
                     '>
                         <p ref={percentParagraphRef} className='
                             text-[6.4rem] md:text-[12.8rem] lg:text-[12.8rem] xl:text-[12.8rem] 2xl:text-[12.8rem]
