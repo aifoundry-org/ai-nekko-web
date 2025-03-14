@@ -1,4 +1,4 @@
-import {  StrapiDefaultAttributes, StrapiData } from '../types/strapi/strapi';
+import { StrapiData } from '../types/strapi/strapi';
 
 type HandledErrorCode = 404 | 500;
 
