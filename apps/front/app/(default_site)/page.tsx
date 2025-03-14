@@ -8,8 +8,8 @@ import Faqs from '@/components/home/faqs/main'
 export default function Page() {
   return (
     <main>
+      <Hero />
       <div className='pin-section bg-black'>
-        <Hero />
         <PaperDiscussions />
       </div>
       <AiAsASystem />

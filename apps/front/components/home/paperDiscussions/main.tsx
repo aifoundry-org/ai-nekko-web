@@ -11,7 +11,7 @@ import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const slides = [{
     id: 1,
@@ -31,8 +31,8 @@ export default function Main() {
 
         ScrollTrigger.create({
             trigger: '.paper-slides-container',
-            start: 'center center',
-            end: 'bottom+=300vh center', 
+            start: () => 'center center',
+            end: () => 'bottom+=300vh center', 
             pin: '.pin-section',
             scroller: 'body',
             snap: {
@@ -55,7 +55,7 @@ export default function Main() {
 
     return (
         <div className='relative w-full h-auto flex justify-center bg-sand'>
-            <div className='relative flex flex-col h-full border-2 border-black
+            <div className='relative flex flex-col h-full border-2
                 w-full xs:w-[40rem] sm:w-full md:w-full lg:w-full xl:w-full 2xl:w-full
                 my-[11.2rem] sm:my-[16.6rem] md:my-[16.6rem] lg:my-[16.6rem] xl:my-[16.6rem] 2xl:my-[16.6rem]
                 mx-[2.4rem] sm:mx-[6rem] md:mx-[4.2rem] lg:mx-[11.2rem] xl:mx-[11.2rem] 2xl:mx-[11.2rem] 
