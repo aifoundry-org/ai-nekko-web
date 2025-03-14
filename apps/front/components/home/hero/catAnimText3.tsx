@@ -136,8 +136,8 @@ export default function CatAnimText3({firstAnimComplete}: {firstAnimComplete?: b
                 <ImageWrapper src={IMGErrorMobile.src} alt='Error Mobile'/>
             </div>
             <div className='absolute transform -translate-x-1/2 graffiti opacity-0
-                w-[12rem] sm:w-[15.9rem] md:w-[15.9rem] lg:w-[15.9rem] xl:w-[15.9rem] 2xl:w-[15.9rem]
-                bottom-[calc(50%-29rem)] sm:bottom-[calc(50%-34rem)] md:bottom-[calc(50%-34rem)] lg:bottom-[calc(50%-34rem)] xl:bottom-[calc(50%-35rem)] 2xl:bottom-[calc(50%-35rem)]
+                w-[10rem] sm:w-[15.9rem] md:w-[15.9rem] lg:w-[15.9rem] xl:w-[15.9rem] 2xl:w-[15.9rem]
+                bottom-[calc(50%-28rem)] sm:bottom-[calc(50%-34rem)] md:bottom-[calc(50%-34rem)] lg:bottom-[calc(50%-34rem)] xl:bottom-[calc(50%-35rem)] 2xl:bottom-[calc(50%-35rem)]
                 left-1/2
             '>
                 <ImageWrapper src={IMGGraffiti.src} alt='Graffiti'/>

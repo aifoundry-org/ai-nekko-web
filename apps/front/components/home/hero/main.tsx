@@ -152,7 +152,9 @@ export default function Hero() {
     });
     
     return (
-        <div className='main-container relative w-full h-screen overflow-hidden translate-x-0 translate-y-0 bg-black'>
+        <div className='main-container relative w-full h-screen overflow-hidden translate-x-0 translate-y-0 bg-black 
+        mb-[10rem] xs:mb-[11rem] sm:mb-[10rem] md:mb-[10rem] lg:mb-0 xl:mb-0 2xl:mb-0 
+        '>
             <div className='absolute w-full h-full flex justify-center items-center rounded-t-[2rem] bg-sand'>
                 <div className='anim-container absolute flex opacity-0 -translate-y-1/2 transform 
                     w-[5.6rem] md:w-[7.5rem] lg:w-[7.5rem] xl:w-[7.5rem] 2xl:w-[7.5rem] 
