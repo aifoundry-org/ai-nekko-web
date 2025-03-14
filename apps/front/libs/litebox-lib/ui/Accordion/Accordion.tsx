@@ -43,7 +43,9 @@ const Accordion = ({ title, isOpen = false, content, className }: AccordionProps
       </div>
      <div
         className={cn(
-          `max-h-0 overflow-y-scroll transition-all duration-500 ${open && 'max-h-screen'}`
+          `max-h-0 transition-all duration-500 ${open && 'max-h-screen'}
+           overflow-y-scroll sm:overflow-y-hidden md:overflow-y-hidden lg:overflow-y-hidden xl:overflow-y-hidden 2xl:overflow-y-hidden  
+          `
         )}>
         <div className='font-normal font-host-grotesk
           text-[1.4rem] sm:text-[1.6rem] md:text-[1.6rem] lg:text-[1.6rem] xl:text-[1.6rem] 2xl:text-[4rem] 
