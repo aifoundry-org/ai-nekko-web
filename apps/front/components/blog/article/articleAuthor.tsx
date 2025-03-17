@@ -1,5 +1,3 @@
-'use client'
-
 import Link from 'next/link'
 import { StrapiAuthor, StrapiContentNavigation } from '@/libs/litebox-lib/types/strapi/strapiBlog';
 import IMGInstagramIcon from '@/public/imgs/blog/instagramIcon.webp'
@@ -8,13 +6,16 @@ import IMGYoutubeIcon from '@/public/imgs/blog/youtubeIcon.webp'
 import getStrapiMediaUrl from '@/utils/getStrapiMediaUrl';
 import ArticleNavigation from './articleNavigation';
 import ImageWrapper from '@/components/common/ImageWrapper';
+import { Dispatch, SetStateAction } from 'react';
 
 interface AuthorProps {
     author: StrapiAuthor;
     contentNavigation: StrapiContentNavigation[];
+    currentHeaderId: string | null; 
+    onCurrentHeaderIdChange: Dispatch<SetStateAction<string | null>>
 }
 
-export default function Author({author, contentNavigation}: AuthorProps) {
+export default function Author({author, contentNavigation, currentHeaderId, onCurrentHeaderIdChange}: AuthorProps) {
     if(author){
         const { name, role, description, instagram_link, youtube_link, linkedin_link, profileImage } = author
         return (
@@ -61,9 +62,14 @@ export default function Author({author, contentNavigation}: AuthorProps) {
                     }
                 </div>
                 {contentNavigation && contentNavigation.length > 0 && 
-                    <div className='hidden lg:block xl:block 2xl:block'>
-                        <ArticleNavigation contentNavigation={contentNavigation} />
-                    </div>}
+                    <div className='hidden 
+                        lg:block xl:block 2xl:block
+                        lg:sticky xl:sticky 2xl:sticky
+                        lg:top-[10rem] xl:top-[10rem] 2xl:top-[10rem]
+                    '>
+                        <ArticleNavigation contentNavigation={contentNavigation} onCurrentHeaderIdChange={onCurrentHeaderIdChange} currentHeaderId={currentHeaderId} />
+                    </div>
+                }
             </div>
         );
     }
