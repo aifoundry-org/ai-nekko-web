@@ -11,28 +11,37 @@ import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const slides = [{
     id: 1,
-    content: "ai paper discussions"
+    content: "ai paper<br/>discussions"
 },{
     id: 2,
-    content: "collaborative ai hack labs"
+    content: "collaborative<br/>ai hack labs"
 },{
     id: 3,
-    content: "open source models & projects"
+    content: "open source models<br/>& projects"
 }]
 
 export default function Main() {
     useGSAP(() => {
         const slides = gsap.utils.toArray<HTMLElement>(['.paper-slide-1','.paper-slide-2','.paper-slide-3'])
         const containerRect = document.querySelector('.paper-slides-container')?.getBoundingClientRect();
+        let scrollTriggerEndOffset = 0;
+        
+        if (window.innerWidth <= 430) {
+            scrollTriggerEndOffset = 90
+        } else if (window.innerWidth > 431 && window.innerWidth <= 639) {
+            scrollTriggerEndOffset = 90
+        } else if (window.innerWidth > 640 && window.innerWidth <= 767) {
+            scrollTriggerEndOffset = 10;
+        } 
 
         ScrollTrigger.create({
             trigger: '.paper-slides-container',
-            start: 'center center',
-            end: 'bottom+=300vh center', 
+            start: () => `center+=${scrollTriggerEndOffset}vh center`,
+            end: () => 'bottom+=300vh center', 
             pin: '.pin-section',
             scroller: 'body',
             snap: {
@@ -55,9 +64,10 @@ export default function Main() {
 
     return (
         <div className='relative w-full h-auto flex justify-center bg-sand'>
-            <div className='relative flex flex-col h-full border-2 border-black
+            <div className='relative flex flex-col h-full border-2
                 w-full xs:w-[40rem] sm:w-full md:w-full lg:w-full xl:w-full 2xl:w-full
-                my-[11.2rem] sm:my-[16.6rem] md:my-[16.6rem] lg:my-[16.6rem] xl:my-[16.6rem] 2xl:my-[16.6rem]
+                mt-[5.2rem] xs:mt-[6rem] sm:mt-[5.6rem] md:mt-[22rem] lg:mt-[16.6rem] xl:mt-[16.6rem] 2xl:mt-[16.6rem]
+                mb-[14.2rem] sm:my-[16.6rem] md:my-[16.6rem] lg:my-[16.6rem] xl:my-[16.6rem] 2xl:my-[16.6rem]
                 mx-[2.4rem] sm:mx-[6rem] md:mx-[4.2rem] lg:mx-[11.2rem] xl:mx-[11.2rem] 2xl:mx-[11.2rem] 
                 p-[2.4rem] sm:p-[5.6rem] md:p-[5.6rem] lg:p-[5.6rem] xl:p-[5.6rem] 2xl:p-[5.6rem]
             '>
@@ -69,28 +79,26 @@ export default function Main() {
                     Freedom of choice in AI requires an interoperable ecosystem.<br className='hidden md:block lg:block xl:block 2xl:block' />Be part of the open, composable community for AI.
                 </p>
                 <div className='pointer-events-none relative overflow-hidden scrollbar-width-none
-                    w-full sm:w-11/12 md:w-10/12 lg:w-10/12 xl:w-9/12 2xl:w-3/4
+                    w-full
                     h-[18.1rem] sm:h-[16rem] md:h-[26rem] lg:h-[26rem] xl:h-[26rem] 2xl:h-[30rem]
                 '>
                     <div className='relative paper-slides-container w-full h-full grid grid-flow-row'>
                         {slides.map(el => (
-                            <div key={el.id} className={`paper-slide-${el.id} relative w-fit flex flex-col flex-nowrap 
+                            <div key={el.id} className={`paper-slide-${el.id} relative w-fit flex flex-col flex-nowrap
                                 sm:justify-center md:justify-center lg:justify-center xl:justify-end 2xl:justify-center
                                 h-[18.1rem] sm:h-[16rem] md:h-[26rem] lg:h-[26rem] xl:h-[26rem] 2xl:h-[30rem]
                             `}>
                                 <p className='relative font-dharma-gothic-e font-black text-orange
                                     text-[4rem] sm:text-[4.8rem] md:text-[4.8rem] lg:text-[4.8rem] xl:text-[4.8rem] 2xl:text-[4.8rem]
                                     leading-[3.3rem] sm:leading-[6rem] md:leading-[8rem] lg:leading-[4rem] xl:leading-[4rem] 2xl:leading-[4rem]
-                                    mb-[0.8rem] sm:mb-[1.6rem] md:mb-[1.6rem] lg:mb-[1.6rem] xl:mb-[1.6rem] 2xl:mb-[1.6rem]
+                                    mb-[0.8rem] sm:mb-[1.3rem] md:mb-[1.6rem] lg:mb-[1.6rem] xl:mb-[1.6rem] 2xl:mb-[1.6rem]
                                 '>
                                     {`0${el.id}.`}
                                 </p>
                                 <p className='relative font-dharma-gothic-e font-black text-black uppercase
                                     text-[6.4rem] sm:text-[5.8rem] md:text-[7.8rem] lg:text-[8.8rem] xl:text-[12.8rem] 2xl:text-[12.8rem]
                                     leading-[4.7rem] sm:leading-[4.4rem] md:leading-[7rem] lg:leading-[7rem] xl:leading-[9.4rem] 2xl:leading-[9.4rem]
-                                '>
-                                    {el.content}
-                                </p>
+                                ' dangerouslySetInnerHTML={{__html: el.content}} />
                             </div>
                         ))}
                     </div>

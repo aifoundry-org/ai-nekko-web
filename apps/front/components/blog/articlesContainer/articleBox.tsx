@@ -24,12 +24,13 @@ export default function ArticleBox({article, isFeaturedArticle = false}: Article
             <div className='flex flex-col flex-grow-0 w-full h-full bg-sand
                 p-[2.4rem] sm:p-[3.2rem] md:p-[3.2rem] lg:p-[3.2rem] xl:p-[3.2rem] 2xl:p-[3.2rem] 
             '>
-                <div className='max-w-[100%] flex flex-row justify-start items-center flex-wrap overflow-x-auto gap-[0.8rem]'>
-                    {tags.map((el: StrapiTag) => ArticleTag({el})) }
-                </div>
+                {tags.length > 0 && 
+                    <div className='max-w-[100%] flex flex-row justify-start items-center flex-wrap overflow-x-auto gap-[0.8rem]'>
+                        {tags.map((el: StrapiTag) => ArticleTag({el})) }
+                    </div>
+                }
                 <div className='flex flex-row text-start mb-[2vw] md:mb-[1.25vw] lg:mb-[1.25vw] xl:mb-[1.25vw] 2xl:mb-[1.25vw]'>
-                    <p className='font-dharma-gothic-e font-black uppercase
-                        my-[1.6rem]
+                    <p style={{wordBreak: 'break-word'}} className='font-dharma-gothic-e font-black uppercase my-[1.6rem]
                         text-[3.2rem] md:text-[4vw] lg:text-[2.778vw] xl:text-[3.34vw] 2xl:text-[3.34vw] 
                         leading-[2.5rem] md:leading-[4vw] lg:leading-[2.3vw] xl:leading-[2.8vw] 2xl:leading-[2.8vw]
                     '>{title}</p>

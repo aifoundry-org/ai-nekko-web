@@ -8,13 +8,13 @@ export default function Card({name, role, profileImgUrl, linkedinUrl, className}
 
     return (
         <div onClick={() => setFlip(!flip)} onMouseEnter={() => setFlip(true)} onMouseLeave={() => setFlip(false)} className={`flex flex-col border-2 border-black bg-sand
-            w-[32.7rem] sm:w-[14.6rem] md:w-[18.6rem] lg:w-[20.5rem] xl:w-[28.6rem] 2xl:w-[30.6rem] 
-            h-[28.9rem] sm:h-[20.3rem] md:h-[23.3rem] lg:h-[25.4rem] xl:h-[33.3rem] 2xl:h-[40.3rem] 
+            w-[32.7rem] sm:w-[17rem] md:w-[18.6rem] lg:w-[20.5rem] xl:w-[28.6rem] 2xl:w-[30.6rem] 
+            h-[28.9rem] sm:h-[22rem] md:h-[23.3rem] lg:h-[25.4rem] xl:h-[33.3rem] 2xl:h-[40.3rem] 
             ${className}
         `}>
-            <div className={`card relative cursor-pointer hover:opacity-100 ${flip ? 'flip' : ''}`}>
-                <div className='front w-full left-0 absolute
-                    h-[28.6rem] sm:h-[20rem] md:h-[23rem] lg:h-[25rem] xl:h-[32.9rem] 2xl:h-[40rem]
+            <div className={`card relative z-[2] cursor-pointer hover:opacity-100 ${flip ? 'flip' : ''}`}>
+                <div className='front w-full left-0 absolute z-[1]
+                    h-[28.6rem] sm:h-[21.6rem] md:h-[23rem] lg:h-[25rem] xl:h-[32.9rem] 2xl:h-[40rem]
                 '>
                     <ImageWrapper style={{height: '100%', objectFit: 'cover'}} src={profileImgUrl} alt={`${name} profile image`} />
                 </div>
@@ -22,8 +22,8 @@ export default function Card({name, role, profileImgUrl, linkedinUrl, className}
                     h-[28.9rem] sm:h-[20.3rem] md:h-[23.3rem] lg:h-[25.4rem] xl:h-[33.3rem] 2xl:h-[40.3rem]
                 '>
                     <p className='flex font-dharma-gothic-e font-black uppercase text-orange
-                        text-[6.4rem] sm:text-[2.8rem] md:text-[3.4rem] lg:text-[4.4rem] xl:text-[6.4rem] 2xl:text-[6.4rem] 
-                        leading-[5.3rem] sm:leading-[2.5rem] md:leading-[3.3rem] lg:leading-[3.5rem] xl:leading-[5.3rem] 2xl:leading-[5rem] 
+                        text-[6.4rem] sm:text-[2.8rem] md:text-[3.4rem] lg:text-[3.7rem] xl:text-[5.5rem] 2xl:text-[6rem] 
+                        leading-[5.3rem] sm:leading-[2.5rem] md:leading-[3.3rem] lg:leading-[3.2rem] xl:leading-[4.5rem] 2xl:leading-[5rem] 
                     '>{name}</p>
                     <div className='w-full h-full flex flex-col justify-end text-black'>
                         <div className='border-t-2 border-black'>
