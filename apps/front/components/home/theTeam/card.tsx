@@ -7,7 +7,7 @@ export default function Card({name, role, profileImgUrl, linkedinUrl, className}
     const [flip, setFlip] = useState(false)
 
     return (
-        <div onClick={() => setFlip(!flip)} onMouseEnter={() => setFlip(true)} onMouseLeave={() => setFlip(false)} className={`flex flex-col border-2 border-black bg-sand
+        <div onClick={() => setFlip(!flip)} onTouchStart={() => setFlip(!flip)} onMouseEnter={() => setFlip(!flip)} onMouseLeave={() => setFlip(false)} className={`flex flex-col border-2 border-black bg-sand
             w-[32.7rem] sm:w-[17rem] md:w-[18.6rem] lg:w-[20.5rem] xl:w-[28.6rem] 2xl:w-[30.6rem] 
             h-[28.9rem] sm:h-[22rem] md:h-[23.3rem] lg:h-[25.4rem] xl:h-[33.3rem] 2xl:h-[40.3rem] 
             ${className}

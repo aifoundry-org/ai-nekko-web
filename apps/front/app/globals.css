@@ -26,6 +26,7 @@
 
 html {
   scroll-behavior: smooth !important;
+  touch-action: manipulation;
 }
 
 :root {
