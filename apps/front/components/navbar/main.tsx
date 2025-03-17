@@ -1,14 +1,13 @@
 'use client';
 
-import Link from 'next/link';
+// import Link from 'next/link';
 import { usePathname } from 'next/navigation'
-
 import IMGAiNekkoLogo from '@/public/imgs/navbar/logo.webp'
 import IMGAiNekkoLogoMobile from '@/public/imgs/navbar/logoMobile.webp'
 import SVGIconHamburger from '@/public/svgs/common/Hamburger.svg'
 import SVGIconLinkedin from '@/public/svgs/common/IconLinkedin.svg'
 import SVGIconCloseButton from '@/public/svgs/common/CloseButton.svg'
-import Button from '@/libs/litebox-lib/ui/Button/Button';
+// import Button from '@/libs/litebox-lib/ui/Button/Button';
 import ImageWrapper from '@/components/common/ImageWrapper';
 
 import { gsap } from 'gsap';
@@ -301,7 +300,7 @@ export default function NavBar() {
                             text-[2rem] lg:text-[2rem] xl:text-[2rem] 2xl:text-[4rem]
                             md:w-full sm:w-full lg:w-full xl:w-full 2xl:w-full justify-start
                         '>
-                            <div onClick={() => window.open("https://aifoundry.org")} className="uppercase cursor-pointer relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300">
+                            <div onClick={() => window.open("https://ai-foundry.litebox.dev")} className="uppercase cursor-pointer relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300">
                                 AI Foundry
                             </div>
                             <div onClick={() => window.location.href="/#team"} className="text-[#808080] navbar-team-link pointer-events-none cursor-pointer uppercase relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300">
@@ -326,7 +325,7 @@ export default function NavBar() {
                         <div className="flex justify-end
                             basis-1/2 md:basis-1/3 lg:basis-1/3 xl:basis-1/3 2xl:basis-1/3
                         ">
-                            <Button target='_blank' as={Link} href='/' variant="primary" content="Contact us" />
+                            {/* <Button target='_blank' as={Link} href='/' variant="primary" content="Contact us" /> */}
                         </div>
                     </div>
                 </nav>
@@ -363,7 +362,7 @@ export default function NavBar() {
                         </div>
                     </div>
                     <div className="flex flex-col w-full my-[10.667vw] xs:my-[4vw] font-dharma-gothic-e font-black text-[10.667vw] xs:text-[6.5vw] leading-[8.8vw] gap-[8.8vw] xs:gap-0">
-                        <div onClick={() => {closeMenu(); window.open("https://aifoundry.org")}} className="uppercase cursor-pointer">
+                        <div onClick={() => {closeMenu(); window.open("https://ai-foundry.litebox.dev")}} className="uppercase cursor-pointer">
                             ai foundry
                         </div>
                         <div onClick={() => {closeMenu(); window.location.href="/#team"}} className="uppercase text-[#808080] navbar-team-link pointer-events-none cursor-pointer">
@@ -385,7 +384,7 @@ export default function NavBar() {
                         </div>
                     </div>
                     <div className='flex w-full justify-start'>
-                        <Button target='_blank' as={Link} href='/' variant='primary' content='Contact us' />
+                        {/* <Button target='_blank' as={Link} href='/' variant='primary' content='Contact us' /> */}
                     </div>
                     <div className='flex flex-row gap-[8.55vw] xs:gap-[2vw] mt-[8.27vw]'>
                         <div className='w-[2.4rem] h-[2.4rem]'>
