@@ -51,9 +51,9 @@ const Headline = ({ article }: HeadlineProps) => {
                 </div>
                 <div className='absolute
                     block sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden
-                    w-[14.5rem]
+                    w-[11.5rem]
                     right-[calc(50%-16.8rem)]
-                    top-[calc(50%+1.5rem)]
+                    top-[calc(50%+6rem)]
                 '>
                     <ImageWrapper src={IMGCatMobile.src} alt="Cat" />
                 </div>

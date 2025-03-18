@@ -60,22 +60,27 @@ export default function ArticlesGrid({articles, search, tags, selectedTags, feat
     };
 
     return (
-        <div className='flex flex-col h-fit mx-auto my-[5rem]
+        <div className='flex flex-col h-fit mx-auto my-[5rem] 
             w-[32.7rem] sm:w-[54rem] md:w-[72rem] lg:w-[95.6rem] xl:w-[121.6rem] 2xl:w-[130rem] 
         '>
-            <div className='flex items-center gap-4 mb-20
+            <div className='flex items-center gap-4 mb-20 justify-center
                 flex-col lg:flex-row xl:flex-row 2xl:flex-row 
             '>
                 <Filters options={filtersOptions} onClick={handleFilterClick} />
                 <SearchInput className='
                     mt-[2.4rem] lg:mt-0 xl:mt-0 2xl:mt-0
-                    w-full lg:w-[32.7rem] xl:w-[32.7rem] 2xl:w-[32.7rem] 
-                ' inputClassName='h-[4.1rem] lg:h-auto xl:h-auto 2xl:h-auto text-[1.6rem]' value={searchTerm} onChange={(e) => handleSearchChange(e.target.value)} />
+                    w-full lg:w-[28.6rem] xl:w-[28.6rem] 2xl:w-[28.6rem] 
+                    h-full lg:h-[4.8rem] xl:h-[4.8rem] 2xl:h-[4.8rem] 
+                ' inputClassName='h-[4.1rem] lg:h-[4.8rem] xl:h-[4.8rem] 2xl:h-[4.8rem] text-[1.6rem]' value={searchTerm} onChange={(e) => handleSearchChange(e.target.value)} />
             </div>
             <div>
                 {!hasMoreArticles && 
-                    <div className='flex flex-col w-full items-center my-[10vw]'>
-                        <p className='font-dharma-gothic-e text-[4rem] text-black font-black uppercase'>
+                    <div className='flex flex-col w-full items-center my-[10vw]
+                        text-center sm:text-inherit md:text-inherit lg:text-inherit xl:text-inherit 2xl:text-inherit
+                    '>
+                        <p className='font-dharma-gothic-e text-[4rem] text-black font-black uppercase mb-[1.6rem]
+                            leading-[3.5rem] sm:leading-none md:leading-none lg:leading-none xl:leading-none 2xl:leading-none
+                        '>
                             There are no exact matches found
                         </p>
                         <p className='font-host-grotesk text-[2rem] text-black font-bold'>
