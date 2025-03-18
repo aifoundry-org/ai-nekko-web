@@ -1,14 +1,13 @@
 'use client';
 
-import Link from 'next/link';
+// import Link from 'next/link';
 import { usePathname } from 'next/navigation'
-
 import IMGAiNekkoLogo from '@/public/imgs/navbar/logo.webp'
 import IMGAiNekkoLogoMobile from '@/public/imgs/navbar/logoMobile.webp'
 import SVGIconHamburger from '@/public/svgs/common/Hamburger.svg'
 import SVGIconLinkedin from '@/public/svgs/common/IconLinkedin.svg'
 import SVGIconCloseButton from '@/public/svgs/common/CloseButton.svg'
-import Button from '@/libs/litebox-lib/ui/Button/Button';
+// import Button from '@/libs/litebox-lib/ui/Button/Button';
 import ImageWrapper from '@/components/common/ImageWrapper';
 
 import { gsap } from 'gsap';
@@ -18,8 +17,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function NavBar() {
-    const path = usePathname();
-    const hiddenAnnouncement = ['blog', 'terms-of-service', 'privacy-policy', 'cookie-policy'].some(el => path.includes(el) ? true : false)
+    const pathname = usePathname();
+    const hiddenAnnouncement = pathname !== "/"
 
     useGSAP(() => {
         ScrollTrigger.create({
@@ -44,7 +43,7 @@ export default function NavBar() {
                     marginRight: '16.6vw',
                 })
 
-                gsap.fromTo('.navbar nav', {
+                gsap.fromTo('.navbar', {
                     borderWidth: '0px',
                     borderColor: 'transparent',
                     paddingTop: '0',
@@ -111,7 +110,7 @@ export default function NavBar() {
                     marginRight: '5vw',
                 })
 
-                gsap.fromTo('.navbar nav', {
+                gsap.fromTo('.navbar', {
                     borderWidth: '2px',
                     borderColor: 'black',
                     paddingTop: '1.05rem',
@@ -165,27 +164,15 @@ export default function NavBar() {
                 gsap.fromTo('.navbar-mobile', {
                     position: 'absolute',
                     backgroundColor: 'transparent',
-                    width: '32.7rem',
-                    height: '4rem',
-                    top: hiddenAnnouncement ? '2.4rem': '9.4rem',
-                    marginLeft: '2.4rem',
-                    marginRight: '2.4rem',
-                    paddingLeft: '0',
-                    paddingRight: '0',
                     borderWidth: '0px',
                     borderColor: 'transparent',
+                    top: hiddenAnnouncement ? '0': '9.4rem',
                 },{
                     position: 'fixed',
                     backgroundColor: '#F6EFE4', // sand
-                    width: '37.5rem',
-                    height: '8.6rem',
-                    top: '0',
-                    marginLeft: '0',
-                    marginRight: '0',
-                    paddingLeft: '2.4rem',
-                    paddingRight: '2.4rem',
                     borderWidth: '2px',
                     borderColor: 'black',
+                    top: 0,
                 })
 
                 const tl = gsap.timeline({paused: true})
@@ -220,27 +207,15 @@ export default function NavBar() {
                 gsap.fromTo('.navbar-mobile', {
                     position: 'fixed',
                     backgroundColor: '#F6EFE4', // sand
-                    width: '37.5rem',
-                    height: '8.6rem',
-                    top: '0',
-                    marginLeft: '0',
-                    marginRight: '0',
-                    paddingLeft: '2.4rem',
-                    paddingRight: '2.4rem',
                     borderWidth: '2px',
-                    borderColor: 'black'
+                    borderColor: 'black',
+                    top: 0,
                 },{
                     position: 'absolute',
                     backgroundColor: 'transparent',
-                    width: '32.7rem',
-                    height: '4rem',
-                    top: hiddenAnnouncement ? '2.4rem': '9.4rem',
-                    marginLeft: '2.4rem',
-                    marginRight: '2.4rem',  
-                    paddingLeft: '0',
-                    paddingRight: '0',
                     borderWidth: '0px',
-                    borderColor: 'transparent'
+                    borderColor: 'transparent',
+                    top: hiddenAnnouncement ? '0': '9.4rem',
                 })
 
                 const tl = gsap.timeline({paused: true})
@@ -290,10 +265,10 @@ export default function NavBar() {
 
     return (
         <>
-            <div className={`navbar z-10 absolute bg-transparent w-[90vw] ${hiddenAnnouncement ? 'top-[2.4rem]': 'top-[9.4rem]'} mx-[5vw] items-center bg-sand
+            <nav className={`navbar z-10 absolute bg-transparent w-[90vw] ${hiddenAnnouncement ? 'top-[2.4rem]': 'top-[9.4rem]'} mx-[5vw] items-center bg-sand
                 hidden xs:flex sm:flex md:flex lg:flex xl:flex 2xl:flex 
             `}>
-                <nav className='relative w-full flex flex-col'>
+                <div className='relative w-full flex flex-col'>
                     <div className='flex flex-row items-center'>
                         <div className='navbar-links
                             flex flex-row font-medium gap-x-[2.8vw]
@@ -301,7 +276,7 @@ export default function NavBar() {
                             text-[2rem] lg:text-[2rem] xl:text-[2rem] 2xl:text-[4rem]
                             md:w-full sm:w-full lg:w-full xl:w-full 2xl:w-full justify-start
                         '>
-                            <div onClick={() => window.open("https://aifoundry.org")} className="uppercase cursor-pointer relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300">
+                            <div onClick={() => window.open("https://ai-foundry.litebox.dev")} className="uppercase cursor-pointer relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300">
                                 AI Foundry
                             </div>
                             <div onClick={() => window.location.href="/#team"} className="text-[#808080] navbar-team-link pointer-events-none cursor-pointer uppercase relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300">
@@ -326,15 +301,15 @@ export default function NavBar() {
                         <div className="flex justify-end
                             basis-1/2 md:basis-1/3 lg:basis-1/3 xl:basis-1/3 2xl:basis-1/3
                         ">
-                            <Button target='_blank' as={Link} href='/' variant="primary" content="Contact us" />
+                            {/* <Button target='_blank' as={Link} href='/' variant="primary" content="Contact us" /> */}
                         </div>
                     </div>
-                </nav>
-            </div>
-            <div className={`navbar-mobile z-10 absolute bg-transparent w-[32.7rem] ${hiddenAnnouncement ? 'top-[2.4rem]': 'top-[9.4rem]'} mx-[2.4rem] items-center bg-sand
+                </div>
+            </nav>
+            <nav className={`navbar-mobile z-10 absolute left-0 h-[8.6rem] bg-transparent w-full ${hiddenAnnouncement ? 'top-0': 'top-[9.4rem]'} items-center bg-sand
                 flex xs:hidden sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden
             `}>
-                <nav className='flex flex-row justify-between items-center w-full'>
+                <div className='flex flex-row justify-between items-center w-full p-[2.4rem]'>
                     <div className='w-[15.4rem]'>
                         <div className='logo w-[15.4rem] justify-start cursor-pointer'>
                             <ImageWrapper onClick={() => window.location.href= '/'} src={IMGAiNekkoLogo.src} alt='AINekko logo' />
@@ -346,9 +321,9 @@ export default function NavBar() {
                     <div className='w-[2.4rem] justify-end cursor-pointer'>
                         <ImageWrapper src={SVGIconHamburger.src} onClick={showMenu} alt="Side menu button" />
                     </div>
-                </nav>
-            </div>
-            <div className='sideMenu fixed left-full w-full h-[100vh] top-0 bg-orange z-20'>
+                </div>
+            </nav>
+            <aside className='sideMenu fixed left-full w-full h-[100vh] top-0 bg-orange z-20'>
                 <div className='flex flex-col p-[6vw]'>
                     <div className='flex flex-row w-full items-center justify-between'>
                         <div className='flex justify-start'>
@@ -363,7 +338,7 @@ export default function NavBar() {
                         </div>
                     </div>
                     <div className="flex flex-col w-full my-[10.667vw] xs:my-[4vw] font-dharma-gothic-e font-black text-[10.667vw] xs:text-[6.5vw] leading-[8.8vw] gap-[8.8vw] xs:gap-0">
-                        <div onClick={() => {closeMenu(); window.open("https://aifoundry.org")}} className="uppercase cursor-pointer">
+                        <div onClick={() => {closeMenu(); window.open("https://ai-foundry.litebox.dev")}} className="uppercase cursor-pointer">
                             ai foundry
                         </div>
                         <div onClick={() => {closeMenu(); window.location.href="/#team"}} className="uppercase text-[#808080] navbar-team-link pointer-events-none cursor-pointer">
@@ -385,7 +360,7 @@ export default function NavBar() {
                         </div>
                     </div>
                     <div className='flex w-full justify-start'>
-                        <Button target='_blank' as={Link} href='/' variant='primary' content='Contact us' />
+                        {/* <Button target='_blank' as={Link} href='/' variant='primary' content='Contact us' /> */}
                     </div>
                     <div className='flex flex-row gap-[8.55vw] xs:gap-[2vw] mt-[8.27vw]'>
                         <div className='w-[2.4rem] h-[2.4rem]'>
@@ -398,7 +373,7 @@ export default function NavBar() {
                         © 2024 AI Foundry. All rights reserved.
                     </div>
                 </div>
-            </div>
+            </aside>
         </>
     )
 }

@@ -1,3 +1,4 @@
+import { redirect } from 'next/navigation'
 import { Suspense } from 'react';
 import Main from '@/components/blog/article/article'
 import { getArticle } from '@/backend/blog/actions';
@@ -10,7 +11,7 @@ export default async function Page({ params }: PageProps) {
     const { slug } = await params;
     const article = await getArticle(slug);
     if(!Object.keys(article).includes('id')){
-        window.location.href = '/page-not-found';
+        redirect('/page-not-found');
     }
 
     return (

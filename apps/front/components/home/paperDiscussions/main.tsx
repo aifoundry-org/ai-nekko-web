@@ -32,9 +32,9 @@ export default function Main() {
         
         if (window.innerWidth <= 430) {
             scrollTriggerEndOffset = 90
-        } else if (window.innerWidth > 431 && window.innerWidth <= 639) {
+        } else if (window.innerWidth >= 431 && window.innerWidth <= 639) {
             scrollTriggerEndOffset = 90
-        } else if (window.innerWidth > 640 && window.innerWidth <= 767) {
+        } else if (window.innerWidth >= 640 && window.innerWidth <= 767) {
             scrollTriggerEndOffset = 10;
         } 
 

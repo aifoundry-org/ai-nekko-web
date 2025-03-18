@@ -54,7 +54,6 @@ export default function RelatedArticles({ articles }: {articles?: StrapiArticle[
                         })
                     },
                     onLeave: () => {
-                        console.log('onLeave ', motoCatEndingPoint)
                         gsap.to(refMotoCat.current, {
                             ease: 'none',
                             duration: 0,

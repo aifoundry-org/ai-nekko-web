@@ -20,8 +20,8 @@ export default function Main() {
     return (
         <div className='flex flex-col w-full h-full'>
             <div className='flex flex-col h-fit mx-auto 
-                mt-[12rem] sm:mt-[10rem] md:mt-[12rem] lg:mt-[12rem] xl:mt-[15rem] 2xl:mt-[15rem] 
-                mb-[12rem] sm:mb-[8rem] md:mb-[8rem] lg:mb-[8rem] xl:mb-[8rem] 2xl:mb-[8rem] 
+                mt-[12rem] sm:mt-[14.2rem] md:mt-[16.2rem] lg:mt-[16.2rem] xl:mt-[19.2rem] 2xl:mt-[19.2rem] 
+                mb-[12rem] sm:mb-[3.4rem] md:mb-[3.4rem] lg:mb-[3.4rem] xl:mb-[3.4rem] 2xl:mb-[3.4rem] 
                 w-[32.7rem] sm:w-[54rem] md:w-[72rem] lg:w-[95.6rem] xl:w-[121.6rem] 2xl:w-[130rem] 
             '>
                 <div className='flex-row w-full text-center relative
