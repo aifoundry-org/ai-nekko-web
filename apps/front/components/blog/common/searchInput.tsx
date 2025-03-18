@@ -55,8 +55,8 @@ const SearchInput = React.forwardRef<HTMLInputElement, SearchInputProps>(
   ({ value = '', onCancel, variant = 'plain', hasCancelButton = false, className, inputClassName, ...props }, ref) => {
     return (
       <div className={`relative flex items-center ${className}`}>
-        <Input defaultValue={value} ref={ref} variant={variant} placeholder='Search' className={`px-[40px] !text-[#7B7B7B] ${inputClassName}`} {...props} />
-        <SearchIcon className='absolute left-5 h-7 w-7 text-neutral-650' />
+        <Input defaultValue={value} ref={ref} variant={variant} placeholder='Search' className={`pl-[5.5rem] lg:pl-[4.2vw] xl:pl-[4.2vw] 2xl:pl-[4.2vw] !text-[#7B7B7B] ${inputClassName}`} {...props} />
+        <SearchIcon className='absolute left-[1.8rem] h-[2.4rem] w-[2.4rem] text-neutral-650' />
         {hasCancelButton && value !== '' && (
           <CancelIcon className='absolute right-3 h-5 w-5 text-gray-400 cursor-pointer' onClick={() => onCancel?.()} />
         )}

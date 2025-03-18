@@ -51,11 +51,11 @@ export default function NotFoundPage() {
 					<Button className='mx-auto mt-32' as={Link} href='/' variant='primary' content='Back to home' svg='scroll-right'/>
 				</div>
 			</div>
-			<div className='xs:hidden flex relative w-full h-full flex-col'>
+			<div className='xs:hidden flex relative w-full h-full flex-col top-[10rem]'>
 				<div className='flex relative flex-col justify-center text-center align-middle mx-auto mt-[6.9rem] gap-y-[0.3rem]'>
 					<p className='font-dharma-gothic-e font-black text-[27.75vw] leading-[20.27vw]'>404</p>
 					<p className='text-orange font-dharma-gothic-e font-black text-[23.47vw] leading-[17.35vw] uppercase'>page not found</p>
-					<div className='absolute w-[40.8vw] left-[49vw] top-[44vw]'>
+					<div className='absolute w-[40.8vw] transform left-[49vw] top-[44vw]'>
 						<ImageWrapper  src={IMGErrorMobile.src} alt="Error mobile" />
 					</div>
 					<div className='absolute w-[33.4vw] right-[8.5vw] top-[5.5vw]'>
