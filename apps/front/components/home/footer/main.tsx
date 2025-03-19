@@ -36,10 +36,10 @@ export default function Footer(){
                 '>
                     <div className='relative w-full h-fit flex border-t-2 border-sand 
                         flex-col sm:flex-row md:flex-row lg:flex-row xl:flex-row 2xl:flex-row
-                        pt-[2.4rem] sm:pt-[2.9rem] md:pt-[2.9rem] lg:pt-[2.9rem] xl:pt-[2.9rem] 2xl:pt-[2.9rem] 
+                        pt-[2.4rem] sm:pt-[1.9rem] md:pt-[2rem] lg:pt-[2.9rem] xl:pt-[2.9rem] 2xl:pt-[2.9rem] 
                     '>
                         <div className='relative w-full h-fit uppercase font-bold tracking-wider justify-start 
-                            flex xs:hidden sm:hidden md:hidden lg:flex xl:flex 2xl:hidden
+                            flex xs:hidden sm:flex md:flex lg:flex xl:flex 2xl:hidden
                             gap-x-[3.2rem] lg:gap-x-[4.8rem] xl:gap-x-[4.8rem] 2xl:gap-x-[4.8rem] 
                             text-[1.8rem] lg:text-[2rem] xl:text-[2rem] 2xl:text-[2rem] 
                             leading-[1.8rem] lg:leading-[2rem] xl:leading-[2rem] 2xl:leading-[2rem] 
@@ -51,7 +51,7 @@ export default function Footer(){
                         </div>
                         <div className='relative w-full h-fit uppercase font-bold tracking-wider items-end justify-end
                             mt-[1.4rem] sm:mt-0 md:mt-0 lg:mt-0 xl:mt-0 2xl:mt-0 
-                            flex xs:hidden sm:hidden md:hidden lg:flex xl:flex 2xl:hidden
+                            flex xs:hidden sm:flex md:flex lg:flex xl:flex 2xl:hidden
                             gap-x-[3.2rem] lg:gap-x-[4.8rem] xl:gap-x-[4.8rem] 2xl:gap-x-[4.8rem] 
                             text-[1.8rem] lg:text-[2rem] xl:text-[2rem] 2xl:text-[2rem] 
                             leading-[1.8rem] lg:leading-[2rem] xl:leading-[2rem] 2xl:leading-[2rem] 
@@ -72,18 +72,18 @@ export default function Footer(){
                                 </div>
                             </div>
                         </div>
-                        <div className='relative w-full h-fit uppercase font-bold tracking-wider justify-between
-                            hidden xs:flex sm:flex md:flex lg:hidden xl:hidden 2xl:flex
+                        <div className='relative w-full h-fit uppercase font-bold tracking-wider justify-between items-end
+                            hidden xs:flex sm:hidden md:hidden lg:hidden xl:hidden 2xl:flex
                             xs:gap-x-[1.8rem] sm:gap-x-[2.2rem] md:gap-x-[4.2rem] 2xl:gap-x-[4rem]
                             xs:text-[2rem] sm:text-[2rem] md:text-[2rem] 2xl:text-[4rem]
                             xs:leading-[2rem] sm:leading-[2rem] md:leading-[2rem] 2xl:leading-[4rem]
                         '>
-                            <div className='cursor-pointer relative after:bg-white after:absolute after:h-1 after:w-0 after:-bottom-[0.5vw] after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300' onClick={() => window.open('https://ai-foundry.litebox.dev')}>ai foundry</div>
-                            <div className='cursor-pointer relative after:bg-white after:absolute after:h-1 after:w-0 after:-bottom-[0.5vw] after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300' onClick={() => window.location.href='/#team'}>team</div>
-                            <div className='cursor-pointer relative after:bg-white after:absolute after:h-1 after:w-0 after:-bottom-[0.5vw] after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300' onClick={() => window.location.href='/blog'}>blog</div>
-                            <div className='cursor-pointer relative after:bg-white after:absolute after:h-1 after:w-0 after:-bottom-[0.5vw] after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300' onClick={() => window.location.href='/privacy-policy'} >privacy policy</div>
-                            <div className='cursor-pointer relative after:bg-white after:absolute after:h-1 after:w-0 after:-bottom-[0.5vw] after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300' onClick={() => window.location.href='/terms-of-service'} >terms of service</div>
-                            <div className='cursor-pointer relative after:bg-white after:absolute after:h-1 after:w-0 after:-bottom-[0.5vw] after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300' onClick={() => window.location.href='/cookie-policy'} >cookie policy</div>
+                            <div style={{flexBasis: 'min-content'}} className='cursor-pointer relative after:bg-white after:absolute after:h-1 after:w-0 after:-bottom-[0.5vw] after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300' onClick={() => window.open('https://ai-foundry.litebox.dev')}>ai foundry</div>
+                            <div style={{flexBasis: 'min-content'}} className='cursor-pointer relative after:bg-white after:absolute after:h-1 after:w-0 after:-bottom-[0.5vw] after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300' onClick={() => window.location.href='/#team'}>team</div>
+                            <div style={{flexBasis: 'min-content'}} className='cursor-pointer relative after:bg-white after:absolute after:h-1 after:w-0 after:-bottom-[0.5vw] after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300' onClick={() => window.location.href='/blog'}>blog</div>
+                            <div style={{flexBasis: 'min-content'}} className='cursor-pointer relative after:bg-white after:absolute after:h-1 after:w-0 after:-bottom-[0.5vw] after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300' onClick={() => window.location.href='/privacy-policy'} >privacy policy</div>
+                            <div style={{flexBasis: 'min-content'}} className='cursor-pointer relative after:bg-white after:absolute after:h-1 after:w-0 after:-bottom-[0.5vw] after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300' onClick={() => window.location.href='/terms-of-service'} >terms of service</div>
+                            <div style={{flexBasis: 'min-content'}} className='cursor-pointer relative after:bg-white after:absolute after:h-1 after:w-0 after:-bottom-[0.5vw] after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300' onClick={() => window.location.href='/cookie-policy'} >cookie policy</div>
                         </div>
                     </div>
                     <div className='relative w-full h-fit justify-end 
