@@ -67,7 +67,6 @@ export default function Hero() {
         const tl = gsap.timeline({paused:true, onComplete: () => {setFirstAnimComplete(true)}});
         const mm = gsap.matchMedia();
 
-        tl.set('.navbar', {top: '9.4rem'});
         tl.set('.navbar-team-link', {pointerEvents: 'none'})
 
         // Remove scroll from body
