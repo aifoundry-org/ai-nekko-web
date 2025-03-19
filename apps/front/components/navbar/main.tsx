@@ -31,7 +31,7 @@ export default function NavBar() {
                     position: 'absolute',
                     backgroundColor: 'transparent',
                     width: '90vw',
-                    top: hiddenAnnouncement ? '2.4rem': '9.4rem',
+                    top: hiddenAnnouncement ? '2.4rem': '5.4rem',
                     marginLeft: '5vw',
                     marginRight: '5vw',
                 },{
@@ -105,7 +105,7 @@ export default function NavBar() {
                     position: 'absolute',
                     backgroundColor: 'transparent',
                     width: '90vw',
-                    top: hiddenAnnouncement ? '2.4rem': '9.4rem',
+                    top: hiddenAnnouncement ? '2.4rem': '5.4rem',
                     marginLeft: '5vw',
                     marginRight: '5vw',
                 })
@@ -166,7 +166,7 @@ export default function NavBar() {
                     backgroundColor: 'transparent',
                     borderWidth: '0px',
                     borderColor: 'transparent',
-                    top: hiddenAnnouncement ? '0': '9.4rem',
+                    top: hiddenAnnouncement ? '0': '5.4rem',
                 },{
                     position: 'fixed',
                     backgroundColor: '#F6EFE4', // sand
@@ -215,7 +215,7 @@ export default function NavBar() {
                     backgroundColor: 'transparent',
                     borderWidth: '0px',
                     borderColor: 'transparent',
-                    top: hiddenAnnouncement ? '0': '9.4rem',
+                    top: hiddenAnnouncement ? '0': '5.4rem',
                 })
 
                 const tl = gsap.timeline({paused: true})
@@ -265,7 +265,7 @@ export default function NavBar() {
 
     return (
         <>
-            <nav className={`navbar z-10 absolute bg-transparent w-[90vw] ${hiddenAnnouncement ? 'top-[2.4rem]': 'top-[9.4rem]'} mx-[5vw] items-center bg-sand
+            <nav className={`navbar z-10 absolute bg-transparent w-[90vw] ${hiddenAnnouncement ? 'top-[2.4rem]': 'top-[5.4rem]'} mx-[5vw] items-center bg-sand
                 hidden xs:flex sm:flex md:flex lg:flex xl:flex 2xl:flex 
             `}>
                 <div className='relative w-full flex flex-col'>
@@ -279,9 +279,11 @@ export default function NavBar() {
                             <div onClick={() => window.open("https://ai-foundry.litebox.dev")} className="uppercase cursor-pointer relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300">
                                 AI Foundry
                             </div>
-                            <div onClick={() => window.location.href="/#team"} className="text-[#808080] navbar-team-link pointer-events-none cursor-pointer uppercase relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300">
-                                Team
-                            </div>
+                            {pathname == '/' && 
+                                <div onClick={() => window.location.href="/#team"} className="navbar-team-link pointer-events-none cursor-pointer uppercase relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300">
+                                    Team
+                                </div>
+                            }
                             <div onClick={() => window.location.href="/blog"} className="uppercase cursor-pointer relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300">
                                 Blog
                             </div>
@@ -306,7 +308,7 @@ export default function NavBar() {
                     </div>
                 </div>
             </nav>
-            <nav className={`navbar-mobile z-10 absolute left-0 h-[8.6rem] bg-transparent w-full ${hiddenAnnouncement ? 'top-0': 'top-[9.4rem]'} items-center bg-sand
+            <nav className={`navbar-mobile z-10 absolute left-0 h-[8.6rem] bg-transparent w-full ${hiddenAnnouncement ? 'top-0': 'top-[5.4rem]'} items-center bg-sand
                 flex xs:hidden sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden
             `}>
                 <div className='flex flex-row justify-between items-center w-full p-[2.4rem]'>
@@ -341,9 +343,11 @@ export default function NavBar() {
                         <div onClick={() => {closeMenu(); window.open("https://ai-foundry.litebox.dev")}} className="uppercase cursor-pointer">
                             ai foundry
                         </div>
-                        <div onClick={() => {closeMenu(); window.location.href="/#team"}} className="uppercase text-[#808080] navbar-team-link pointer-events-none cursor-pointer">
-                            team
-                        </div>
+                        {pathname == '/' &&
+                            <div onClick={() => {closeMenu(); window.location.href="/#team"}} className="uppercase navbar-team-link pointer-events-none cursor-pointer">
+                                team
+                            </div>
+                        }
                         <div onClick={() => {closeMenu(); window.location.href="/blog"}} className="uppercase cursor-pointer">
                             blog
                         </div>

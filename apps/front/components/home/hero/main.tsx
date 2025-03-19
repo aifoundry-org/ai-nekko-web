@@ -59,7 +59,7 @@ export default function Hero() {
             })
             gsap.set('body', {overflowY: 'scroll'})
             gsap.set('.scroller-container', {overflowY: 'hidden'})
-            gsap.set('.navbar-team-link', {color: 'black', pointerEvents: 'auto'})
+            gsap.set('.navbar-team-link', {pointerEvents: 'auto'})
 
             return;
         }
@@ -68,7 +68,7 @@ export default function Hero() {
         const mm = gsap.matchMedia();
 
         tl.set('.navbar', {top: '9.4rem'});
-        tl.set('.navbar-team-link', {color: 'gray', pointerEvents: 'none'})
+        tl.set('.navbar-team-link', {pointerEvents: 'none'})
 
         // Remove scroll from body
         tl.set('body', {overflowY: 'hidden'})
@@ -159,7 +159,7 @@ export default function Hero() {
                 <div className='anim-container absolute flex opacity-0 -translate-y-1/2 transform 
                     w-[5.6rem] md:w-[7.5rem] lg:w-[7.5rem] xl:w-[7.5rem] 2xl:w-[7.5rem] 
                     h-[5.1rem] md:h-[6.9rem] lg:h-[6.9rem] xl:h-[6.9rem] 2xl:h-[6.9rem] 
-                    top-[calc(50%+4.5rem)] sm:top-[calc(50%+4.5rem)] md:top-[calc(50%+4.5rem)] lg:top-[calc(50%+4.5rem)] xl:top-[calc(50%+4.5rem)] 2xl:top-[calc(50%+4.5rem)] 
+                    top-[calc(50%+1.5rem)] sm:top-[calc(50%+4.5rem)] md:top-[calc(50%+4.5rem)] lg:top-[calc(50%+4.5rem)] xl:top-[calc(50%+4.5rem)] 2xl:top-[calc(50%+4.5rem)] 
                 '>
                     <Image className='light-cat absolute transform left-1/2 -translate-x-1/2
                     -top-[4.5rem] sm:-top-[5rem] md:-top-[5rem] lg:-top-[5rem] xl:-top-[5rem] 2xl:-top-[5rem]
