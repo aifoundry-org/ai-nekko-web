@@ -102,20 +102,20 @@ export default function CatAnimText3({firstAnimComplete}: {firstAnimComplete?: b
         <div className='cat-text-container-3 fixed top-0 pointer-events-none flex flex-col w-[100rem] h-full font-dharma-gothic-e font-black uppercase justify-center items-center text-center'>
             <div className='absolute arrows opacity-0
                 w-[11rem] sm:w-[11rem] md:w-[14.7rem] md:lg:w-[16.7rem] xl:w-[16.7rem] 2xl:w-[16.7rem]
-                top-[calc(50%+4.5rem)] sm:top-[calc(50%+5rem)] md:top-[calc(50%+2rem)] lg:top-[calc(50%+4.6rem)] xl:top-[calc(50%+5.6rem)] 2xl:top-[calc(50%+5.6rem)]
+                top-[calc(50%+1.5rem)] sm:top-[calc(50%+5rem)] md:top-[calc(50%+2rem)] lg:top-[calc(50%+4.6rem)] xl:top-[calc(50%+5.6rem)] 2xl:top-[calc(50%+5.6rem)]
                 left-[29.7rem] sm:left-[22rem] md:left-[13rem] lg:left-0 xl:left-0 2xl:left-0
             '>
                 <ImageWrapper src={IMGArrows.src} alt='Arrows'/>
             </div>
             <div className='absolute googles opacity-0
                 w-[9.5rem] sm:w-[11.3rem] md:w-[11.3rem] lg:w-[11.3rem] xl:w-[11.3rem] 2xl:w-[11.3rem]
-                top-[calc(50%-21rem)] sm:top-[calc(50%-26rem)] md:top-[calc(50%-27rem)] lg:top-[calc(50%-26.5rem)] xl:top-[calc(50%-26.5rem)] 2xl:top-[calc(50%-26.5rem)]
+                top-[calc(50%-24rem)] sm:top-[calc(50%-26rem)] md:top-[calc(50%-27rem)] lg:top-[calc(50%-26.5rem)] xl:top-[calc(50%-26.5rem)] 2xl:top-[calc(50%-26.5rem)]
             '>
                 <ImageWrapper src={IMGGloves.src} alt='Googles'/>
             </div>
             <div className='absolute z-[1] circles opacity-0
                 w-[5.1rem] sm:w-[7.1rem] md:w-[7.1rem] lg:w-[7.1rem] xl:w-[7.1rem] 2xl:w-[7.1rem]
-                top-[calc(50%-5.5rem)] sm:top-[calc(50%-5.8rem)] md:top-[calc(50%-7rem)] lg:top-[calc(50%-7.9rem)] xl:top-[calc(50%-7.5rem)] 2xl:top-[calc(50%-7.5rem)]
+                top-[calc(50%-8.5rem)] sm:top-[calc(50%-5.8rem)] md:top-[calc(50%-7rem)] lg:top-[calc(50%-7.9rem)] xl:top-[calc(50%-7.5rem)] 2xl:top-[calc(50%-7.5rem)]
                 right-[calc(50%-7.8rem)] sm:right-[calc(50%-11.1rem)] md:right-[calc(50%-11.1rem)] lg:right-[calc(50%-12.1rem)] xl:right-[calc(50%-12.1rem)] 2xl:right-[calc(50%-12.1rem)]
             '>
                 <ImageWrapper src={IMGCircles.src} alt='Circles'/>
@@ -131,19 +131,19 @@ export default function CatAnimText3({firstAnimComplete}: {firstAnimComplete?: b
             <div className='absolute z-[1] errorMobile opacity-0
                 block sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden
                 w-[15.4rem]
-                top-[calc(50%-2rem)] left-[calc(50%-11rem)]
+                top-[calc(50%-5rem)] left-[calc(50%-11rem)]
             '>
                 <ImageWrapper src={IMGErrorMobile.src} alt='Error Mobile'/>
             </div>
             <div className='absolute transform -translate-x-1/2 graffiti opacity-0
                 w-[10rem] sm:w-[15.9rem] md:w-[15.9rem] lg:w-[15.9rem] xl:w-[15.9rem] 2xl:w-[15.9rem]
-                bottom-[calc(50%-28rem)] sm:bottom-[calc(50%-34rem)] md:bottom-[calc(50%-34rem)] lg:bottom-[calc(50%-34rem)] xl:bottom-[calc(50%-35rem)] 2xl:bottom-[calc(50%-35rem)]
+                bottom-[calc(50%-25rem)] sm:bottom-[calc(50%-34rem)] md:bottom-[calc(50%-34rem)] lg:bottom-[calc(50%-34rem)] xl:bottom-[calc(50%-35rem)] 2xl:bottom-[calc(50%-35rem)]
                 left-1/2
             '>
                 <ImageWrapper src={IMGGraffiti.src} alt='Graffiti'/>
             </div>
             <div className='flex flex-col absolute transform -translate-y-1/2
-                top-[calc(50%+4rem)] sm:top-[calc(50%+4rem)] md:top-[calc(50%+3rem)] lg:top-[calc(50%+5.5rem)] xl:top-[calc(50%+6rem)] 2xl:top-[calc(50%+6rem)] 
+                top-[calc(50%+1rem)] sm:top-[calc(50%+4rem)] md:top-[calc(50%+3rem)] lg:top-[calc(50%+5.5rem)] xl:top-[calc(50%+6rem)] 2xl:top-[calc(50%+6rem)] 
                 gap-y-[4rem] sm:gap-y-[2rem] md:gap-y-[2rem] lg:gap-y-[2rem] xl:gap-y-[2rem] 2xl:gap-y-[2rem] 
             '>
                 <p className='text1 opacity-0

@@ -41,7 +41,7 @@ export default function Main() {
         ScrollTrigger.create({
             trigger: '.paper-slides-container',
             start: () => `center+=${scrollTriggerEndOffset}vh center`,
-            end: () => 'bottom+=300vh center', 
+            end: () => 'bottom+=1200vh center', 
             pin: '.pin-section',
             scroller: 'body',
             snap: {

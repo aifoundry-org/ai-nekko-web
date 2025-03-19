@@ -68,20 +68,20 @@ export default function CatAnimText1({firstAnimComplete}: {firstAnimComplete?: b
         <div className='cat-text-container-1 fixed top-0 pointer-events-none flex flex-col w-[100rem] h-full font-dharma-gothic-e font-black uppercase justify-center items-center text-center'>
             <div className='arrows absolute opacity-0
                 w-[11rem] sm:w-[11rem] md:w-[11rem] lg:w-[16.7rem] xl:w-[16.7rem] 2xl:w-[16.7rem]
-                top-[calc(50%+6rem)] sm:top-[calc(50%+5rem)] md:top-[calc(50%+6rem)] lg:top-[calc(50%+5rem)] xl:top-[calc(50%+5rem)] 2xl:top-[calc(50%+5rem)]
+                top-[calc(50%+3rem)] sm:top-[calc(50%+5rem)] md:top-[calc(50%+6rem)] lg:top-[calc(50%+5rem)] xl:top-[calc(50%+5rem)] 2xl:top-[calc(50%+5rem)]
                 left-[29.7rem] sm:left-[21rem] md:left-[21rem] lg:left-0 xl:left-0 2xl:left-0
             '>
                 <ImageWrapper src={IMGArrows.src} alt='Arrows' />
             </div>
             <div className='googles absolute opacity-0
                 w-[12.5rem] sm:w-[17.9rem] md:w-[17.9rem] lg:w-[17.9rem] xl:w-[17.9rem] 2xl:w-[17.9rem]
-                top-[calc(50%-20rem)] sm:top-[calc(50%-26rem)] md:top-[calc(50%-26rem)] lg:top-[calc(50%-25rem)] xl:top-[calc(50%-24.7rem)] 2xl:top-[calc(50%-24.7rem)]
+                top-[calc(50%-23rem)] sm:top-[calc(50%-26rem)] md:top-[calc(50%-26rem)] lg:top-[calc(50%-25rem)] xl:top-[calc(50%-24.7rem)] 2xl:top-[calc(50%-24.7rem)]
             '>
                 <ImageWrapper src={IMGGoogles.src} alt='Googles' />
             </div>
             <div className='graffiti absolute opacity-0
                 w-[13rem] sm:w-[15rem] md:w-[15rem] lg:w-[19rem] xl:w-[19rem] 2xl:w-[19rem]
-                top-[calc(50%-1.5rem)] sm:top-[calc(50%-3rem)] md:top-[calc(50%-3rem)] lg:top-[calc(50%-5rem)] xl:top-[calc(50%-4rem)] 2xl:top-[calc(50%-4rem)]
+                top-[calc(50%-4.5rem)] sm:top-[calc(50%-3rem)] md:top-[calc(50%-3rem)] lg:top-[calc(50%-5rem)] xl:top-[calc(50%-4rem)] 2xl:top-[calc(50%-4rem)]
                 right-[32rem] sm:right-[23.5rem] md:right-[23.5rem] lg:right-[16.5rem] xl:right-[16.8rem] 2xl:right-[16.5rem]
             '>
                 <ImageWrapper src={IMGGraffiti.src} alt='Graffiti' />
@@ -97,12 +97,12 @@ export default function CatAnimText1({firstAnimComplete}: {firstAnimComplete?: b
             <div className='errorMobile absolute z-[1] opacity-0
                 block sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden
                 w-[15.4rem] 
-                top-[calc(50%+0.5rem)] left-[calc(50%-10.7rem)]
+                top-[calc(50%-1.5rem)] left-[calc(50%-10.7rem)]
             '>
                 <ImageWrapper src={IMGErrorMobile.src} alt='Error Mobile' />
             </div>
             <div className='flex flex-col gap-y-[2.4rem] absolute transform -translate-y-1/2
-                top-[calc(50%+4rem)] sm:top-[calc(50%+3rem)] md:top-[calc(50%+3.5rem)] lg:top-[calc(50%+6rem)] xl:top-[calc(50%+6rem)] 2xl:top-[calc(50%+6rem)] 
+                top-[calc(50%+1rem)] sm:top-[calc(50%+3rem)] md:top-[calc(50%+3.5rem)] lg:top-[calc(50%+6rem)] xl:top-[calc(50%+6rem)] 2xl:top-[calc(50%+6rem)] 
             '>
                 <p className='text1 opacity-0
                 text-[7.2rem] sm:text-[10.2rem] md:text-[10.2rem] lg:text-[12.8rem] xl:text-[12.8rem] 2xl:text-[12.8rem] 
