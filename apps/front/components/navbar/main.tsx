@@ -31,7 +31,7 @@ export default function NavBar() {
                     position: 'absolute',
                     backgroundColor: 'transparent',
                     width: '90vw',
-                    top: hiddenAnnouncement ? '2.4rem': '5.4rem',
+                    top: hiddenAnnouncement ? '2.4rem': '9.4rem',
                     marginLeft: '5vw',
                     marginRight: '5vw',
                 },{
@@ -105,7 +105,7 @@ export default function NavBar() {
                     position: 'absolute',
                     backgroundColor: 'transparent',
                     width: '90vw',
-                    top: hiddenAnnouncement ? '2.4rem': '5.4rem',
+                    top: hiddenAnnouncement ? '2.4rem': '9.4rem',
                     marginLeft: '5vw',
                     marginRight: '5vw',
                 })
@@ -265,7 +265,7 @@ export default function NavBar() {
 
     return (
         <>
-            <nav className={`navbar z-10 absolute bg-transparent w-[90vw] ${hiddenAnnouncement ? 'top-[2.4rem]': 'top-[5.4rem]'} mx-[5vw] items-center bg-sand
+            <nav className={`navbar z-10 absolute bg-transparent w-[90vw] ${hiddenAnnouncement ? 'top-[2.4rem]': 'top-[9.4rem]'} mx-[5vw] items-center bg-sand
                 hidden xs:flex sm:flex md:flex lg:flex xl:flex 2xl:flex 
             `}>
                 <div className='relative w-full flex flex-col'>
