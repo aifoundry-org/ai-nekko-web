@@ -31,8 +31,8 @@ export default function RelatedArticles({ articles }: {articles?: StrapiArticle[
             setTimeout(() => {
                 ScrollTrigger.create({
                     trigger: '.scroller',
-                    start: () => 'top center',
-                    end: () => 'bottom center',
+                    start: 'top center',
+                    end: 'bottom center',
                     scroller: 'body',
                     onUpdate: self => {
                         if(motoCatStartingPoint && windowWidth && motoCatWidth){

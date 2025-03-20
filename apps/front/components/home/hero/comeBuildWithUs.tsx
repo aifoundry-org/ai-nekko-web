@@ -14,7 +14,7 @@ import Link from 'next/link'
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-export default function ComeBuildWithUs({firstAnimComplete}: {firstAnimComplete?: boolean}) {
+export default function ComeBuildWithUs({firstAnimComplete, resetAnimationFn}: {firstAnimComplete?: boolean, resetAnimationFn: () => void}) {
     useGSAP(() => {
         if(firstAnimComplete){
             const tl = gsap.timeline({paused: true})
@@ -67,8 +67,8 @@ export default function ComeBuildWithUs({firstAnimComplete}: {firstAnimComplete?
                 
             ScrollTrigger.create({
                 trigger: '.trigger-4',
-                start: () => 'top+=30vw center',
-                end: () => 'top+=30vw center',
+                start: 'top center',
+                end: 'top center',
                 id: 'trigger-4',
                 scroller: '.scroller-container',
                 onEnter: () => {
@@ -99,6 +99,17 @@ export default function ComeBuildWithUs({firstAnimComplete}: {firstAnimComplete?
                     gsap.set('.navbar-team-link', {color: 'gray', pointerEvents: 'none'})
                 }
             })
+
+            const listenerFunc = () => {
+                tl.kill()
+                resetAnimationFn();
+            }
+
+            ScrollTrigger.addEventListener("refresh", listenerFunc)
+
+            return () => {
+                ScrollTrigger.removeEventListener("refresh", listenerFunc)
+            }
         }
     }, [firstAnimComplete])
 
