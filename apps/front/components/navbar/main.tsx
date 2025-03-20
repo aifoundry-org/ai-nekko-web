@@ -22,8 +22,8 @@ export default function NavBar() {
 
     useGSAP(() => {
         ScrollTrigger.create({
-            start: () => 'top+=1px top',
-            end: () => 'top+=1px top',
+            start: 'top+=1px top',
+            end: 'top+=1px top',
             id: 'navbar-trigger',
             scroller: 'body',
             onEnter: () => {
@@ -156,8 +156,8 @@ export default function NavBar() {
         })
 
         ScrollTrigger.create({
-            start: () => 'top+=1px top',
-            end: () => 'top+=1px top',
+            start: 'top+=1px top',
+            end: 'top+=1px top',
             id: 'navbar-mobile-trigger',
             scroller: 'body',
             onEnter: () => {

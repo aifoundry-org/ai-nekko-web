@@ -42,8 +42,8 @@ export default function CatAnimText2({firstAnimComplete}: {firstAnimComplete?: b
                 
             ScrollTrigger.create({
                 trigger: '.trigger-2',
-                start: () => 'top+=30vw center',
-                end: () => 'bottom-=30vw center',
+                start: 'top center',
+                end: 'bottom center',
                 id: 'trigger-2',
                 scroller: '.scroller-container',
                 onEnter: () => {
@@ -89,6 +89,16 @@ export default function CatAnimText2({firstAnimComplete}: {firstAnimComplete?: b
                     })
                 }
             })
+
+            const listenerFunc = () => {
+                tl.kill()
+            }
+
+            ScrollTrigger.addEventListener("refresh", listenerFunc)
+
+            return () => {
+                ScrollTrigger.removeEventListener("refresh", listenerFunc)
+            }
         }
     }, [firstAnimComplete])
     return (

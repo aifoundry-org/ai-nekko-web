@@ -24,43 +24,46 @@ export default function Hero() {
     // eslint-disable-next-line prefer-const
     let skipAnim = false;
 
-    useGSAP(() => {
-        if(skipAnim || window.scrollY > 10){
-            gsap.set(['.trigger-1', '.trigger-2', '.trigger-3'],{
-                display: 'none'
-            })
+    const resetAnimationFn = () => {
+        gsap.set(['.trigger-1', '.trigger-2', '.trigger-3'],{
+            display: 'none'
+        })
 
-            gsap.set('.come-build-with-us-container', {
-                position: 'relative',
+        gsap.set('.come-build-with-us-container', {
+            position: 'relative',
+            opacity: 1,
+            y: 0,
+            backgroundColor: '#F9A03F' // bg-orange
+        })
+
+        gsap.set([
+            '.come-build-with-us-container .cat',
+            '.come-build-with-us-container .text1',
+            '.come-build-with-us-container .text2',
+            '.come-build-with-us-container .error',
+            '.come-build-with-us-container .punchCard',
+            '.come-build-with-us-container .findOut',
+            '.come-build-with-us-container .data',
+            '.come-build-with-us-container .sticker',
+            '.come-build-with-us-container .ainekko-repo-button'], {
                 opacity: 1,
                 y: 0,
-                backgroundColor: '#F9A03F' // bg-orange
-            })
+            }
+        )
+        gsap.set('body', {overflowY: 'scroll'})
+        gsap.set('.scroller-container', {overflowY: 'hidden'})
+        gsap.set('.navbar-team-link', {pointerEvents: 'auto'})
+    }
 
-            gsap.set([
-                '.come-build-with-us-container .cat',
-                '.come-build-with-us-container .text1',
-                '.come-build-with-us-container .text2',
-                '.come-build-with-us-container .error',
-                '.come-build-with-us-container .punchCard',
-                '.come-build-with-us-container .findOut',
-                '.come-build-with-us-container .data',
-                '.come-build-with-us-container .sticker',
-                '.come-build-with-us-container .ainekko-repo-button'], {
-                    opacity: 1,
-                    y: 0,
-                }
-            )
+    useGSAP(() => {
+        if(skipAnim || window.scrollY > 10){
+            resetAnimationFn();
             gsap.to('.come-build-with-us-container .sticker', {
                 rotation: 360,
                 repeat: -1,
                 duration: 2.5,
                 ease: 'none'
             })
-            gsap.set('body', {overflowY: 'scroll'})
-            gsap.set('.scroller-container', {overflowY: 'hidden'})
-            gsap.set('.navbar-team-link', {pointerEvents: 'auto'})
-
             return;
         }
 
@@ -136,8 +139,8 @@ export default function Hero() {
         // Enable going back to previous section
         ScrollTrigger.create({
             scroller: 'body',
-            start: () => 'top top',
-            end: () => 'top+=1px top',
+            start: 'top top',
+            end: 'top+=1px top',
             trigger: 'body',
             onEnter: () => {
                 gsap.set('.main-container', { pointerEvents: 'none'})
@@ -189,7 +192,7 @@ export default function Hero() {
                     <CatAnimText3 firstAnimComplete={firstAnimComplete} />
                 </div>
                 <div className='trigger-4 w-full h-full flex flex-col justify-center items-center snap-center'>
-                    <ComeBuildWithUs firstAnimComplete={firstAnimComplete} />
+                    <ComeBuildWithUs firstAnimComplete={firstAnimComplete} resetAnimationFn={resetAnimationFn} />
                 </div>
             </div>
         </div>
