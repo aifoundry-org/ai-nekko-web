@@ -84,7 +84,7 @@ export default function ComeBuildWithUs({firstAnimComplete, resetAnimationFn}: {
                     tl.restart(true)
                     .set('.scroller-container', {overflowY: 'scroll'})
                     .set('body', {overflowY: 'scroll'})
-                    gsap.set('.navbar-team-link', {color: 'black', pointerEvents: 'auto'})
+                    gsap.set('.navbar-team-link', {pointerEvents: 'auto'})
                 },
                 onEnterBack: () => {
                     gsap.set('body', {overflowY: 'hidden'})
@@ -96,7 +96,7 @@ export default function ComeBuildWithUs({firstAnimComplete, resetAnimationFn}: {
                         y: '50px',
                         duration: 0.3
                     })
-                    gsap.set('.navbar-team-link', {color: 'gray', pointerEvents: 'none'})
+                    gsap.set('.navbar-team-link', {pointerEvents: 'none'})
                 }
             })
 
