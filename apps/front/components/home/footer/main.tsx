@@ -24,7 +24,7 @@ export default function Footer(){
     })
 
     const classMainContainer = `relative w-full flex ${pathname.includes('/blog/') ? (alternativeBackground ? 'bg-orange' : 'bg-sand') : 'bg-none'} overflow-hidden
-        h-[43.3rem] sm:h-[35rem] md:h-[45rem] lg:h-[55rem] xl:h-[60.1rem] 2xl:h-[60.1rem] 
+        h-[43.3rem] sm:h-[35rem] md:h-[45rem] lg:h-[55rem] xl:h-[60.1rem] 2xl:h-[65.1rem] 
     `
     
     return (
@@ -72,9 +72,9 @@ export default function Footer(){
                                 </div>
                             </div>
                         </div>
-                        <div className='relative w-full h-fit uppercase font-bold tracking-wider justify-between items-end
-                            hidden xs:flex sm:hidden md:hidden lg:hidden xl:hidden 2xl:flex
-                            xs:gap-x-[1.8rem] sm:gap-x-[2.2rem] md:gap-x-[4.2rem] 2xl:gap-x-[4rem]
+                        <div className='relative w-full h-fit grid-flow-col uppercase font-bold tracking-wider justify-between items-start
+                            hidden xs:grid sm:hidden md:hidden lg:hidden xl:hidden 2xl:grid
+                            xs:gap-x-[1.8rem] sm:gap-x-[2.2rem] md:gap-x-[4.2rem] 2xl:gap-x-[2rem]
                             xs:text-[2rem] sm:text-[2rem] md:text-[2rem] 2xl:text-[4rem]
                             xs:leading-[2rem] sm:leading-[2rem] md:leading-[2rem] 2xl:leading-[4rem]
                         '>
