@@ -63,8 +63,8 @@ export default function Main() {
     }, []);
 
     return (
-        <div className='relative w-full h-auto flex justify-center bg-sand'>
-            <div className='relative flex flex-col h-full border-2
+        <div className='relative w-full h-auto flex justify-center bg-sand scrollbar-width-none'>
+            <div className='relative flex flex-col h-full border-2 border-black scrollbar-width-none
                 w-full xs:w-[40rem] sm:w-full md:w-full lg:w-full xl:w-full 2xl:w-full
                 mt-[5.2rem] xs:mt-[6rem] sm:mt-[5.6rem] md:mt-[22rem] lg:mt-[16.6rem] xl:mt-[16.6rem] 2xl:mt-[16.6rem]
                 mb-[14.2rem] sm:my-[16.6rem] md:my-[16.6rem] lg:my-[16.6rem] xl:my-[16.6rem] 2xl:my-[16.6rem]
@@ -82,7 +82,7 @@ export default function Main() {
                     w-full
                     h-[18.1rem] sm:h-[16rem] md:h-[26rem] lg:h-[26rem] xl:h-[26rem] 2xl:h-[30rem]
                 '>
-                    <div className='relative paper-slides-container w-full h-full grid grid-flow-row'>
+                    <div className='relative paper-slides-container w-full h-full grid grid-flow-row scrollbar-width-none'>
                         {slides.map(el => (
                             <div key={el.id} className={`paper-slide-${el.id} relative w-fit flex flex-col flex-nowrap
                                 sm:justify-center md:justify-center lg:justify-center xl:justify-end 2xl:justify-center
@@ -107,7 +107,7 @@ export default function Main() {
                 mt-[2.4rem] sm:mt-[6.4rem] md:mt-[6.4rem] lg:mt-[6.4rem] xl:mt-[6.4rem] 2xl:mt-[6.4rem]
                 mb-[18.6rem] sm:mb-0 md:mb-0 lg:mb-0 xl:mb-0 2xl:mb-0
                 ' target='_blank' as={Link} href='https://aifoundry.org/' variant='primary' content='join the open ecosystem for ai' svg='arrow-up-right' />
-                <div className='absolute
+                <div className='absolute scrollbar-width-none
                     w-[20rem] sm:w-[18rem] md:w-[20rem] lg:w-[28.7rem] xl:w-[32.7rem] 2xl:w-[32.7rem]
                     -bottom-[4.6rem] sm:-bottom-[4.1rem] md:-bottom-[4.5rem] lg:-bottom-[6.4rem] xl:-bottom-[7.4rem] 2xl:-bottom-[7.4rem]
                     left-0 sm:left-auto md:left-auto lg:left-auto xl:left-auto 2xl:left-auto
@@ -115,7 +115,7 @@ export default function Main() {
                 '>
                     <ImageWrapper src={IMGCat.src} alt='Cat' />
                 </div>
-                <div className='absolute
+                <div className='absolute scrollbar-width-none
                     hidden md:block lg:block xl:block 2xl:block
                     sm:w-[1.6rem] md:w-[1.6rem] lg:w-[1.6rem] xl:w-[1.6rem] 2xl:w-[1.6rem]
                     sm:top-[4rem] md:top-[6rem] lg:top-[6rem] xl:top-[6rem] 2xl:top-[6rem]
@@ -123,7 +123,7 @@ export default function Main() {
                 '>
                     <ImageWrapper src={IMGText.src} alt='Text' />
                 </div>
-                <div className='absolute
+                <div className='absolute scrollbar-width-none
                     block md:hidden lg:hidden xl:hidden 2xl:hidden
                     w-[1.6rem] sm:w-[1.4rem]
                     bottom-[3rem] sm:bottom-[15rem]
