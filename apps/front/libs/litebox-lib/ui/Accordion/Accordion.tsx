@@ -27,9 +27,9 @@ const Accordion = ({ title, isOpen = false, content, className }: AccordionProps
   const [open, setOpen] = useState(isOpen)
 
   return (
-    <div className={cn('flex flex-col border-t-[2px] border-black', className)}>
-      <div className='flex flex-row items-center justify-between' onClick={() => setOpen(!open)}>
-        <label className='font-host-grotesk pl-0 pr-[2vw] cursor-pointer font-bold
+    <div className={cn('flex flex-col border-t-[2px] cursor-pointer border-black', className)}>
+      <div className='flex flex-row items-center cursor-pointer justify-between' onClick={() => setOpen(!open)}>
+        <label className='font-host-grotesk pl-0 pr-[2vw] font-bold cursor-pointer 
           py-[1.6rem] sm:py-[2.4rem] md:py-[2.4rem] lg:py-[2.4rem] xl:py-[2.4rem] 2xl:py-[2.4rem]
           text-[1.8rem] sm:text-[2.4rem] md:text-[2.4rem] lg:text-[2.4rem] xl:text-[2.4rem] 2xl:text-[4.4rem]
         '>

@@ -45,6 +45,9 @@ body {
   background: var(--sand);
   font-family: 'dharma-gothic-e', 'Host Grotesk', Helvetica, sans-serif;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 
 ul {
   list-style-type: disc;
@@ -112,7 +115,11 @@ ol {
 }
 
 .scrollbar-width-none{
-  scrollbar-width: none;
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+.scrollbar-width-none::-webkit-scrollbar {
+  display: none !important;
 }
 
 .card {
