@@ -16,9 +16,9 @@ export default function ArticleBox({article, isFeaturedArticle = false}: Article
                     <div className='flex w-full h-[21.4rem]'>
                         <ImageWrapper className='object-cover object-top' src={getStrapiMediaUrl(coverImage.url)} alt="cover" /> 
                     </div> :
-                    <div className='flex w-full h-[21.4rem] items-center justify-center uppercase
+                    <p className='flex w-full h-[21.4rem] items-center justify-center uppercase
                         text-[4rem] sm:text-[5.7rem] md:text-[5.7rem] lg:text-[5.7rem] xl:text-[5.7rem] 2xl:text-[5.7rem] 
-                    '>No cover image</div>
+                    '>No cover image</p>
                 }
             </div>
             <div className='flex flex-col flex-grow-0 w-full h-full bg-sand
@@ -30,18 +30,18 @@ export default function ArticleBox({article, isFeaturedArticle = false}: Article
                     </div>
                 }
                 <div className='flex flex-row text-start mb-[2vw] md:mb-[1.25vw] lg:mb-[1.25vw] xl:mb-[1.25vw] 2xl:mb-[1.25vw]'>
-                    <p style={{wordBreak: 'break-word'}} className={`font-dharma-gothic-e font-black uppercase my-[1.6rem]
+                    <h1 style={{wordBreak: 'break-word'}} className={`font-dharma-gothic-e font-black uppercase my-[1.6rem]
                         text-[3.2rem] md:text-[4vw] lg:text-[2.778vw] ${isFeaturedArticle ? 'xl:text-[3.34vw]' : 'xl:text-[2.8vw]' } 2xl:text-[3.34vw] 
                         leading-[2.5rem] md:leading-[4vw] lg:leading-[2.3vw] ${isFeaturedArticle ? 'xl:leading-[2.8vw]' : 'xl:leading-[2.4vw]'} 2xl:leading-[2.8vw]
-                    `}>{title}</p>
+                    `}>{title}</h1>
                 </div>
-                <div className='flex flex-row font-normal text-[3vw] md:text-[2vw] lg:text-[1vw] xl:text-[1vw] 2xl:text-[1vw] sm:leading-[4vw] lg:leading-[1.5vw] xl:leading-[1.5vw] 2xl:leading-[1.5vw] font-host-grotesk mb-8'>
+                <h2 className='flex flex-row font-normal text-[3vw] md:text-[2vw] lg:text-[1vw] xl:text-[1vw] 2xl:text-[1vw] sm:leading-[4vw] lg:leading-[1.5vw] xl:leading-[1.5vw] 2xl:leading-[1.5vw] font-host-grotesk mb-8'>
                     {authors && authors.length > 0 && `${authors[0].name} | `}{date && new Date(date).toLocaleDateString('en-US', {
                         year: 'numeric',
                         month: 'long',
                         day: 'numeric'
                     })}
-                </div>
+                </h2>
                 <div className='flex flex-row items-end justify-start mt-auto mr-auto mb-0 ml-0'>
                     <Button as={Link} href={`/blog/${slug}`} variant='secondary' content='Read more' />
                 </div>

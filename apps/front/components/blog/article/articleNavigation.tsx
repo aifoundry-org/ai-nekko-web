@@ -7,7 +7,7 @@ import scrollToElement from '@/hooks/useScrollToElement'
 export default function ArticleNavigation({contentNavigation, currentHeaderId, onCurrentHeaderIdChange}: {contentNavigation: StrapiContentNavigation[], currentHeaderId: string | null, onCurrentHeaderIdChange: Dispatch<SetStateAction<string | null>>}) {
     return (
         <div className='flex flex-col font-normal font-host-grotesk gap-y-[1.6rem] pt-[4rem]'>
-            <p className='font-bold text-[2rem] text-[#222222]'>Content</p>
+            <h3 className='font-bold text-[2rem] text-[#222222] normal-case'>Content</h3>
             {contentNavigation.map(el => (
                 <a onClick={() => {
                     if (window.innerWidth <= 639) {

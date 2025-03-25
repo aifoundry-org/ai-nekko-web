@@ -57,7 +57,7 @@ const Headline = ({ article }: HeadlineProps) => {
                 '>
                     <ImageWrapper src={IMGCatMobile.src} alt="Cat" />
                 </div>
-                <div className='flex flex-wrap gap-4 text-black items-center font-normal 
+                <h2 className='flex flex-wrap gap-4 text-black items-center font-normal normal-case 
                     text-[1.6rem] sm:text-[1.2rem] md:text-[1.6rem] lg:text-[1.6rem] xl:text-[1.6rem] 2xl:text-[1.6rem] 
                     leading-[2.4rem] sm:leading-[2.4rem] md:leading-[2.4rem] lg:leading-[2.4rem] xl:leading-[2.4rem] 2xl:leading-[2.4rem] 
                 '>
@@ -78,7 +78,7 @@ const Headline = ({ article }: HeadlineProps) => {
                     }
                     <div className='bg-black w-[1px] h-6' />
                     <span className='flex flex-nowrap text-nowrap items-center'>{getReadTime(cleanParagraphsContent)}</span>
-                </div>
+                </h2>
             </div>
             <div className='flex w-full justify-start mt-[2.4rem]
                 gap-[1.6rem] sm:gap-[2.4rem] md:gap-[2.4rem] lg:gap-[2.4rem] xl:gap-[2.4rem] 2xl:gap-[2.4rem] 
