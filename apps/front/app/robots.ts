@@ -8,5 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       disallow: ['/cookie-policy/', '/privacy-policy/', '/terms-of-service/', '/not-found/'],
     },
     sitemap: 'https://ainekko.ai/sitemap.xml',
+    host: 'https://ainekko.ai'
   }
 }
