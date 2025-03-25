@@ -17,10 +17,16 @@ const nextConfig: NextConfig = {
     ]
   },
   compress: true,
-  swcMinify: true,
   experimental: {
-    optimizeCss: true,
     scrollRestoration: true,
+    cssChunking: true,
+    optimizeCss: true,
+    optimizePackageImports: [
+      '@dotlottie/react-player',
+      '@gsap/react',
+      'motion',
+      'swiper',
+    ],
   },
   webpack: (config) => {
     config.parallelism = 4;
