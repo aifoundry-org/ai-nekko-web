@@ -166,7 +166,7 @@ export default function NavBar() {
                     backgroundColor: 'transparent',
                     borderWidth: '0px',
                     borderColor: 'transparent',
-                    top: hiddenAnnouncement ? '0': '5.4rem',
+                    top: hiddenAnnouncement ? '0': '9.3rem',
                 },{
                     position: 'fixed',
                     backgroundColor: '#F6EFE4', // sand
@@ -215,7 +215,7 @@ export default function NavBar() {
                     backgroundColor: 'transparent',
                     borderWidth: '0px',
                     borderColor: 'transparent',
-                    top: hiddenAnnouncement ? '0': '5.4rem',
+                    top: hiddenAnnouncement ? '0': '9.3rem',
                 })
 
                 const tl = gsap.timeline({paused: true})
@@ -308,7 +308,7 @@ export default function NavBar() {
                     </div>
                 </div>
             </nav>
-            <nav className={`navbar-mobile z-10 absolute left-0 h-[8.6rem] bg-transparent w-full ${hiddenAnnouncement ? 'top-0': 'top-[5.4rem]'} items-center bg-sand
+            <nav className={`navbar-mobile z-10 absolute left-0 h-[8.6rem] bg-transparent w-full ${hiddenAnnouncement ? 'top-0': 'top-[9.3rem]'} items-center bg-sand
                 flex xs:hidden sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden
             `}>
                 <div className='flex flex-row justify-between items-center w-full p-[2.4rem]'>
