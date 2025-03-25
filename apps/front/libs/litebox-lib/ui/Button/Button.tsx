@@ -64,6 +64,7 @@ const Button: FC<ButtonProps> = ({as: Component = 'button', href = '', variant =
     ...(href ? { href } : {}),
     ...(target ? { target } : {}),
     className: styles,
+    'aria-label': content
   };
 
   let SVGIcon = null;

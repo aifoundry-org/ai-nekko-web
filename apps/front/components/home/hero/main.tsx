@@ -12,12 +12,11 @@ import IMGCatAnimLight from '@/public/imgs/hero/catAnimLight.webp'
 import { gsap } from "gsap";
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function Hero() {
-    const percentParagraphRef = useRef(null);
     const [percent, setpercent] = useState(0);
     const [firstAnimComplete, setFirstAnimComplete] = useState(false);
 
@@ -107,8 +106,8 @@ export default function Hero() {
     
         // Fading out of the percent number and enlarging the cat image
         // (with responsive)
-        tl.to(percentParagraphRef.current, { opacity: 0, duration: 0.35, onComplete: () => {
-            tl.set(percentParagraphRef.current, { display: 'none' })
+        tl.to('.percentParagraph', { opacity: 0, duration: 0.35, onComplete: () => {
+            tl.set('.percentParagraph', { display: 'none' })
         } }, '+=0.4');
 
         mm.add('(max-width: 430px)', () => { // xs
@@ -172,7 +171,7 @@ export default function Hero() {
                     <div className='absolute transform left-1/2 -translate-x-1/2 font-dharma-gothic-e flex font-black justify-center items-center
                         -bottom-[2rem] sm:-bottom-[3rem] md:-bottom-[8rem] lg:-bottom-[9rem] xl:-bottom-[9rem] 2xl:-bottom-[9rem] 
                     '>
-                        <p ref={percentParagraphRef} className='
+                        <p className='percentParagraph
                             text-[6.4rem] md:text-[12.8rem] lg:text-[12.8rem] xl:text-[12.8rem] 2xl:text-[12.8rem]
                             leading-[4.7rem] md:leading-[9.4rem] lg:leading-[9.4rem] xl:leading-[9.4rem] 2xl:leading-[9.4rem]
                         '>
