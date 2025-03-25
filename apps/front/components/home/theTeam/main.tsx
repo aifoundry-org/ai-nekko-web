@@ -209,11 +209,11 @@ export default function Main() {
                 </Swiper>
                 <div className='relative flex w-[33rem] justify-center items-center mx-auto mt-[4rem]'>
                     <div ref={buttonPrevRef} className='flex basis-[15%] justify-center'>
-                        <Button variant='secondary' svg='scroll-left'/>
+                        <Button aria-label='Scroll left button' variant='secondary' svg='scroll-left'/>
                     </div>
                     <div className='pagination-mobile !gap-[3.2vw] flex basis-[80%] justify-center' />
                     <div ref={buttonNextRef} className='flex basis-[15%] justify-center'>
-                        <Button variant='secondary' svg='scroll-right'/>
+                        <Button aria-label='Scroll right button' variant='secondary' svg='scroll-right'/>
                     </div>
                 </div>
             </div>
