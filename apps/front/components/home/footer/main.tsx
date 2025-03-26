@@ -113,7 +113,7 @@ export default function Footer(){
                             leading-[2.6rem] sm:leading-[2.4rem] md:leading-[2.5rem] lg:leading-[2.8rem] xl:leading-[3.3rem] 2xl:leading-[3.3rem] 
                             text-[3.2rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3rem] xl:text-[4rem] 2xl:text-[4rem] 
                         '>
-                            Ainekko, Co. is a global, <br className='block sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden' />remote-first company<br/> headquartered in San<br className='block sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden' />Francisco, CA, USA.
+                            Ainekko, Co. is a global, <br className='block sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden' />remote-first company<br/> headquartered in San<br className='block sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden' /> Francisco, CA, USA.
                         </p>
                         <p className='font-normal font-host-grotesk w-fit h-fit
                             leading-[1.8rem] sm:leading-[1.8rem] md:leading-[1.8rem] lg:leading-[1.8rem] xl:leading-[1.8rem] 2xl:leading-[1.8rem] 

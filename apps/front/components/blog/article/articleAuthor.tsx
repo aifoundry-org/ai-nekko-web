@@ -31,8 +31,8 @@ export default function Author({author, contentNavigation, currentHeaderId, onCu
                         </div>
                     </div>}
                     <div className='flex flex-col'>
-                        <h3 className='font-bold text-[2rem] leading-[2.4rem] text-[#222222] normal-case'>{name}</h3>
-                        <h4 className='font-normal text-[1.6rem] leading-[2.1rem['>{role}</h4>
+                        <h2 className='font-bold text-[2rem] leading-[2.4rem] text-[#222222] normal-case'>{name}</h2>
+                        <h3 className='font-normal text-[1.6rem] leading-[2.1rem['>{role}</h3>
                     </div>
                 </div>
                 <h4 className='flex font-host-grotesk font-normal text-[1.4rem] leading-[2.1rem] mt-10 text-[#222222]'>{description}</h4>

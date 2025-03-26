@@ -45,9 +45,9 @@ export default function Faqs() {
             py-[10rem] sm:py-[5rem] md:py-[5rem] lg:py-[5rem] xl:py-[12rem] 2xl:py-[10rem] 
             mx-auto sm:mx-[6rem] md:mx-[4.2rem] lg:mx-[11.2rem] xl:mx-[11.2rem] 2xl:mx-[11.2rem] 
         '>
-            <h1 className='font-black font-dharma-gothic-e text-[6.4rem] leading-[5.3rem] mb-[4rem] uppercase'>
+            <h3 className='font-black font-dharma-gothic-e text-[6.4rem] leading-[5.3rem] mb-[4rem] uppercase'>
                 Faqs
-            </h1>
+            </h3>
             {questions.map((el,idx) => (
                 <Accordion isDesktop key={idx} title={el.title} content={el.content} />
             ))}

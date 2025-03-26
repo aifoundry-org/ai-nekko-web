@@ -125,18 +125,18 @@ export default function ComeBuildWithUs({firstAnimComplete, resetAnimationFn}: {
             <div className='flex flex-col absolute transform -translate-y-1/2 text-sand
                 top-[calc(50%-10rem)] sm:top-1/2 md:top-1/2 lg:top-1/2 xl:top-[calc(50%-2rem)] 2xl:top-[calc(50%-2rem)]
             '>
-                <p className='text1 opacity-0
+                <h1 className='text1 opacity-0
                 ml-0 sm:ml-0 md:ml-[1rem] lg:ml-0 xl:ml-0 2xl:ml-0
                 word-spacing-[0] sm:word-spacing-[8.8rem] md:word-spacing-[15rem] lg:word-spacing-[17.8rem] xl:word-spacing-[17.8rem] 2xl:word-spacing-[17.8rem]
                 text-[8.8rem] sm:text-[10.2rem] md:text-[13.2rem] lg:text-[23.2rem] xl:text-[23.2rem] 2xl:text-[23.2rem] 
                 leading-[6.5rem] sm:leading-[8rem] md:leading-[10rem] lg:leading-[17.5rem] xl:leading-[17.5rem] 2xl:leading-[17.5rem]
-                '>Come<br className='block sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden'/> build</p>
-                <p className='text2 opacity-0
+                '>Come<br className='block sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden'/> build</h1>
+                <h2 className='text2 opacity-0
                 ml-0 sm:-ml-[3rem] md:-ml-[3rem] lg:-ml-[5rem] xl:-ml-[5rem] 2xl:-ml-[5rem]
                 word-spacing-0 sm:word-spacing-[8.4rem] md:word-spacing-[12rem] lg:word-spacing-[18.4rem] xl:word-spacing-[18.4rem] 2xl:word-spacing-[18.4rem]
                 text-[8.8rem] sm:text-[10.2rem] md:text-[13.2rem] lg:text-[23.2rem] xl:text-[23.2rem] 2xl:text-[23.2rem] 
                 leading-[6.5rem] sm:leading-[8rem] md:leading-[10rem] lg:leading-[17.5rem] xl:leading-[17.5rem] 2xl:leading-[17.5rem]
-                '>with us</p>
+                '>with us</h2>
             </div>
             <div className='cat absolute opacity-0
                 w-[11rem] sm:w-[15rem] md:w-[20.7rem] lg:w-[30.3rem] xl:w-[30.3rem] 2xl:w-[30.3rem]
