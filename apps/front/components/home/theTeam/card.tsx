@@ -21,17 +21,17 @@ export default function Card({name, role, profileImgUrl, linkedinUrl, className}
                 <div className='back absolute p-[2.4rem] flex flex-col w-full
                     h-[28.9rem] sm:h-[20.3rem] md:h-[23.3rem] lg:h-[25.4rem] xl:h-[33.3rem] 2xl:h-[40.3rem]
                 '>
-                    <h2 className='flex font-dharma-gothic-e font-black uppercase text-orange
+                    <h4 className='flex font-dharma-gothic-e font-black uppercase text-orange
                         text-[6.4rem] sm:text-[2.8rem] md:text-[3.4rem] lg:text-[3.7rem] xl:text-[5.5rem] 2xl:text-[6rem] 
                         leading-[5.3rem] sm:leading-[2.5rem] md:leading-[3.3rem] lg:leading-[3.2rem] xl:leading-[4.5rem] 2xl:leading-[5rem] 
-                    '>{name}</h2>
+                    '>{name}</h4>
                     <div className='w-full h-full flex flex-col justify-end text-black'>
                         <div className='border-t-2 border-black'>
-                            <h3 className='font-host-grotesk font-bold normal-case
+                            <h5 className='font-host-grotesk font-bold normal-case
                                 mt-[2.4rem] sm:mt-[1.5rem] md:mt-[1.2rem] lg:mt-[1.4rem] xl:mt-[2.4rem] 2xl:mt-[2.4rem]
                                 leading-[3rem] sm:leading-[1.3rem] md:leading-[2rem] lg:leading-[2rem] xl:leading-[3rem] 2xl:leading-[4rem]
                                 text-[2rem] sm:text-[1.3rem] md:text-[1.5rem] lg:text-[1.7rem] xl:text-[2rem] 2xl:text-[3rem]
-                            '>{role}</h3>
+                            '>{role}</h5>
                             <div className='w-full flex flex-row
                                 mt-[1.6rem] sm:mt-[1.6rem] md:mt-[1.2rem] lg:mt-[1.4rem] xl:mt-[1.6rem] 2xl:mt-[1.6rem]
                             '>
