@@ -31,9 +31,7 @@ export default function Main() {
                         text-[7.2rem] sm:text-[5.8rem] md:text-[8.8rem] lg:text-[9.8rem] xl:text-[12.8rem] 2xl:text-[12.8rem] 
                         leading-[5.3rem] sm:leading-[4.4rem] md:leading-[6.4rem] lg:leading-[7.4rem] xl:leading-[9.4rem] 2xl:leading-[9.4rem] 
                     '>
-                        <p className='text-orange'>latest news</p>
-                        <p className='text-orange'>from the</p>
-                        <p>ainekko world</p>
+                        <h1 className='text-orange'>latest news<br/>from the<br/><span className='text-black'>ainekko world</span></h1>
                         <div className='relative top-0 left-0'>
                             <div className='absolute 
                                 w-[9.2rem] sm:w-[6.9rem] md:w-[10.9rem] lg:w-[13.9rem] xl:w-[16.9rem] 2xl:w-[16.9rem] 

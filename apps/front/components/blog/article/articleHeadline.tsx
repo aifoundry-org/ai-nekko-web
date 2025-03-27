@@ -35,11 +35,11 @@ const Headline = ({ article }: HeadlineProps) => {
                     </div>
                 ))}
             </div>
-            <h1 className='font-dharma-gothic-e font-black uppercase
+            <h2 className='font-dharma-gothic-e font-black uppercase
                 w-full sm:w-4/6 md:w-3/4 lg:w-4/6 xl:w-4/6 2xl:w-4/6
                 text-[4.8rem] sm:text-[4.4rem] md:text-[4.4rem] lg:text-[4.4rem] xl:text-[6.4rem] 2xl:text-[6.4rem] 
                 leading-[4.1rem] sm:leading-[3.3rem] md:leading-[3.3rem] lg:leading-[3.3rem] xl:leading-[5.3rem] 2xl:leading-[5.3rem] 
-            '>{title}</h1>
+            '>{title}</h2>
             <div className='relative font-host-grotesk border-b-2 border-black flex flex-wrap justify-between gap-y-[2rem] pt-[3.2rem] pb-[2.4rem] font-paralucent gap-2'>
                 <div className='absolute 
                     hidden sm:block md:block lg:block xl:block 2xl:block
@@ -57,7 +57,7 @@ const Headline = ({ article }: HeadlineProps) => {
                 '>
                     <ImageWrapper src={IMGCatMobile.src} alt="Cat" />
                 </div>
-                <h2 className='flex flex-wrap gap-4 text-black items-center font-normal normal-case 
+                <h3 className='flex flex-wrap gap-4 text-black items-center font-normal normal-case 
                     text-[1.6rem] sm:text-[1.2rem] md:text-[1.6rem] lg:text-[1.6rem] xl:text-[1.6rem] 2xl:text-[1.6rem] 
                     leading-[2.4rem] sm:leading-[2.4rem] md:leading-[2.4rem] lg:leading-[2.4rem] xl:leading-[2.4rem] 2xl:leading-[2.4rem] 
                 '>
@@ -78,7 +78,7 @@ const Headline = ({ article }: HeadlineProps) => {
                     }
                     <div className='bg-black w-[1px] h-6' />
                     <span className='flex flex-nowrap text-nowrap items-center'>{getReadTime(cleanParagraphsContent)}</span>
-                </h2>
+                </h3>
             </div>
             <div className='flex w-full justify-start mt-[2.4rem]
                 gap-[1.6rem] sm:gap-[2.4rem] md:gap-[2.4rem] lg:gap-[2.4rem] xl:gap-[2.4rem] 2xl:gap-[2.4rem] 

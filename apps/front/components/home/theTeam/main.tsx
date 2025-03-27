@@ -111,13 +111,13 @@ export default function Main() {
                 '>
                     <ImageWrapper src={IMGPaper.src} alt="Punch card" />
                 </div>
-                <h1 className='font-dharma-gothic-e font-black uppercase
+                <h3 className='font-dharma-gothic-e font-black uppercase
                     leading-[5.3rem] sm:leading-[5.3rem] md:leading-[5.3rem] lg:leading-[5.3rem] xl:leading-[5.3rem] 2xl:leading-[10rem]
                     text-[4.8rem] sm:text-[6.4rem] md:text-[6.4rem] lg:text-[6.4rem] xl:text-[6.4rem] 2xl:text-[8.4rem] 
                     mb-[4rem] sm:mb-[4.8rem] md:mb-[4.8rem] lg:mb-[4.8rem] xl:mb-[4.8rem] 2xl:mb-[6.8rem] 
                 '>
                     the team
-                </h1>
+                </h3>
                 <div className='flex z-0
                     flex-col sm:flex-row md:flex-row lg:flex-row xl:flex-row 2xl:flex-row
                     gap-y-[2.4rem] sm:gap-x-[2.4rem] md:gap-x-[2.4rem] lg:gap-x-[2.4rem] xl:gap-x-[2.4rem] 2xl:gap-x-[2.4rem] 
@@ -147,14 +147,14 @@ export default function Main() {
                 '>
                     <ImageWrapper src={IMGPunchCard.src} alt="Punch card" />
                 </div>
-                <h1 className='font-dharma-gothic-e font-black uppercase
+                <h3 className='font-dharma-gothic-e font-black uppercase
                     mx-0 sm:mx-[8.2rem] md:mx-[11.2rem] lg:mx-[11.2rem] xl:mx-[11.2rem] 2xl:mx-[11.2rem] 
                     leading-[10.3rem] sm:leading-[5.3rem] md:leading-[5.3rem] lg:leading-[5.3rem] xl:leading-[5.3rem] 2xl:leading-[10rem]
                     text-[4.8rem] sm:text-[6.4rem] md:text-[6.4rem] lg:text-[6.4rem] xl:text-[6.4rem] 2xl:text-[8.4rem] 
                     mb-[4rem] sm:mb-[4.8rem] md:mb-[4.8rem] lg:mb-[4.8rem] xl:mb-[4.8rem] 2xl:mb-[6.8rem] 
                 '>
                     our advisors
-                </h1>
+                </h3>
                 <Swiper
                     breakpoints={{
                         640: {
@@ -187,9 +187,9 @@ export default function Main() {
                 </Swiper>
             </div>
             <div className='block sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden'>
-                <h1 className='font-dharma-gothic-e font-black uppercase mt-[9.6rem] leading-[4rem] text-[4.8rem] mb-[4rem] mx-auto w-[32.3rem]'>
+                <h3 className='font-dharma-gothic-e font-black uppercase mt-[9.6rem] leading-[4rem] text-[4.8rem] mb-[4rem] mx-auto w-[32.3rem]'>
                     our advisors
-                </h1>
+                </h3>
                 <Swiper
                     modules={[Navigation]}
                     slidesPerView={1}

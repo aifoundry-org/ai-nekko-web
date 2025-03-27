@@ -30,18 +30,18 @@ export default function ArticleBox({article, isFeaturedArticle = false}: Article
                     </div>
                 }
                 <div className='flex flex-row text-start mb-[2vw] md:mb-[1.25vw] lg:mb-[1.25vw] xl:mb-[1.25vw] 2xl:mb-[1.25vw]'>
-                    <h1 style={{wordBreak: 'break-word'}} className={`font-dharma-gothic-e font-black uppercase my-[1.6rem]
+                    <h2 style={{wordBreak: 'break-word'}} className={`font-dharma-gothic-e font-black uppercase my-[1.6rem]
                         text-[3.2rem] md:text-[4vw] lg:text-[2.778vw] ${isFeaturedArticle ? 'xl:text-[3.34vw]' : 'xl:text-[2.8vw]' } 2xl:text-[3.34vw] 
                         leading-[2.5rem] md:leading-[4vw] lg:leading-[2.3vw] ${isFeaturedArticle ? 'xl:leading-[2.8vw]' : 'xl:leading-[2.4vw]'} 2xl:leading-[2.8vw]
-                    `}>{title}</h1>
+                    `}>{title}</h2>
                 </div>
-                <h2 className='flex flex-row font-normal text-[3vw] md:text-[2vw] lg:text-[1vw] xl:text-[1vw] 2xl:text-[1vw] sm:leading-[4vw] lg:leading-[1.5vw] xl:leading-[1.5vw] 2xl:leading-[1.5vw] font-host-grotesk mb-8'>
+                <h3 className='flex flex-row font-normal text-[3vw] md:text-[2vw] lg:text-[1vw] xl:text-[1vw] 2xl:text-[1vw] sm:leading-[4vw] lg:leading-[1.5vw] xl:leading-[1.5vw] 2xl:leading-[1.5vw] font-host-grotesk mb-8'>
                     {authors && authors.length > 0 && `${authors[0].name} | `}{date && new Date(date).toLocaleDateString('en-US', {
                         year: 'numeric',
                         month: 'long',
                         day: 'numeric'
                     })}
-                </h2>
+                </h3>
                 <div className='flex flex-row items-end justify-start mt-auto mr-auto mb-0 ml-0'>
                     <Button as={Link} href={`/blog/${slug}`} variant='secondary' content='Read more' />
                 </div>
