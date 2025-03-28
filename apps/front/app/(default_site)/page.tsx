@@ -9,7 +9,7 @@ export default function Page() {
   return (
     <main>
       <Hero />
-      <div className='pin-section bg-black'>
+      <div className='pin-section'>
         <PaperDiscussions />
       </div>
       <AiAsASystem />
