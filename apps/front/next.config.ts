@@ -3,7 +3,7 @@ import withBundleAnalyzer from '@next/bundle-analyzer';
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ['127.0.0.1', 'localhost', 'strapi.ai-foundry.litebox.dev'],
+    domains: ['127.0.0.1', 'localhost', 'strapi.ai-nekko.litebox.dev'],
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 3600,
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'strapi.ai-foundry.litebox.dev',
+        hostname: 'strapi.ai-nekko.litebox.dev',
         pathname: '/uploads/**',
       }
     ]
