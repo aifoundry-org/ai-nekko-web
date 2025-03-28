@@ -95,7 +95,7 @@ export default function Main() {
                                 '>
                                     {`0${el.id}.`}
                                 </p>
-                                <p className='relative font-dharma-gothic-e font-black text-black uppercase
+                                <h2 className='relative font-dharma-gothic-e font-black text-black uppercase
                                     text-[6.4rem] sm:text-[5.8rem] md:text-[7.8rem] lg:text-[8.8rem] xl:text-[12.8rem] 2xl:text-[12.8rem]
                                     leading-[4.7rem] sm:leading-[4.4rem] md:leading-[7rem] lg:leading-[7rem] xl:leading-[9.4rem] 2xl:leading-[9.4rem]
                                 ' dangerouslySetInnerHTML={{__html: el.content}} />

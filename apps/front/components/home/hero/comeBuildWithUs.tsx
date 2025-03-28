@@ -131,12 +131,12 @@ export default function ComeBuildWithUs({firstAnimComplete, resetAnimationFn}: {
                 text-[8.8rem] sm:text-[10.2rem] md:text-[13.2rem] lg:text-[23.2rem] xl:text-[23.2rem] 2xl:text-[23.2rem] 
                 leading-[6.5rem] sm:leading-[8rem] md:leading-[10rem] lg:leading-[17.5rem] xl:leading-[17.5rem] 2xl:leading-[17.5rem]
                 '>Come<br className='block sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden'/> build</h1>
-                <h2 className='text2 opacity-0
+                <h1 className='text2 opacity-0
                 ml-0 sm:-ml-[3rem] md:-ml-[3rem] lg:-ml-[5rem] xl:-ml-[5rem] 2xl:-ml-[5rem]
                 word-spacing-0 sm:word-spacing-[8.4rem] md:word-spacing-[12rem] lg:word-spacing-[18.4rem] xl:word-spacing-[18.4rem] 2xl:word-spacing-[18.4rem]
                 text-[8.8rem] sm:text-[10.2rem] md:text-[13.2rem] lg:text-[23.2rem] xl:text-[23.2rem] 2xl:text-[23.2rem] 
                 leading-[6.5rem] sm:leading-[8rem] md:leading-[10rem] lg:leading-[17.5rem] xl:leading-[17.5rem] 2xl:leading-[17.5rem]
-                '>with us</h2>
+                '>with us</h1>
             </div>
             <div className='cat absolute opacity-0
                 w-[11rem] sm:w-[15rem] md:w-[20.7rem] lg:w-[30.3rem] xl:w-[30.3rem] 2xl:w-[30.3rem]
