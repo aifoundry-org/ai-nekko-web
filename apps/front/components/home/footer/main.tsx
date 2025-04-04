@@ -44,10 +44,10 @@ export default function Footer(){
                             text-[1.8rem] lg:text-[2rem] xl:text-[2rem] 2xl:text-[2rem] 
                             leading-[1.8rem] lg:leading-[2rem] xl:leading-[2rem] 2xl:leading-[2rem] 
                         '>
-                            <div onClick={() => window.open('https://ai-foundry.litebox.dev')} className='cursor-pointer relative' >ai foundry</div>
-                            {pathname == "/" && <div onClick={() => window.location.href='/#team'} className='cursor-pointer relative' >team</div>}
-                            <div onClick={() => window.location.href='/blog'} className='cursor-pointer relative' >blog</div>
-                            <div onClick={() => window.location.href='/privacy-policy'} className='block sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden cursor-pointer relative'>privacy policy</div>
+                            <div onClick={() => window.open('https://ai-foundry.litebox.dev')} className='cursor-pointer relative after:bg-white after:absolute after:top-[2rem] after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300' >ai foundry</div>
+                            {pathname == "/" && <div onClick={() => window.location.href='/#team'} className='cursor-pointer relative after:bg-white after:absolute after:top-[2rem] after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300' >team</div>}
+                            <div onClick={() => window.location.href='/blog'} className='cursor-pointer relative after:bg-white after:absolute after:top-[2rem] after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300' >blog</div>
+                            <div onClick={() => window.location.href='/privacy-policy'} className='block sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden cursor-pointer relative after:bg-white after:absolute after:top-[2rem] after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300'>privacy policy</div>
                         </div>
                         <div className='relative w-full h-fit uppercase font-bold tracking-wider items-end justify-end
                             mt-[1.4rem] sm:mt-0 md:mt-0 lg:mt-0 xl:mt-0 2xl:mt-0 
@@ -56,12 +56,12 @@ export default function Footer(){
                             text-[1.8rem] lg:text-[2rem] xl:text-[2rem] 2xl:text-[2rem] 
                             leading-[1.8rem] lg:leading-[2rem] xl:leading-[2rem] 2xl:leading-[2rem] 
                         '>
-                            <div className='cursor-pointer relative after:bg-white after:absolute after:top-[2rem] after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300
+                            <div className='cursor-pointer relative after:bg-white after:absolute after:top-[2rem] after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300
                                 hidden sm:block md:block lg:block xl:block 2xl:block
                                 basis-1/3 sm:basis-auto md:basis-auto lg:basis-auto xl:basis-auto 2xl:basis-auto
                             ' onClick={() => window.location.href='/privacy-policy'} >privacy policy</div>
-                            <div className='cursor-pointer relative basis-1/2 sm:basis-auto md:basis-auto lg:basis-auto xl:basis-auto 2xl:basis-auto after:bg-white after:absolute after:top-[2rem] after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300' onClick={() => window.location.href='/terms-of-service'} >terms of service</div>
-                            <div className='cursor-pointer relative basis-1/2 sm:basis-auto md:basis-auto lg:basis-auto xl:basis-auto 2xl:basis-auto after:bg-white after:absolute after:top-[2rem] after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300' onClick={() => window.location.href='/cookie-policy'} >cookie policy</div>
+                            <div className='cursor-pointer relative basis-1/2 sm:basis-auto md:basis-auto lg:basis-auto xl:basis-auto 2xl:basis-auto after:bg-white after:absolute after:top-[2rem] after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300' onClick={() => window.location.href='/terms-of-service'} >terms of service</div>
+                            <div className='cursor-pointer relative basis-1/2 sm:basis-auto md:basis-auto lg:basis-auto xl:basis-auto 2xl:basis-auto after:bg-white after:absolute after:top-[2rem] after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all after:duration-300' onClick={() => window.location.href='/cookie-policy'} >cookie policy</div>
                             <div className='basis-1/4 justify-end mt-0
                                 flex sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden 
                             '>
@@ -78,12 +78,12 @@ export default function Footer(){
                             xs:text-[2rem] sm:text-[2rem] md:text-[2rem] 2xl:text-[4rem]
                             xs:leading-[2rem] sm:leading-[2rem] md:leading-[2rem] 2xl:leading-[4rem]
                         '>
-                            <div style={{flexBasis: 'min-content'}} className='cursor-pointer relative after:bg-white after:absolute after:h-1 after:w-0 after:-bottom-[0.5vw] after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300' onClick={() => window.open('https://ai-foundry.litebox.dev')}>ai foundry</div>
-                            <div style={{flexBasis: 'min-content'}} className='cursor-pointer relative after:bg-white after:absolute after:h-1 after:w-0 after:-bottom-[0.5vw] after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300' onClick={() => window.location.href='/#team'}>team</div>
-                            <div style={{flexBasis: 'min-content'}} className='cursor-pointer relative after:bg-white after:absolute after:h-1 after:w-0 after:-bottom-[0.5vw] after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300' onClick={() => window.location.href='/blog'}>blog</div>
-                            <div style={{flexBasis: 'min-content'}} className='cursor-pointer relative after:bg-white after:absolute after:h-1 after:w-0 after:-bottom-[0.5vw] after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300' onClick={() => window.location.href='/privacy-policy'} >privacy policy</div>
-                            <div style={{flexBasis: 'min-content'}} className='cursor-pointer relative after:bg-white after:absolute after:h-1 after:w-0 after:-bottom-[0.5vw] after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300' onClick={() => window.location.href='/terms-of-service'} >terms of service</div>
-                            <div style={{flexBasis: 'min-content'}} className='cursor-pointer relative after:bg-white after:absolute after:h-1 after:w-0 after:-bottom-[0.5vw] after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300' onClick={() => window.location.href='/cookie-policy'} >cookie policy</div>
+                            <div style={{flexBasis: 'min-content'}} className='cursor-pointer relative after:bg-white after:absolute after:h-1 after:w-0 after:-bottom-[0.5vw] after:left-0 hover:after:w-full after:transition-all after:duration-300' onClick={() => window.open('https://ai-foundry.litebox.dev')}>ai foundry</div>
+                            <div style={{flexBasis: 'min-content'}} className='cursor-pointer relative after:bg-white after:absolute after:h-1 after:w-0 after:-bottom-[0.5vw] after:left-0 hover:after:w-full after:transition-all after:duration-300' onClick={() => window.location.href='/#team'}>team</div>
+                            <div style={{flexBasis: 'min-content'}} className='cursor-pointer relative after:bg-white after:absolute after:h-1 after:w-0 after:-bottom-[0.5vw] after:left-0 hover:after:w-full after:transition-all after:duration-300' onClick={() => window.location.href='/blog'}>blog</div>
+                            <div style={{flexBasis: 'min-content'}} className='cursor-pointer relative after:bg-white after:absolute after:h-1 after:w-0 after:-bottom-[0.5vw] after:left-0 hover:after:w-full after:transition-all after:duration-300' onClick={() => window.location.href='/privacy-policy'} >privacy policy</div>
+                            <div style={{flexBasis: 'min-content'}} className='cursor-pointer relative after:bg-white after:absolute after:h-1 after:w-0 after:-bottom-[0.5vw] after:left-0 hover:after:w-full after:transition-all after:duration-300' onClick={() => window.location.href='/terms-of-service'} >terms of service</div>
+                            <div style={{flexBasis: 'min-content'}} className='cursor-pointer relative after:bg-white after:absolute after:h-1 after:w-0 after:-bottom-[0.5vw] after:left-0 hover:after:w-full after:transition-all after:duration-300' onClick={() => window.location.href='/cookie-policy'} >cookie policy</div>
                         </div>
                     </div>
                     <div className='relative w-full h-fit justify-end 
