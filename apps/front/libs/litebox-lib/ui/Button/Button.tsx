@@ -20,8 +20,8 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const btnVariants: {[key: string]: string } = {
-  primary: 'bg-orange border-black hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] focus:shadow-none focus:translate-x-[4px] focus:translate-y-[4px]',
-  secondary: 'bg-sand border-black hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] focus:shadow-none focus:translate-x-[4px] focus:translate-y-[4px]',
+  primary: 'bg-orange border-black hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px]',
+  secondary: 'bg-sand border-black hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px]',
 };
 
 const svgVariants : {[key: string]: FC<SVGProps<SVGSVGElement>>} = {
