@@ -276,7 +276,7 @@ export default function NavBar() {
                             text-[2rem] lg:text-[2rem] xl:text-[2rem] 2xl:text-[4rem]
                             md:w-full sm:w-full lg:w-full xl:w-full 2xl:w-full justify-start
                         '>
-                            <div onClick={() => window.open("https://ai-foundry.litebox.dev")} className="uppercase cursor-pointer relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300">
+                            <div onClick={() => window.open("https://aifoundry.org")} className="uppercase cursor-pointer relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300">
                                 AI Foundry
                             </div>
                             {pathname == '/' && 
@@ -340,7 +340,7 @@ export default function NavBar() {
                         </div>
                     </div>
                     <div className="flex flex-col w-full my-[10.667vw] xs:my-[4vw] font-dharma-gothic-e font-black text-[10.667vw] xs:text-[6.5vw] leading-[8.8vw] gap-[8.8vw] xs:gap-0">
-                        <div onClick={() => {closeMenu(); window.open("https://ai-foundry.litebox.dev")}} className="uppercase cursor-pointer">
+                        <div onClick={() => {closeMenu(); window.open("https://aifoundry.org")}} className="uppercase cursor-pointer">
                             ai foundry
                         </div>
                         {pathname == '/' &&
