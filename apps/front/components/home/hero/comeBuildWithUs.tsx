@@ -175,7 +175,7 @@ export default function ComeBuildWithUs({firstAnimComplete, resetAnimationFn}: {
             </div>
             <Button className='ainekko-repo-button pointer-events-auto absolute transform -translate-x-1/2 left-1/2 opacity-0
             bottom-[calc(50%-22rem)] sm:bottom-[calc(50%-22rem)] md:bottom-[calc(50%-22rem)] lg:bottom-[calc(50%-28rem)] xl:bottom-[calc(50%-28rem)] 2xl:bottom-[calc(50%-28rem)] 
-            ' target='_blank' as={Link} href='https://github.com/aifoundry-org/ainekko' variant='primary' content='ainekko repo' svg='arrow-up-right' />
+            ' target='_blank' as={Link} href='https://github.com/aifoundry-org' variant='primary' content='AI Foundry' svg='arrow-up-right' />
         </div>
     )
 }
