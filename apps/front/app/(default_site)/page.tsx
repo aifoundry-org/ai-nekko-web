@@ -12,10 +12,7 @@ export default function Page() {
       <div className='pin-section'>
         <PaperDiscussions />
       </div>
-      <AiAsASystem />
-      <Marquee />
       <TheTeam />
-      <Faqs />
     </main>
   );
 }
