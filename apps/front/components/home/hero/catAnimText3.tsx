@@ -165,7 +165,7 @@ export default function CatAnimText3({firstAnimComplete}: {firstAnimComplete?: b
                 <p className='text2 opacity-0
                 text-[3.2rem] sm:text-[4.2rem] md:text-[4.2rem] lg:text-[6.4rem] xl:text-[6.4rem] 2xl:text-[6.4rem] 
                 leading-[2.6rem] sm:leading-[3.6rem] md:leading-[3.6rem] lg:leading-[5.3rem] xl:leading-[5.3rem] 2xl:leading-[5.3rem]
-                '>An open source composable<br className='block sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden'/> stack<br className='hidden sm:block md:block lg:hidden xl:hidden 2xl:hidden'/> from inference to<br className='block sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden'/> hardware<br className='hidden sm:block md:block lg:hidden xl:hidden 2xl:hidden'/> to let the Edge AI Market<br className='block sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden'/> "OWN ITS OWN AI"</p>
+                '>An open source composable<br className='block sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden'/> stack<br className='hidden sm:block md:block lg:hidden xl:hidden 2xl:hidden'/> from inference to<br className='block sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden'/> hardware<br className='hidden sm:block md:block lg:hidden xl:hidden 2xl:hidden'/> to let the Edge AI Market<br className='block sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden'/> &quot;OWN ITS OWN AI&quot;</p>
             </div>
         </div>
     )
