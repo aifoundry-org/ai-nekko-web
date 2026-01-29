@@ -300,10 +300,27 @@ export default function NavBar() {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex justify-end
+                        <div className="flex justify-right items-center"><div className='navbar-links
+                            flex flex-row font-medium gap-x-[2.8vw]
                             basis-1/2 md:basis-1/3 lg:basis-1/3 xl:basis-1/3 2xl:basis-1/3
-                        ">
-                            {/* <Button target='_blank' as={Link} href='/' variant="primary" content="Contact us" /> */}
+                            text-[2rem] lg:text-[2rem] xl:text-[2rem] 2xl:text-[4rem]
+                            md:w-full sm:w-full lg:w-full xl:w-full 2xl:w-full justify-start
+                        '>
+
+
+                            <div onClick={() => window.location.href="https://www.eetimes.com/ainekko-buys-esperanto-hardware-ip-open-sources-it/"} className="uppercase cursor-pointer relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300">
+                               ORIGIN 
+                            </div>
+
+                            <div onClick={() => window.location.href="https://www.globenewswire.com/news-release/2026/01/29/3228632/0/en/Ainekko-Merges-with-Veevx-Expands-Open-Silicon-Platform-with-Breakthrough-Memory-and-Embedded-AI-Capabilities.html"} className="uppercase cursor-pointer relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300">
+                               DECLOAKING
+                            </div>
+
+                            <div onClick={() => window.location.href="https://www.eejournal.com/article/do-you-want-to-be-an-ai-plumber/"} className="uppercase cursor-pointer relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300">
+                               AI&nbsp;PLUMBERS 
+                            </div>
+
+                           </div>
                         </div>
                     </div>
                 </div>

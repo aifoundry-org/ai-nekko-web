@@ -117,7 +117,7 @@ export default function CatAnimText1({firstAnimComplete}: {firstAnimComplete?: b
                 <p className='text1 opacity-0
                 text-[7.2rem] sm:text-[10.2rem] md:text-[10.2rem] lg:text-[12.8rem] xl:text-[12.8rem] 2xl:text-[12.8rem] 
                 leading-[5.3rem] sm:leading-[8.3rem] md:leading-[8.3rem] lg:leading-[9.4rem] xl:leading-[9.4rem] 2xl:leading-[9.4rem]
-                '>Edge silicon<br className='hidden sm:block md:block lg:block xl:block 2xl:block'/>done <br className='block sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden' />right‍</p>
+                '>Edge silicon<br className='hidden sm:block md:block lg:block xl:block 2xl:block'/> done <br className='block sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden' />right‍</p>
                 <p className='text2 opacity-0
                 text-[3.2rem] sm:text-[4.2rem] md:text-[4.2rem] lg:text-[6.4rem] xl:text-[6.4rem] 2xl:text-[6.4rem] 
                 leading-[2.6rem] sm:leading-[3.6rem] md:leading-[3.6rem] lg:leading-[5.3rem] xl:leading-[5.3rem] 2xl:leading-[5.3rem]
