@@ -25,7 +25,7 @@ export default function Footer(){
     })
 
     const classMainContainer = `relative w-full flex ${pathname.includes('/blog/') ? (alternativeBackground ? 'bg-orange' : 'bg-sand') : 'bg-none'} overflow-hidden
-        h-[43.3rem] sm:h-[35rem] md:h-[45rem] lg:h-[55rem] xl:h-[60.1rem] 2xl:h-[65.1rem] 
+        h-[60rem]   sm:h-[35rem] md:h-[45rem] lg:h-[55rem] xl:h-[60.1rem] 2xl:h-[65.1rem]
     `
     
     return (
