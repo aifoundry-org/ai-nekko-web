@@ -15,13 +15,13 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const slides = [{
     id: 1,
-    content: "ai paper<br/>discussions"
+    content: "No abstracting away<br/>hardware"
 },{
     id: 2,
-    content: "collaborative<br/>ai hack labs"
+    content: "Flexible Clustering<br/>Network-on-Chip"
 },{
     id: 3,
-    content: "open source models<br/>& projects"
+    content: "True Co-Design<br/>of HW and SW stacks"
 }]
 
 export default function Main() {
@@ -76,7 +76,7 @@ export default function Main() {
                     leading-[2.4rem] sm:leading-[2.5rem] md:leading-[3rem] lg:leading-[3rem] xl:leading-[3rem] 2xl:leading-[5rem]
                     mb-[2.4rem] sm:mb-[4.8rem] md:mb-[2.5rem] lg:mb-[2.5rem] xl:mb-[2.5rem] 2xl:mb-[2.5rem]
                 '>
-                    Freedom of choice in AI requires an interoperable ecosystem.<br className='hidden md:block lg:block xl:block 2xl:block' />Be part of the open, composable community for AI.
+                    Why delopers and customers are excited?<br className='hidden md:block lg:block xl:block 2xl:block' />	Open, Transparent & Programmable Architecture!
                 </p>
                 <div className='pointer-events-none relative overflow-hidden scrollbar-width-none
                     w-full
