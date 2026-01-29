@@ -1,9 +1,10 @@
 'use client'
 
 import { usePathname } from 'next/navigation';
-import IMGCat from '@/public/imgs/footer/cat.webp'
+// import IMGCat from '@/public/imgs/footer/cat.webp'
 import IMGSticker from '@/public/imgs/footer/sticker.webp'
 import SVGIconLinkedin from '@/public/svgs/common/IconLinkedin.svg'
+import MadeInSF from '@/public/imgs/og/SFMade.png'
 import ImageWrapper from '@/components/common/ImageWrapper';
 
 import { gsap } from 'gsap';
@@ -137,7 +138,7 @@ export default function Footer(){
                 -bottom-[calc(50%-20.7rem)] xs:bottom-0 sm:bottom-0 md:bottom-0 lg:bottom-0 xl:bottom-0 2xl:bottom-0 
                 w-[25.9rem] xs:w-[20rem] sm:w-[20.2rem] md:w-[27.2rem] lg:w-[40.2rem] xl:w-[50.2rem] 2xl:w-[50.2rem] 
             '>
-                <ImageWrapper style={{height: '100%'}} src={IMGCat.src} alt="AINekko cat" />
+                <ImageWrapper style={{height: '100%'}} src={MadeInSF.src} alt="Made in SF" />
             </div>
         </footer>
     )
