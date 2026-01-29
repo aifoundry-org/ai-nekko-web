@@ -291,7 +291,8 @@ export default function Main() {
                 '>
                     our investors
                 </h2>
-                <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 z-0
+                <div className='flex z-0
+                    flex-col sm:flex-row md:flex-row lg:flex-row xl:flex-row 2xl:flex-row
                     gap-y-[2.4rem] sm:gap-x-[2.4rem] md:gap-x-[2.4rem] lg:gap-x-[2.4rem] xl:gap-x-[2.4rem] 2xl:gap-x-[2.4rem]
                 '>
                     {teamInvestors.map(investor => (
