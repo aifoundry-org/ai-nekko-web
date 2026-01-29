@@ -76,7 +76,7 @@ export default function Main() {
                     leading-[2.4rem] sm:leading-[2.5rem] md:leading-[3rem] lg:leading-[3rem] xl:leading-[3rem] 2xl:leading-[5rem]
                     mb-[2.4rem] sm:mb-[4.8rem] md:mb-[2.5rem] lg:mb-[2.5rem] xl:mb-[2.5rem] 2xl:mb-[2.5rem]
                 '>
-                    Why delopers and customers are excited?<br className='hidden md:block lg:block xl:block 2xl:block' />	Open, Transparent & Programmable Architecture!
+                    Why developers and customers are excited?<br className='hidden md:block lg:block xl:block 2xl:block' />	Open, Transparent & Programmable Architecture!
                 </p>
                 <div className='pointer-events-none relative overflow-hidden scrollbar-width-none
                     w-full
