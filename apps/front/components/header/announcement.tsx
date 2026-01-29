@@ -13,12 +13,12 @@ export default function Announcement() {
         <div className={`${hideSelf && 'hidden'} flex flex-row text-sand justify-center p-4`}>
             <Link target="_blank" className='flex font-host-grotesk 
                 text-[1.3rem] sm:text-[1.3rem] md:text-[1.6rem] lg:text-[1.6rem] xl:text-[1.6rem] 2xl:text-[1.6rem] 
-            ' href="https://aifoundry.org/fosdem-2025-low-level-ai-engineering-hacking-dev-room">
+            ' href="https://fosdem.org/2026/schedule/track/ai/">
                 <div className='leading-7
                     block sm:flex md:flex lg:flex xl:flex 2xl:flex
                     text-center sm:text-justify md:text-justify lg:text-justify xl:text-justify 2xl:text-justify
                 '>
-                    AIFoundry.org is sponsoring the &quot;Low-Level AI<br className='block xs:hidden sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden'/> Engineering & Hacking&quot; Dev Room at FOSDEM.<br className='block xs:hidden sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden'/>Find out more!
+		    AI Plumbers Devroom has been accepted for FOSDEM 2026! Make your plans for January 31!
                     <span className='ml-[1.5vw] mb-[0.5vw] w-[1.4rem] align-middle
                         inline-flex sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden 
                     '>
