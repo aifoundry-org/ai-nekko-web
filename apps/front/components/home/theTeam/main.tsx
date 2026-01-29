@@ -19,23 +19,54 @@ const teamMembers = [
     {
         id: 1,
         name: 'Tanya Dadasheva',
-        role: 'CEO & Co-Founder',
+        role: 'Co-founder, CEO',
         linkedin: 'https://www.linkedin.com/in/tanya-dadasheva/',
-        profileImgUrl: '/imgs/theTeam/team/team-1.webp'
+        profileImgUrl: '/imgs/theTeam/team/tanya-dadasheva.png'
     },
     {
         id: 2,
         name: 'Roman Shaposhnik',
-        role: 'CTO & Co-Founder',
+        role: 'Co-founder, Head of Software',
         linkedin: 'https://www.linkedin.com/in/shaposhnik/',
-        profileImgUrl: '/imgs/theTeam/team/team-2.webp'
+        profileImgUrl: '/imgs/theTeam/team/roman-shaposhnik.png'
     },
     {
         id: 3,
-        name: 'Tony Kiehn',
+        name: 'Douglas Smith',
+        role: 'Co-founder, Head of Silicon',
+        linkedin: 'https://www.linkedin.com/in/douglas-smith-bbab255/',
+        profileImgUrl: '/imgs/theTeam/team/douglas-smith.png'
+    }
+]
+
+const additionalTeamMembers = [
+    {
+        id: 1,
+        name: 'Gianluca Guida',
+        role: 'VP of Software',
+        linkedin: 'https://www.linkedin.com/in/glguida/',
+        profileImgUrl: '/imgs/theTeam/team/gianluca-guida.png'
+    },
+    {
+        id: 2,
+        name: 'Allen Rush',
+        role: 'Chief Architect',
+        linkedin: 'https://www.linkedin.com/in/allen-rush-41624b/',
+        profileImgUrl: '/imgs/theTeam/team/allen-rush.png'
+    },
+    {
+        id: 3,
+        name: 'Dan Stolyarov',
         role: 'COO',
-        linkedin: 'https://www.linkedin.com/in/tonykiehn/',
-        profileImgUrl: '/imgs/theTeam/team/team-3.webp'
+        linkedin: 'https://www.linkedin.com/in/dstolyarov/',
+        profileImgUrl: '/imgs/theTeam/team/dan-stolyarov.png'
+    },
+    {
+        id: 4,
+        name: 'Milind Bhandarkar',
+        role: 'Field CTO',
+        linkedin: 'https://www.linkedin.com/in/milindb/',
+        profileImgUrl: '/imgs/theTeam/team/milind-bhandarkar.png'
     }
 ]
 
@@ -49,31 +80,39 @@ const teamAdvisors = [
     },
     {
         id: 2,
-        name: 'Elisabeth Hendrickson',
-        role: 'Curious Duck Labs',
-        linkedin: 'https://www.linkedin.com/in/testobsessed/',
-        profileImgUrl: '/imgs/theTeam/advisors/advisor-2.webp'
+        name: 'James Pace',
+        role: 'Interleave',
+        linkedin: 'https://www.linkedin.com/in/james-pace-772142/',
+        profileImgUrl: '/imgs/theTeam/advisors/james-pace.webp'
     },
     {
         id: 3,
-        name: 'Noelle Saldana',
-        role: 'DataKind',
-        linkedin: 'https://www.linkedin.com/in/noellesio/',
-        profileImgUrl: '/imgs/theTeam/advisors/advisor-3.webp'
-    },
-    {
-        id: 4,
-        name: 'Greg Chase',
-        role: 'Upbound.io',
-        linkedin: 'https://www.linkedin.com/in/gregory-chase/',
-        profileImgUrl: '/imgs/theTeam/advisors/advisor-4.webp'
-    },
-    {
-        id: 5,
         name: 'Sasha Galitsky',
         role: 'Almaz Capital',
         linkedin: 'https://www.linkedin.com/in/alexander-sasha-galitsky/',
         profileImgUrl: '/imgs/theTeam/advisors/advisor-5.webp'
+    },
+    {
+        id: 4,
+        name: 'Elisabeth Hendrickson',
+        role: 'Curious Duck Labs',
+        linkedin: 'https://www.linkedin.com/in/testobsessed/',
+        profileImgUrl: '/imgs/theTeam/advisors/advisor-2.webp'
+    }
+]
+
+const teamInvestors = [
+    {
+        id: 1,
+        name: 'WI Harper Group',
+        logoUrl: '/imgs/theTeam/investors/wih-logo.webp',
+        websiteUrl: 'https://wiharper.com/'
+    },
+    {
+        id: 2,
+        name: 'Silicon Catalyst',
+        logoUrl: '/imgs/theTeam/investors/SiC.webp',
+        websiteUrl: 'https://siliconcatalyst.com/'
     }
 ]
 
@@ -116,7 +155,7 @@ export default function Main() {
                     text-[4.8rem] sm:text-[6.4rem] md:text-[6.4rem] lg:text-[6.4rem] xl:text-[6.4rem] 2xl:text-[8.4rem] 
                     mb-[4rem] sm:mb-[4.8rem] md:mb-[4.8rem] lg:mb-[4.8rem] xl:mb-[4.8rem] 2xl:mb-[6.8rem] 
                 '>
-                    the team
+                    founders
                 </h2>
                 <div className='flex z-0
                     flex-col sm:flex-row md:flex-row lg:flex-row xl:flex-row 2xl:flex-row
@@ -127,16 +166,38 @@ export default function Main() {
                     ))}
                 </div>
                 <div className='absolute
-                    -bottom-[6.7rem] sm:-bottom-[2.9rem] md:-bottom-[3.5rem] lg:-bottom-[4.4rem] xl:-bottom-[6rem] 2xl:-bottom-[6rem] 
-                    w-[23rem] sm:w-[10.3rem] md:w-[12.3rem] lg:w-[15rem] xl:w-[21rem] 2xl:w-[20rem] 
+                    -bottom-[6.7rem] sm:-bottom-[2.9rem] md:-bottom-[3.5rem] lg:-bottom-[4.4rem] xl:-bottom-[6rem] 2xl:-bottom-[6rem]
+                    w-[23rem] sm:w-[10.3rem] md:w-[12.3rem] lg:w-[15rem] xl:w-[21rem] 2xl:w-[20rem]
                     -right-[30.5vw] sm:-right-[7.1vw] md:-right-[6.2vw] lg:-right-[6vw] xl:-right-[7vw] 2xl:-right-[3.5vw]
                 '>
                     <ImageWrapper src={IMGGraffiti.src} alt="Graffiti" />
                 </div>
             </div>
+
+            {/* The Team Section */}
+            <div className='relative w-fit h-full flex flex-col
+                mt-[9.6rem] sm:mt-[9.6rem] md:mt-[9.6rem] lg:mt-[9.6rem] xl:mt-[9.6rem] 2xl:mt-[14rem]
+                mx-auto sm:mx-[8.2rem] md:mx-[11.2rem] lg:mx-[11.2rem] xl:mx-[11.2rem] 2xl:mx-[11.2rem]
+            '>
+                <h2 className='font-dharma-gothic-e font-black uppercase
+                    leading-[5.3rem] sm:leading-[5.3rem] md:leading-[5.3rem] lg:leading-[5.3rem] xl:leading-[5.3rem] 2xl:leading-[10rem]
+                    text-[4.8rem] sm:text-[6.4rem] md:text-[6.4rem] lg:text-[6.4rem] xl:text-[6.4rem] 2xl:text-[8.4rem]
+                    mb-[4rem] sm:mb-[4.8rem] md:mb-[4.8rem] lg:mb-[4.8rem] xl:mb-[4.8rem] 2xl:mb-[6.8rem]
+                '>
+                    leadership
+                </h2>
+                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 z-0
+                    gap-y-[2.4rem] sm:gap-x-[2.4rem] md:gap-x-[2.4rem] lg:gap-x-[2.4rem] xl:gap-x-[2.4rem] 2xl:gap-x-[2.4rem]
+                '>
+                    {additionalTeamMembers.map(member => (
+                        <Card key={member.id} name={member.name} role={member.role} profileImgUrl={member.profileImgUrl} linkedinUrl={member.linkedin} />
+                    ))}
+                </div>
+            </div>
+
             <div className='
                 hidden sm:flex md:flex lg:flex xl:flex 2xl:flex
-                relative w-fit flex-col 
+                relative w-fit flex-col
                 mt-[9.6rem] sm:mt-[9.6rem] md:mt-[9.6rem] lg:mt-[9.6rem] xl:mt-[9.6rem] 2xl:mt-[14rem]
                 mx-auto sm:mx-0 md:mx-0 lg:mx-0 xl:mx-0 2xl:mx-0
             '>
@@ -215,6 +276,32 @@ export default function Main() {
                     <div ref={buttonNextRef} className='flex basis-[15%] justify-center'>
                         <Button aria-label='Scroll right button' variant='secondary' svg='scroll-right'/>
                     </div>
+                </div>
+            </div>
+
+            {/* Investors Section */}
+            <div className='relative w-fit h-full flex flex-col
+                mt-[9.6rem] sm:mt-[9.6rem] md:mt-[9.6rem] lg:mt-[9.6rem] xl:mt-[9.6rem] 2xl:mt-[14rem]
+                mx-auto sm:mx-[8.2rem] md:mx-[11.2rem] lg:mx-[11.2rem] xl:mx-[11.2rem] 2xl:mx-[11.2rem]
+            '>
+                <h2 className='font-dharma-gothic-e font-black uppercase
+                    leading-[5.3rem] sm:leading-[5.3rem] md:leading-[5.3rem] lg:leading-[5.3rem] xl:leading-[5.3rem] 2xl:leading-[10rem]
+                    text-[4.8rem] sm:text-[6.4rem] md:text-[6.4rem] lg:text-[6.4rem] xl:text-[6.4rem] 2xl:text-[8.4rem]
+                    mb-[4rem] sm:mb-[4.8rem] md:mb-[4.8rem] lg:mb-[4.8rem] xl:mb-[4.8rem] 2xl:mb-[6.8rem]
+                '>
+                    our investors
+                </h2>
+                <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 z-0
+                    gap-y-[2.4rem] sm:gap-x-[2.4rem] md:gap-x-[2.4rem] lg:gap-x-[2.4rem] xl:gap-x-[2.4rem] 2xl:gap-x-[2.4rem]
+                '>
+                    {teamInvestors.map(investor => (
+                        <a key={investor.id} href={investor.websiteUrl} target="_blank" rel="noopener noreferrer"
+                           className='flex justify-center items-center hover:opacity-80 transition-opacity
+                           w-[32.7rem] sm:w-[17rem] md:w-[18.6rem] lg:w-[20.5rem] xl:w-[28.6rem] 2xl:w-[30.6rem]
+                           h-[28.9rem] sm:h-[22rem] md:h-[23.3rem] lg:h-[25.4rem] xl:h-[33.3rem] 2xl:h-[40.3rem]'>
+                            <ImageWrapper src={investor.logoUrl} alt={investor.name} className="max-h-[20rem] max-w-[90%] object-contain" />
+                        </a>
+                    ))}
                 </div>
             </div>
         </div>
