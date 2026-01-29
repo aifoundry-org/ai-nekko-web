@@ -145,11 +145,11 @@ export default function CatAnimText2({firstAnimComplete}: {firstAnimComplete?: b
                 <p className='text1 opacity-0
                 text-[7.2rem] sm:text-[10.2rem] md:text-[10.2rem] lg:text-[12.8rem] xl:text-[12.8rem] 2xl:text-[12.8rem] 
                 leading-[5.3rem] sm:leading-[8rem] md:leading-[8.3rem] lg:leading-[9.4rem] xl:leading-[9.4rem] 2xl:leading-[9.4rem]
-                '>A common<br/> foundation</p>
+                '>Generative<br/> System-on-Chip</p>
                 <p className='text2 opacity-0
                 text-[3.2rem] sm:text-[4.2rem] md:text-[4.2rem] lg:text-[6.4rem] xl:text-[6.4rem] 2xl:text-[6.4rem] 
                 leading-[2.6rem] sm:leading-[3.6rem] md:leading-[3.6rem] lg:leading-[5.3rem] xl:leading-[5.3rem] 2xl:leading-[5.3rem]
-                '>That unlocks freedom<br className='block sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden'/> of choice<br className='hidden sm:block md:hidden lg:hidden xl:hidden 2xl:hidden'/> is what&apos;s<br className='block sm:hidden md:block lg:block xl:block 2xl:block' /> missing in today&apos;s world</p>
+                '>AI-enabled, <br className='block sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden'/> open<br className='hidden sm:block md:hidden lg:hidden xl:hidden 2xl:hidden'/> compute platforms<br className='block sm:hidden md:block lg:block xl:block 2xl:block' /> in under 9 months</p>
             </div>
         </div>
     )
