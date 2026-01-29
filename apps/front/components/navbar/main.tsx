@@ -284,7 +284,7 @@ export default function NavBar() {
                                     Team
                                 </div>
                             }
-                            <div onClick={() => window.location.href="/blog"} className="uppercase cursor-pointer relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300">
+                            <div onClick={() => window.location.href="https://blog.aifoundry.org/"} className="uppercase cursor-pointer relative after:bg-black after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 focus:after:w-full hover:after:w-full after:transition-all after:duration-300">
                                 Blog
                             </div>
                         </div>
@@ -348,7 +348,7 @@ export default function NavBar() {
                                 team
                             </div>
                         }
-                        <div onClick={() => {closeMenu(); window.location.href="/blog"}} className="uppercase cursor-pointer">
+                        <div onClick={() => {closeMenu(); window.location.href="https://blog.aifoundry.org/"}} className="uppercase cursor-pointer">
                             blog
                         </div>
                     </div>
@@ -374,7 +374,7 @@ export default function NavBar() {
                         </div>
                     </div>
                     <div className='font-host-grotesk font-normal text-[3.2vw] leading-[4.8vw] mt-[4.8vw]'>
-                        © 2024 AI Foundry. All rights reserved.
+                        © 2026 Ainekko, Co. All rights reserved.
                     </div>
                 </div>
             </aside>
