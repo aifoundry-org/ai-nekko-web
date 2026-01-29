@@ -119,7 +119,7 @@ export default function Footer(){
                             leading-[1.8rem] sm:leading-[1.8rem] md:leading-[1.8rem] lg:leading-[1.8rem] xl:leading-[1.8rem] 2xl:leading-[1.8rem] 
                             text-[1.2rem] sm:text-[1.2rem] md:text-[1.2rem] lg:text-[1.2rem] xl:text-[1.2rem] 2xl:text-[1.2rem] 
                         '>
-                            © 2024 AI Foundry. All rights reserved.
+                            © 2026 Ainekko, Co. All rights reserved.
                         </p>
                         <div className='footer-sticker absolute 
                             right-[calc(50%-2.1rem)] xs:right-[calc(50%-4.7rem)] sm:right-[calc(50%+2.1rem)] md:right-[calc(50%+5.8rem)] lg:right-[calc(50%-2.5rem)] xl:right-[calc(50%-5rem)] 2xl:right-[calc(50%-4.8rem)] 
