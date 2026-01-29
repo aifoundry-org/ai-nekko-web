@@ -133,10 +133,11 @@ export default function Footer(){
                 </div>
             </div>
             <div className='absolute
-                right-1/2 translate-x-1/2 xs:left-auto sm:left-auto md:left-auto lg:left-auto xl:left-auto 2xl:left-auto
-                xs:right-0 sm:right-0 md:right-0 lg:right-0 xl:right-0 2xl:right-0
-                bottom-2 xs:bottom-0 sm:bottom-0 md:bottom-0 lg:bottom-0 xl:bottom-0 2xl:bottom-0
-                w-[20rem] xs:w-[20rem] sm:w-[20.2rem] md:w-[27.2rem] lg:w-[40.2rem] xl:w-[50.2rem] 2xl:w-[50.2rem]
+                left-1/2 -translate-x-1/2 xs:right-[2.4rem] sm:right-[1.4rem] md:right-[3.4rem] lg:right-[8.4rem] xl:right-[8.4rem] 2xl:right-[8.4rem]
+                xs:left-auto sm:left-auto md:left-auto lg:left-auto xl:left-auto 2xl:left-auto
+                xs:translate-x-0 sm:translate-x-0 md:translate-x-0 lg:translate-x-0 xl:translate-x-0 2xl:translate-x-0
+                bottom-20 xs:bottom-20 sm:bottom-20 md:bottom-20 lg:bottom-20 xl:bottom-20 2xl:bottom-20
+                w-[16rem] xs:w-[16rem] sm:w-[18rem] md:w-[20rem] lg:w-[24rem] xl:w-[28rem] 2xl:w-[28rem]
             '>
                 <ImageWrapper style={{height: '100%'}} src={MadeInSF.src} alt="Made in SF" />
             </div>
