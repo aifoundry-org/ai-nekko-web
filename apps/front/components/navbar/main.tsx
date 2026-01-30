@@ -368,6 +368,15 @@ export default function NavBar() {
                         <div onClick={() => {closeMenu(); window.location.href="https://blog.aifoundry.org/"}} className="uppercase cursor-pointer">
                             blog
                         </div>
+                        <div onClick={() => {closeMenu(); window.location.href="https://www.eetimes.com/ainekko-buys-esperanto-hardware-ip-open-sources-it/"}} className="uppercase cursor-pointer">
+                            origin story 
+                        </div>
+                        <div onClick={() => {closeMenu(); window.location.href="https://www.globenewswire.com/news-release/2026/01/29/3228632/0/en/Ainekko-Merges-with-Veevx-Expands-Open-Silicon-Platform-with-Breakthrough-Memory-and-Embedded-AI-Capabilities.html"}} className="uppercase cursor-pointer">
+                            decloaking 
+                        </div>
+                        <div onClick={() => {closeMenu(); window.location.href="https://www.eejournal.com/article/do-you-want-to-be-an-ai-plumber/"}} className="uppercase cursor-pointer">
+                            ai plumbers 
+                        </div>
                     </div>
                     <div className="flex flex-col w-full mb-[10.667vw] xs:mb-[5vw] font-dharma-gothic-e font-bold text-[4.8vw] xs:text-[4vw] leading-[4.8vw] gap-[4.8vw] xs:gap-[2vw]">
                         <div onClick={() => {closeMenu(); window.location.href="/privacy-policy"}} className="uppercase cursor-pointer">
