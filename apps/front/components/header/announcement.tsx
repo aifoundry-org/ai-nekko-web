@@ -18,7 +18,7 @@ export default function Announcement() {
                     block sm:flex md:flex lg:flex xl:flex 2xl:flex
                     text-center sm:text-justify md:text-justify lg:text-justify xl:text-justify 2xl:text-justify
                 '>
-		    AI Plumbers Devroom has been accepted for FOSDEM 2026! Make your plans for January 31!
+		    AI Plumbers had a blast at FOSDEM&#8217;26! Click here to catch up!
                     <span className='ml-[1.5vw] mb-[0.5vw] w-[1.4rem] align-middle
                         inline-flex sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden 
                     '>
