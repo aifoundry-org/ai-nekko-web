@@ -87,13 +87,6 @@ const teamAdvisors = [
     },
     {
         id: 3,
-        name: 'Sasha Galitsky',
-        role: 'Almaz Capital',
-        linkedin: 'https://www.linkedin.com/in/alexander-sasha-galitsky/',
-        profileImgUrl: '/imgs/theTeam/advisors/advisor-5.webp'
-    },
-    {
-        id: 4,
         name: 'Elisabeth Hendrickson',
         role: 'Curious Duck Labs',
         linkedin: 'https://www.linkedin.com/in/testobsessed/',
