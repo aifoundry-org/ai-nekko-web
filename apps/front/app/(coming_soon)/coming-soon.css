@@ -1,0 +1,135 @@
+/* Mirrors the deck-nekko "Coming soon" page. */
+@font-face {
+  font-family: "Big Shoulders Display";
+  src: url("/coming-soon/fonts/big-shoulders-display.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Host Grotesk";
+  src: url("/coming-soon/fonts/host-grotesk.woff2") format("woff2");
+  font-weight: 300 800;
+  font-display: swap;
+}
+
+:root {
+  --orange: #F9A03F;
+  --cream: #F6EFE4;
+  --ink: #141414;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: "Host Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* The factory: a fixed-size tile repeated outwards from the centre of the stage.
+   Resizing the window never scales it — it only reveals or crops more of the floor.
+   Desktop tile is 2400×840 (two variations side by side); phones get the lighter
+   1200×840 half. Both put the same spot (x=600) at the centre, so the swap is invisible. */
+main {
+  display: grid;
+  place-items: center;
+  padding: 40px 24px;
+  background-color: var(--cream);
+  background-image: url("/coming-soon/factory-tile.svg");
+  background-repeat: repeat;
+  background-size: 2400px 840px;
+  background-position: calc(50% + 600px) center;
+}
+@media (max-width: 1100px) {
+  main {
+    background-image: url("/coming-soon/factory-tile-sm.svg");
+    background-size: 1200px 840px;
+    background-position: center center;
+  }
+}
+
+/* Riveted sign plate, drawn in the same line style as the factory */
+.sign {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 26px 52px 24px;
+  background: var(--cream);
+  border: 2px solid var(--orange);
+  border-radius: 6px;
+  box-shadow: 0 0 0 10px var(--cream), 0 0 0 12px var(--orange);
+  text-align: center;
+}
+.sign::before, .sign::after {
+  /* rivets */
+  content: "";
+  position: absolute;
+  inset: 10px;
+  pointer-events: none;
+  background:
+    radial-gradient(circle, var(--orange) 2.5px, transparent 3px) left top / 12px 12px no-repeat,
+    radial-gradient(circle, var(--orange) 2.5px, transparent 3px) right top / 12px 12px no-repeat,
+    radial-gradient(circle, var(--orange) 2.5px, transparent 3px) left bottom / 12px 12px no-repeat,
+    radial-gradient(circle, var(--orange) 2.5px, transparent 3px) right bottom / 12px 12px no-repeat;
+}
+.sign::after { display: none; }
+
+.logo {
+  display: block;
+  height: 32px;
+  width: auto;
+}
+
+h1 {
+  margin: 0;
+  font-family: "Big Shoulders Display", "Arial Narrow", Impact, sans-serif;
+  font-weight: 900;
+  font-size: clamp(60px, 9vw, 112px);
+  line-height: .86;
+  letter-spacing: .005em;
+  text-transform: uppercase;
+}
+
+.dots {
+  display: flex;
+  gap: 7px;
+}
+.dots i {
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: var(--orange);
+}
+
+footer {
+  background: var(--cream);
+  border-top: 2px solid var(--orange);
+  padding: 16px 20px calc(16px + env(safe-area-inset-bottom));
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+}
+footer .sep { margin: 0 .7em; color: var(--orange); }
+footer a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--orange);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+footer a:hover, footer a:focus-visible { color: #b8650f; }
+
+@media (max-width: 560px) {
+  .sign { padding: 22px 28px 20px; gap: 12px; }
+  .logo { height: 26px; }
+  h1 { width: min-content; font-size: 76px; }
+  footer { font-size: 13px; }
+  footer .sep { margin: 0 .45em; }
+}
